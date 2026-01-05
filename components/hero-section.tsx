@@ -1,35 +1,23 @@
 import { Button } from "@/components/ui/button"
-import Image from "next/image"
 
 export function HeroSection() {
   return (
-    <section className="relative bg-secondary/30 overflow-hidden">
-      <div className="container mx-auto px-4 py-16 md:py-24">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-              Your HR Partner for Worry-Free Compliance
-            </h1>
-            <p className="text-lg md:text-xl text-muted-foreground text-pretty leading-relaxed">
-              We simplify the complex world of employment laws and workplace safety. From attorney-reviewed labor law
-              posters to a dedicated HR and Safety team, we provide the right level of coverage for your business.
-            </p>
-            <div className="pt-2">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-                Get Started
-              </Button>
-            </div>
-          </div>
-
-          <div className="relative aspect-[4/3] lg:aspect-auto lg:h-[500px]">
-            <Image
-              src="/images/ww-home-banner-desk1-min.jpg"
-              alt="Professional reviewing workplace compliance materials"
-              fill
-              className="object-cover rounded-lg"
-              style={{ objectPosition: "calc(50% - 175px) center" }}
-              priority
-            />
+    <section className="relative bg-gradient-to-b from-secondary/30 to-background overflow-hidden">
+      <div className="container mx-auto px-4 py-20 md:py-32">
+        <div className="max-w-4xl mx-auto text-center space-y-8">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-balance">
+            Loved by businesses. Built for compliance.
+          </h1>
+          <p className="text-xl md:text-2xl text-muted-foreground text-pretty leading-relaxed max-w-3xl mx-auto">
+            The all-in-one platform that simplifies employment laws and workplace safety for growing businesses.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+            <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg px-8 py-6">
+              Request a Demo
+            </Button>
+            <Button size="lg" variant="outline" className="text-lg px-8 py-6 bg-transparent">
+              Take a Tour
+            </Button>
           </div>
         </div>
       </div>
