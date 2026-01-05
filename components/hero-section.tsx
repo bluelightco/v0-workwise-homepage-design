@@ -21,7 +21,7 @@ export function HeroSection() {
             <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg px-8 py-6">
               Request a Demo
             </Button>
-            <Button size="lg" className="text-lg px-8 py-6 bg-gray-300 text-gray-800 hover:bg-indigo-400">
+            <Button size="lg" className="text-lg px-8 py-6 bg-gray-300 text-gray-800 hover:bg-violet-400">
               Take a Tour
             </Button>
           </div>
