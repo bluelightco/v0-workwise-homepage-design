@@ -104,13 +104,13 @@ export function ProductFeaturesSection() {
         </div>
 
         <div className="bg-purple-50 rounded-2xl p-8 md:p-12 overflow-hidden">
-          <div className="relative">
+          <div className="relative overflow-hidden">
             <div
               className="flex transition-transform duration-500 ease-in-out"
               style={{ transform: `translateX(-${activeIndex * 100}%)` }}
             >
               {features.map((feature) => (
-                <div key={feature.id} className="w-full flex-shrink-0">
+                <div key={feature.id} className="w-full flex-shrink-0 px-1">
                   <div className="grid md:grid-cols-2 gap-12 items-center">
                     <div className="space-y-6">
                       <div className="inline-flex items-center justify-center w-16 h-16 rounded-lg bg-primary/10 text-primary">
