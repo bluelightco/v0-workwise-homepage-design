@@ -74,6 +74,7 @@ const features = [
 export function ProductFeaturesSection() {
   const [activeTab, setActiveTab] = useState("compliance")
   const activeFeature = features.find((f) => f.id === activeTab) || features[0]
+  const activeIndex = features.findIndex((f) => f.id === activeTab)
 
   return (
     <section className="py-16 md:py-24 bg-background">
@@ -102,26 +103,39 @@ export function ProductFeaturesSection() {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-lg bg-primary/10 text-primary">
-              <activeFeature.icon className="w-8 h-8" />
-            </div>
-            <h3 className="text-2xl md:text-3xl font-bold">{activeFeature.title}</h3>
-            <p className="text-lg text-muted-foreground leading-relaxed">{activeFeature.description}</p>
-            <div className="flex gap-4">
-              <Button size="lg">{activeFeature.cta}</Button>
-              <Button size="lg" variant="ghost">
-                Learn more
-              </Button>
-            </div>
-          </div>
-          <div>
-            <div className="bg-muted/30 rounded-lg p-8 space-y-4">
-              {activeFeature.items.map((item, i) => (
-                <div key={i} className="flex items-start gap-3">
-                  <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  <p className="text-sm md:text-base leading-relaxed">{item}</p>
+        <div className="bg-purple-50 rounded-2xl p-8 md:p-12 overflow-hidden">
+          <div className="relative">
+            <div
+              className="flex transition-transform duration-500 ease-in-out"
+              style={{ transform: `translateX(-${activeIndex * 100}%)` }}
+            >
+              {features.map((feature) => (
+                <div key={feature.id} className="w-full flex-shrink-0">
+                  <div className="grid md:grid-cols-2 gap-12 items-center">
+                    <div className="space-y-6">
+                      <div className="inline-flex items-center justify-center w-16 h-16 rounded-lg bg-primary/10 text-primary">
+                        <feature.icon className="w-8 h-8" />
+                      </div>
+                      <h3 className="text-2xl md:text-3xl font-bold">{feature.title}</h3>
+                      <p className="text-lg text-muted-foreground leading-relaxed">{feature.description}</p>
+                      <div className="flex gap-4">
+                        <Button size="lg">{feature.cta}</Button>
+                        <Button size="lg" variant="ghost">
+                          Learn more
+                        </Button>
+                      </div>
+                    </div>
+                    <div>
+                      <div className="bg-background/80 rounded-lg p-8 space-y-4">
+                        {feature.items.map((item, i) => (
+                          <div key={i} className="flex items-start gap-3">
+                            <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                            <p className="text-sm md:text-base leading-relaxed">{item}</p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>
