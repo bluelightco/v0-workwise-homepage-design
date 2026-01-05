@@ -5,9 +5,9 @@ import { ProductFeaturesSection } from "@/components/product-features-section"
 import { OutcomesSection } from "@/components/outcomes-section"
 import { InnovationSection } from "@/components/innovation-section"
 import { ROISection } from "@/components/roi-section"
-import { SolutionsByDepartment } from "@/components/solutions-by-department"
+import { ThreeTierSection } from "@/components/three-tier-section"
+import { OnSiteSection } from "@/components/on-site-section"
 import { RecognitionSection } from "@/components/recognition-section"
-import { IntegrationsSection } from "@/components/integrations-section"
 import { ResourcesSection } from "@/components/resources-section"
 import { FinalCTA } from "@/components/final-cta"
 import { Footer } from "@/components/footer"
@@ -23,9 +23,9 @@ export default function Home() {
         <OutcomesSection />
         <InnovationSection />
         <ROISection />
-        <SolutionsByDepartment />
+        <ThreeTierSection />
+        <OnSiteSection />
         <RecognitionSection />
-        <IntegrationsSection />
         <ResourcesSection />
         <FinalCTA />
       </main>
