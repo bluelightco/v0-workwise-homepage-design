@@ -17,12 +17,6 @@ export function Header() {
           </Link>
 
           <nav className="hidden md:flex items-center gap-6">
-             <Link
-              href="/shop-posters"
-              className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
-              >
-                Posters
-              </Link>
             <div
               className="relative"
               onMouseEnter={() => setServicesOpen(true)}
@@ -40,31 +34,31 @@ export function Header() {
                 <div className="absolute top-full left-0 pt-2 z-50">
                   <div className="w-80 bg-white border rounded-lg shadow-lg py-2">
                     <Link
-                      href="/services/tier-1-you-post-it"
+                      href="/shop-posters"
                       className="block px-4 py-3 text-sm hover:bg-gray-50 transition-colors"
                     >
-                      <div className="font-semibold text-foreground">You Post It</div>
+                      <div className="font-semibold text-foreground">Posters</div>
                       <div className="text-xs text-muted-foreground">Posters + automatic updates for the year</div>
                     </Link>
                     <Link
                       href="/services/tier-2-you-do-it"
                       className="block px-4 py-3 text-sm hover:bg-gray-50 transition-colors"
                     >
-                      <div className="font-semibold text-foreground">You Do It</div>
+                      <div className="font-semibold text-foreground">Essentials/div>
                       <div className="text-xs text-muted-foreground">Self-service compliance tools and support</div>
                     </Link>
                     <Link
                       href="/services/tier-3-we-do-it"
                       className="block px-4 py-3 text-sm hover:bg-gray-50 transition-colors"
                     >
-                      <div className="font-semibold text-foreground">We Do It</div>
+                      <div className="font-semibold text-foreground">Pro</div>
                       <div className="text-xs text-muted-foreground">Fully managed compliance (Virtual / Onsite)</div>
                     </Link>
                     <Link
                       href="/services/essential-add-ons"
                       className="block px-4 py-3 text-sm hover:bg-gray-50 transition-colors"
                     >
-                      <div className="font-semibold text-foreground">Essential Add-Ons</div>
+                      <div className="font-semibold text-foreground">Admin Add-Ons</div>
                       <div className="text-xs text-muted-foreground">
                         Track payroll, benefits, and leave, plus talent acquisition
                       </div>
