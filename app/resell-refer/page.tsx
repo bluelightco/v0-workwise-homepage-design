@@ -131,47 +131,6 @@ export default function ResellReferPage() {
                   <Button className="w-full mt-4">Become a Channel Partner</Button>
                 </CardContent>
               </Card>
-
-              {/* Enterprise & Strategic Alliances */}
-              <Card className="hover:shadow-lg transition-shadow">
-                <CardHeader>
-                  <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-                    <Shield className="w-6 h-6 text-purple-700" />
-                  </div>
-                  <CardTitle>Enterprise & Strategic Alliances</CardTitle>
-                  <CardDescription>Best for: Large Organizations and Software Integrators</CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <p className="text-sm text-muted-foreground">
-                    Integrate compliance data directly into your HCM platform or deploy a white-labeled safety solution
-                    across your franchise network.
-                  </p>
-                  <div className="space-y-3">
-                    <h4 className="font-semibold text-sm">Benefits:</h4>
-                    <ul className="space-y-2 text-sm">
-                      <li className="flex items-start gap-2">
-                        <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
-                        <span>
-                          <strong>API Integration:</strong> Seamless data sync for posters and training records
-                        </span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
-                        <span>
-                          <strong>Bulk Pricing:</strong> Volume discounts for large-scale deployments
-                        </span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
-                        <span>
-                          <strong>Dedicated Account Management:</strong> Strategic support for rollout and adoption
-                        </span>
-                      </li>
-                    </ul>
-                  </div>
-                  <Button className="w-full mt-4">Request Enterprise Consultation</Button>
-                </CardContent>
-              </Card>
             </div>
           </div>
         </section>
