@@ -17,7 +17,7 @@ const posters = [
     price: 49.99,
     state: "California",
     category: "State-Only",
-    image: "/images/poster-email.jpeg",
+    image: "/images/ca-labor-law-poster.webp",
   },
   {
     id: "ca-combo",
@@ -25,7 +25,7 @@ const posters = [
     price: 79.99,
     state: "California",
     category: "All-in-One",
-    image: "/images/poster-email.jpeg",
+    image: "/images/ca-labor-law-poster.webp",
   },
   {
     id: "tx-state-only",
@@ -33,7 +33,7 @@ const posters = [
     price: 49.99,
     state: "Texas",
     category: "State-Only",
-    image: "/images/poster-email.jpeg",
+    image: "/images/ca-labor-law-poster.webp",
   },
   {
     id: "tx-combo",
@@ -41,7 +41,7 @@ const posters = [
     price: 79.99,
     state: "Texas",
     category: "All-in-One",
-    image: "/images/poster-email.jpeg",
+    image: "/images/ca-labor-law-poster.webp",
   },
   {
     id: "ny-state-only",
@@ -49,7 +49,7 @@ const posters = [
     price: 49.99,
     state: "New York",
     category: "State-Only",
-    image: "/images/poster-email.jpeg",
+    image: "/images/ca-labor-law-poster.webp",
   },
   {
     id: "ny-combo",
@@ -57,7 +57,7 @@ const posters = [
     price: 79.99,
     state: "New York",
     category: "All-in-One",
-    image: "/images/poster-email.jpeg",
+    image: "/images/ca-labor-law-poster.webp",
   },
   {
     id: "fl-state-only",
@@ -65,7 +65,7 @@ const posters = [
     price: 49.99,
     state: "Florida",
     category: "State-Only",
-    image: "/images/poster-email.jpeg",
+    image: "/images/ca-labor-law-poster.webp",
   },
   {
     id: "fl-combo",
@@ -73,7 +73,7 @@ const posters = [
     price: 79.99,
     state: "Florida",
     category: "All-in-One",
-    image: "/images/poster-email.jpeg",
+    image: "/images/ca-labor-law-poster.webp",
   },
   {
     id: "federal-only",
@@ -81,7 +81,7 @@ const posters = [
     price: 39.99,
     state: "All States",
     category: "Federal-Only",
-    image: "/images/poster-email.jpeg",
+    image: "/images/ca-labor-law-poster.webp",
   },
 ]
 
