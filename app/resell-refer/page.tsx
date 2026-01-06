@@ -37,12 +37,12 @@ export default function ResellReferPage() {
         {/* Partnership Paths */}
         <section className="py-20 px-4 bg-gray-50">
           <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Three Ways to Partner</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Two Ways to Partner</h2>
             <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
               Choose the partnership model that aligns with your business goals
             </p>
 
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 gap-8">
               {/* Affiliate Program */}
               <Card className="hover:shadow-lg transition-shadow">
                 <CardHeader>
