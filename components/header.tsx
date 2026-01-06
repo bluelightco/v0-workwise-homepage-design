@@ -41,14 +41,14 @@ export function Header() {
                       href="/services/tier-2-you-do-it"
                       className="block px-4 py-3 text-sm hover:bg-gray-50 transition-colors"
                     >
-                      <div className="font-semibold text-foreground">Essentials</div>
+                      <div className="font-semibold text-foreground">Essential Tools</div>
                       <div className="text-xs text-muted-foreground">Self-service compliance tools and support</div>
                     </Link>
                     <Link
                       href="/services/tier-3-we-do-it"
                       className="block px-4 py-3 text-sm hover:bg-gray-50 transition-colors"
                     >
-                      <div className="font-semibold text-foreground">Pro</div>
+                      <div className="font-semibold text-foreground">Pro Support</div>
                       <div className="text-xs text-muted-foreground">Fully managed compliance (Virtual / Onsite)</div>
                     </Link>
                     <Link
