@@ -86,9 +86,6 @@ export default function ResellReferPage() {
 
               {/* Channel Partners */}
               <Card className="hover:shadow-lg transition-shadow border-2 border-purple-700 relative">
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-purple-700 text-white px-4 py-1 rounded-full text-sm font-semibold">
-                  Most Popular
-                </div>
                 <CardHeader>
                   <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
                     <Users className="w-6 h-6 text-purple-700" />
