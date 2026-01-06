@@ -17,7 +17,7 @@ export function Header() {
           </Link>
 
           <nav className="hidden md:flex items-center gap-6">
-                          <Link
+             <Link
               href="/shop-posters"
               className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
               >
