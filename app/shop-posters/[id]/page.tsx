@@ -98,7 +98,7 @@ export default function PosterDetailPage() {
                           </div>
                           <div className="flex-1">
                             <div className="flex items-center gap-2 mb-1">
-                              <p className="font-semibold">Auto-Updates</p>
+                              <p className="font-semibold">Auto-Update Subscription</p>
                               <Badge className="bg-green-600 hover:bg-green-700">Save 10%</Badge>
                             </div>
                             <p className="text-sm text-muted-foreground mb-2">
