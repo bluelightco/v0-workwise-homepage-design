@@ -72,12 +72,6 @@ export function Header() {
               Webinars
             </Link>
             <Link
-              href="/resell-refer"
-              className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
-            >
-              Resell & Refer
-            </Link>
-            <Link
               href="/about"
               className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
             >
