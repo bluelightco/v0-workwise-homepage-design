@@ -33,10 +33,7 @@ export function Header() {
               {servicesOpen && (
                 <div className="absolute top-full left-0 pt-2 z-50">
                   <div className="w-80 bg-white border rounded-lg shadow-lg py-2">
-                    <Link
-                      href="/shop-posters"
-                      className="block px-4 py-3 text-sm hover:bg-gray-50 transition-colors"
-                    >
+                    <Link href="/shop-posters" className="block px-4 py-3 text-sm hover:bg-gray-50 transition-colors">
                       <div className="font-semibold text-foreground">Posters</div>
                       <div className="text-xs text-muted-foreground">Posters + automatic updates for the year</div>
                     </Link>
@@ -44,7 +41,7 @@ export function Header() {
                       href="/services/tier-2-you-do-it"
                       className="block px-4 py-3 text-sm hover:bg-gray-50 transition-colors"
                     >
-                      <div className="font-semibold text-foreground">Essentials/div>
+                      <div className="font-semibold text-foreground">Essentials</div>
                       <div className="text-xs text-muted-foreground">Self-service compliance tools and support</div>
                     </Link>
                     <Link
