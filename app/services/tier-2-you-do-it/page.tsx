@@ -24,7 +24,7 @@ export default function Tier2Page() {
             <div className="flex items-center justify-center gap-4">
               <div className="bg-white text-indigo-600 px-6 py-3 rounded-lg">
                 <div className="text-sm">Starting at</div>
-                <div className="text-3xl font-bold">$299</div>
+                <div className="text-3xl font-bold">$149/mo.</div>
               </div>
             </div>
           </div>
@@ -36,10 +36,10 @@ export default function Tier2Page() {
             <div className="max-w-4xl mx-auto text-center">
               <h3 className="text-2xl font-bold mb-6">Everything in You Post It:</h3>
               <div className="flex flex-wrap justify-center gap-4 text-sm mb-8">
-                <span className="bg-white px-4 py-2 rounded-full">Auto-Update Service</span>
+                <span className="bg-white px-4 py-2 rounded-full">3 Posters Included</span>
+                <span className="bg-white px-4 py-2 rounded-full">Auto-Update Poster Service</span>
                 <span className="bg-white px-4 py-2 rounded-full">Remote Coverage</span>
                 <span className="bg-white px-4 py-2 rounded-full">$40K Guarantee</span>
-                <span className="bg-white px-4 py-2 rounded-full">Space Saver Posters</span>
               </div>
               <h3 className="text-2xl font-bold text-indigo-600">Plus:</h3>
             </div>
