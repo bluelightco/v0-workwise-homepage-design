@@ -16,8 +16,7 @@ export default function Tier2Page() {
             <div className="inline-block bg-white/20 text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
               MOST POPULAR
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">HR & Safety Toolkit</h1>
-            <p className="text-2xl mb-4 text-indigo-100">"You Do It"</p>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">Essential Toolkit</h1>
             <p className="text-xl text-indigo-100 max-w-3xl mx-auto mb-8">
               Empower your internal team with the Employee Management System (EMS)—our cloud-based platform that
               centralizes your workflows and reduces administrative burden.
