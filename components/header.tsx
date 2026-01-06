@@ -23,6 +23,12 @@ export function Header() {
               onMouseLeave={() => setServicesOpen(false)}
             >
               <Link
+              href="/shop-posters"
+              className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
+              >
+                Posters
+              </Link>
+              <Link
                 href="/services"
                 className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors flex items-center gap-1"
               >
