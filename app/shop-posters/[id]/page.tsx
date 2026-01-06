@@ -51,7 +51,7 @@ export default function PosterDetailPage() {
               <div>
                 <div className="bg-gray-100 rounded-lg p-8 aspect-[3/4] flex items-center justify-center sticky top-8">
                   <img
-                    src="/images/poster-email.jpeg"
+                    src="/images/ca-labor-law-poster.webp"
                     alt="California State-Only Labor Law Poster"
                     className="w-full h-full object-contain"
                   />
