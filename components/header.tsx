@@ -55,7 +55,7 @@ export function Header() {
                       href="/services/essential-add-ons"
                       className="block px-4 py-3 text-sm hover:bg-gray-50 transition-colors"
                     >
-                      <div className="font-semibold text-foreground">Administrative Add-Ons</div>
+                      <div className="font-semibold text-foreground">HR Add-Ons</div>
                       <div className="text-xs text-muted-foreground">
                         Track payroll, benefits, and leave, plus talent acquisition
                       </div>
