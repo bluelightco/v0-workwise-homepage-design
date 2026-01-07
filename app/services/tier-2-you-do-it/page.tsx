@@ -17,10 +17,10 @@ export default function Tier2Page() {
               Self-service access to compliance tools and resources
             </p>
             <div className="flex items-center justify-center gap-4">
-              <Button size="lg" variant="secondary" className="text-lg">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
+              <div className="bg-indigo-600 text-white px-6 py-3 rounded-lg">
+                <div className="text-sm">Custom</div>
+                <div className="text-3xl font-bold">Pricing</div>
+              </div>
             </div>
           </div>
         </section>
