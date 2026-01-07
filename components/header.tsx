@@ -91,7 +91,7 @@ export function Header() {
             >
             <Link
               href="/webinars"
-              className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
+              className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors flex items-center gap-1"
             >
               Webinars
               <ChevronDown className="h-4 w-4" />
@@ -103,13 +103,13 @@ export function Header() {
                       href="/services/tier-3-we-do-it"
                       className="block px-4 py-3 text-sm hover:bg-gray-50 transition-colors"
                     >
-                      <div className="font-semibold text-foreground">Resell Posters</div>
+                      <div className="font-semibold text-foreground">Webinars</div>
                     </Link>
                     <Link
                       href="/services/tier-2-you-do-it"
                       className="block px-4 py-3 text-sm hover:bg-gray-50 transition-colors"
                     >
-                      <div className="font-semibold text-foreground">Refer Clients</div>
+                      <div className="font-semibold text-foreground">Trainings</div>
                     </Link>
                   </div>
                 </div>
