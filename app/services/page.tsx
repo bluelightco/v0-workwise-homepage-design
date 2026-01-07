@@ -23,32 +23,24 @@ export default function ServicesPage() {
             </p>
           </div>
 
-          {/* Growth Staircase Visual */}
           <div className="mt-16 flex items-end justify-center gap-4 max-w-2xl mx-auto">
             <div className="flex flex-col items-center flex-1">
-              <div className="bg-white/50 backdrop-blur-sm rounded-lg p-6 w-full h-24 flex items-center justify-center mb-2">
-                <span className="font-semibold text-sm text-indigo-900">Tier 1</span>
-              </div>
-              <span className="text-xs text-white/70">You Post It</span>
-            </div>
-            <div className="flex flex-col items-center flex-1">
               <div className="bg-white/60 backdrop-blur-sm rounded-lg p-6 w-full h-32 flex items-center justify-center mb-2">
-                <span className="font-semibold text-indigo-900">Tier 2</span>
+                <span className="font-semibold text-indigo-900">Essential Toolkit</span>
               </div>
-              <span className="text-xs text-white/70">You Do It</span>
+              <span className="text-xs text-white/70">Self-Service</span>
             </div>
             <div className="flex flex-col items-center flex-1">
               <div className="bg-white/70 backdrop-blur-sm rounded-lg p-6 w-full h-40 flex items-center justify-center mb-2">
-                <span className="font-semibold text-lg text-indigo-900">Tier 3</span>
+                <span className="font-semibold text-lg text-indigo-900">Pro Support</span>
               </div>
-              <span className="text-xs text-white/70">We Do It</span>
+              <span className="text-xs text-white/70">Fully Managed</span>
             </div>
             <TrendingUp className="absolute right-0 w-32 h-32 text-white/20" />
           </div>
         </div>
       </section>
 
-      {/* 3-Tier Service Model */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -56,181 +48,181 @@ export default function ServicesPage() {
             <p className="text-xl text-muted-foreground">Choose the engagement level that fits your business</p>
           </div>
 
-          {/* Tier 1: Compliance Essentials */}
           <div className="max-w-6xl mx-auto mb-12">
-            <Card className="overflow-hidden">
-              <div className="bg-indigo-100 p-6 border-b">
-                <div className="flex items-start justify-between">
+            <Card className="bg-indigo-50 border-indigo-200">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-4">
+                  <FileText className="w-6 h-6 text-indigo-600 flex-shrink-0 mt-1" />
                   <div>
-                    <div className="text-sm font-semibold text-indigo-600 mb-2">TIER 1</div>
-                    <h3 className="text-3xl font-bold mb-2">Compliance Essentials</h3>
-                    <p className="text-lg text-muted-foreground">"You Post It"</p>
-                  </div>
-                  <div className="bg-indigo-600 text-white px-4 py-2 rounded-lg">
-                    <div className="text-xs">Starting at</div>
-                    <div className="text-2xl font-bold">$99</div>
-                  </div>
-                </div>
-              </div>
-              <CardContent className="p-8">
-                <p className="text-lg mb-6">
-                  The foundational layer of compliance. We handle the regulatory tracking and ensure your physical and
-                  digital workspaces meet all state, federal, and local posting regulations.
-                </p>
-
-                <h4 className="font-semibold text-lg mb-4">What We Handle:</h4>
-                <div className="grid md:grid-cols-2 gap-6 mb-6">
-                  <div className="flex gap-3">
-                    <Check className="w-5 h-5 text-indigo-600 flex-shrink-0 mt-1" />
-                    <div>
-                      <div className="font-semibold mb-1">Auto-Update Service</div>
-                      <div className="text-sm text-muted-foreground">
-                        We monitor over 22,000 jurisdictions. When a mandatory change occurs, we automatically ship your
-                        replacement posters.
-                      </div>
-                    </div>
-                  </div>
-                  <div className="flex gap-3">
-                    <Check className="w-5 h-5 text-indigo-600 flex-shrink-0 mt-1" />
-                    <div>
-                      <div className="font-semibold mb-1">Remote Coverage</div>
-                      <div className="text-sm text-muted-foreground">
-                        Includes access to digital downloads for remote/hybrid staff.
-                      </div>
-                    </div>
-                  </div>
-                  <div className="flex gap-3">
-                    <Check className="w-5 h-5 text-indigo-600 flex-shrink-0 mt-1" />
-                    <div>
-                      <div className="font-semibold mb-1">The Guarantee</div>
-                      <div className="text-sm text-muted-foreground">
-                        Backed by our $40,000 "We Pay The Fine" Guarantee.
-                      </div>
-                    </div>
-                  </div>
-                  <div className="flex gap-3">
-                    <Check className="w-5 h-5 text-indigo-600 flex-shrink-0 mt-1" />
-                    <div>
-                      <div className="font-semibold mb-1">Space Saver Posters</div>
-                      <div className="text-sm text-muted-foreground">
-                        All-in-One format for easy display and compliance.
-                      </div>
-                    </div>
+                    <h4 className="font-semibold text-lg mb-2">Just Need Posters?</h4>
+                    <p className="text-muted-foreground mb-4">
+                      Purchase compliance posters individually with optional auto-update subscription service. Get free
+                      replacement posters when laws change mid-year, backed by our $40,000 "We Pay The Fine" guarantee.
+                    </p>
+                    <Button asChild>
+                      <Link href="/shop-posters">Shop Compliance Posters</Link>
+                    </Button>
                   </div>
                 </div>
-
-                <Button size="lg" asChild>
-                  <Link href="/products">Shop Compliance Essentials</Link>
-                </Button>
               </CardContent>
             </Card>
           </div>
 
-          {/* Tier 2: HR & Safety Toolkit */}
           <div className="max-w-6xl mx-auto mb-12">
             <Card className="overflow-hidden border-2 border-indigo-600">
               <div className="bg-indigo-600 text-white p-6 border-b">
                 <div className="flex items-start justify-between">
                   <div>
-                    <div className="text-sm font-semibold mb-2 text-indigo-200">TIER 2 • MOST POPULAR</div>
-                    <h3 className="text-3xl font-bold mb-2">HR & Safety Toolkit</h3>
-                    <p className="text-lg text-indigo-100">"You Do It"</p>
+                    <div className="text-sm font-semibold mb-2 text-indigo-200">TIER 1</div>
+                    <h3 className="text-3xl font-bold mb-2">Essential Toolkit</h3>
+                    <p className="text-lg text-indigo-100">Self-service access to compliance tools and resources</p>
                   </div>
                   <div className="bg-white text-indigo-600 px-4 py-2 rounded-lg">
                     <div className="text-xs">Starting at</div>
-                    <div className="text-2xl font-bold">$299</div>
+                    <div className="text-2xl font-bold">$199</div>
                   </div>
                 </div>
               </div>
               <CardContent className="p-8">
                 <p className="text-lg mb-6">
-                  Empower your internal team with the Employee Management System (EMS)—our cloud-based platform that
-                  centralizes your workflows and reduces administrative burden.
+                  Self-service toolkit with automatic poster updates, digital library access, and foundational
+                  compliance training. Perfect for businesses that want to manage compliance internally with quality
+                  resources.
                 </p>
 
-                <h4 className="font-semibold text-lg mb-4">What You Get:</h4>
+                <h4 className="font-semibold text-lg mb-4">Core Features:</h4>
                 <div className="grid md:grid-cols-2 gap-6 mb-6">
+                  <div className="flex gap-3">
+                    <Check className="w-5 h-5 text-indigo-600 flex-shrink-0 mt-1" />
+                    <div>
+                      <div className="font-semibold mb-1">Auto-Update Poster Subscription</div>
+                      <div className="text-sm text-muted-foreground">
+                        1 poster included with automatic replacements when laws change
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex gap-3">
+                    <Check className="w-5 h-5 text-indigo-600 flex-shrink-0 mt-1" />
+                    <div>
+                      <div className="font-semibold mb-1">Digital Library</div>
+                      <div className="text-sm text-muted-foreground">
+                        HR templates, workflows, checklists, and compliance guides
+                      </div>
+                    </div>
+                  </div>
                   <div className="flex gap-3">
                     <GraduationCap className="w-5 h-5 text-indigo-600 flex-shrink-0 mt-1" />
                     <div>
-                      <div className="font-semibold mb-1">Training Tracker (LMS)</div>
-                      <div className="text-sm text-muted-foreground">
-                        Full access to our Learning Management System to assign and track mandatory courses like Sexual
-                        Harassment Prevention.
-                      </div>
+                      <div className="font-semibold mb-1">LMS Training (2 Courses)</div>
+                      <div className="text-sm text-muted-foreground">Access to select compliance training modules</div>
                     </div>
                   </div>
                   <div className="flex gap-3">
-                    <FileText className="w-5 h-5 text-indigo-600 flex-shrink-0 mt-1" />
+                    <Check className="w-5 h-5 text-indigo-600 flex-shrink-0 mt-1" />
                     <div>
-                      <div className="font-semibold mb-1">Resource Library</div>
+                      <div className="font-semibold mb-1">10% Discount on Add-Ons</div>
                       <div className="text-sm text-muted-foreground">
-                        Unlimited downloads of attorney-reviewed HR forms, checklists, and compliance guides.
-                      </div>
-                    </div>
-                  </div>
-                  <div className="flex gap-3">
-                    <Users className="w-5 h-5 text-indigo-600 flex-shrink-0 mt-1" />
-                    <div>
-                      <div className="font-semibold mb-1">Digital Onboarding</div>
-                      <div className="text-sm text-muted-foreground">
-                        Paperless new-hire packets with e-signature capabilities.
-                      </div>
-                    </div>
-                  </div>
-                  <div className="flex gap-3">
-                    <Shield className="w-5 h-5 text-indigo-600 flex-shrink-0 mt-1" />
-                    <div>
-                      <div className="font-semibold mb-1">AI Support</div>
-                      <div className="text-sm text-muted-foreground">
-                        24/7 access to our compliance chatbot for instant answers.
+                        Additional posters, courses, and webinars at discounted rates
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <Button size="lg" className="bg-indigo-600 hover:bg-indigo-700">
-                  Demo the Toolkit
+                <Button size="lg" asChild className="bg-indigo-600 hover:bg-indigo-700">
+                  <Link href="/services/tier-2-you-do-it">Explore Essential Toolkit</Link>
                 </Button>
               </CardContent>
             </Card>
           </div>
 
-          {/* Tier 3: Virtual Director */}
           <div className="max-w-6xl mx-auto">
             <Card className="overflow-hidden">
               <div className="bg-slate-800 text-white p-6 border-b">
                 <div className="flex items-start justify-between">
                   <div>
-                    <div className="text-sm font-semibold mb-2 text-slate-300">TIER 3</div>
-                    <h3 className="text-3xl font-bold mb-2">Virtual Director</h3>
-                    <p className="text-lg text-slate-300">"We Do It"</p>
+                    <div className="text-sm font-semibold mb-2 text-slate-300">TIER 2 • MOST POPULAR</div>
+                    <h3 className="text-3xl font-bold mb-2">Pro Support</h3>
+                    <p className="text-lg text-slate-300">Fully managed compliance (Virtual and Onsite)</p>
                   </div>
                   <div className="bg-indigo-600 text-white px-4 py-2 rounded-lg">
-                    <div className="text-xs">Custom</div>
-                    <div className="text-2xl font-bold">Pricing</div>
+                    <div className="text-xs">Starting at</div>
+                    <div className="text-2xl font-bold">$349</div>
                   </div>
                 </div>
               </div>
               <CardContent className="p-8">
                 <p className="text-lg mb-6">
-                  Gain a dedicated HR and Safety Business Partner who works virtually to build your infrastructure,
-                  manage liability, and handle complex employee relations.
+                  Everything in Essential Toolkit, plus fully managed compliance with expert-led support. We handle the
+                  heavy lifting while you focus on growing your business.
                 </p>
 
                 <div className="grid md:grid-cols-2 gap-8 mb-6">
                   <div>
                     <h4 className="font-semibold text-lg mb-4 flex items-center gap-2">
-                      <Briefcase className="w-5 h-5 text-indigo-600" />
-                      HR Consulting Services
+                      <Shield className="w-5 h-5 text-indigo-600" />
+                      Managed Compliance
                     </h4>
                     <ul className="space-y-3">
                       <li className="flex gap-3">
                         <Check className="w-5 h-5 text-indigo-600 flex-shrink-0 mt-0.5" />
                         <div>
-                          <div className="font-semibold text-sm">Handbook Development</div>
+                          <div className="font-semibold text-sm">EMS Tracking System</div>
                           <div className="text-sm text-muted-foreground">
-                            Custom-written employee handbooks tailored to your culture and local laws.
+                            Track employee compliance and training with our management system
+                          </div>
+                        </div>
+                      </li>
+                      <li className="flex gap-3">
+                        <Check className="w-5 h-5 text-indigo-600 flex-shrink-0 mt-0.5" />
+                        <div>
+                          <div className="font-semibold text-sm">All-Access Library & LMS</div>
+                          <div className="text-sm text-muted-foreground">
+                            Unlimited access to resources, templates, and training modules
+                          </div>
+                        </div>
+                      </li>
+                      <li className="flex gap-3">
+                        <Check className="w-5 h-5 text-indigo-600 flex-shrink-0 mt-0.5" />
+                        <div>
+                          <div className="font-semibold text-sm">Virtual or Onsite Support</div>
+                          <div className="text-sm text-muted-foreground">
+                            Expert-led compliance management with multi-location coverage
+                          </div>
+                        </div>
+                      </li>
+                      <li className="flex gap-3">
+                        <Check className="w-5 h-5 text-indigo-600 flex-shrink-0 mt-0.5" />
+                        <div>
+                          <div className="font-semibold text-sm">2 Free Webinars/Year</div>
+                          <div className="text-sm text-muted-foreground">
+                            Live training sessions on critical compliance topics
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h4 className="font-semibold text-lg mb-4 flex items-center gap-2">
+                      <Briefcase className="w-5 h-5 text-indigo-600" />
+                      Fractional HR & Safety
+                    </h4>
+                    <ul className="space-y-3">
+                      <li className="flex gap-3">
+                        <Check className="w-5 h-5 text-indigo-600 flex-shrink-0 mt-0.5" />
+                        <div>
+                          <div className="font-semibold text-sm">Policies & SOPs</div>
+                          <div className="text-sm text-muted-foreground">
+                            We create, maintain, and implement all HR and safety policies
+                          </div>
+                        </div>
+                      </li>
+                      <li className="flex gap-3">
+                        <Check className="w-5 h-5 text-indigo-600 flex-shrink-0 mt-0.5" />
+                        <div>
+                          <div className="font-semibold text-sm">Training Programs</div>
+                          <div className="text-sm text-muted-foreground">
+                            Fully designed, delivered, and tracked by our team
                           </div>
                         </div>
                       </li>
@@ -239,52 +231,16 @@ export default function ServicesPage() {
                         <div>
                           <div className="font-semibold text-sm">Employee Relations</div>
                           <div className="text-sm text-muted-foreground">
-                            Guidance on disciplinary actions, terminations, and internal investigations.
+                            We act on behalf of your company for HR issues
                           </div>
                         </div>
                       </li>
                       <li className="flex gap-3">
                         <Check className="w-5 h-5 text-indigo-600 flex-shrink-0 mt-0.5" />
                         <div>
-                          <div className="font-semibold text-sm">Compensation Analysis</div>
+                          <div className="font-semibold text-sm">Salary Benchmarking</div>
                           <div className="text-sm text-muted-foreground">
-                            Benchmarking data to ensure competitive and compliant pay structures.
-                          </div>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div>
-                    <h4 className="font-semibold text-lg mb-4 flex items-center gap-2">
-                      <HardHat className="w-5 h-5 text-indigo-600" />
-                      Safety Consulting Services
-                    </h4>
-                    <ul className="space-y-3">
-                      <li className="flex gap-3">
-                        <Check className="w-5 h-5 text-indigo-600 flex-shrink-0 mt-0.5" />
-                        <div>
-                          <div className="font-semibold text-sm">IIPP Development</div>
-                          <div className="text-sm text-muted-foreground">
-                            Creation of your mandatory Injury & Illness Prevention Program.
-                          </div>
-                        </div>
-                      </li>
-                      <li className="flex gap-3">
-                        <Check className="w-5 h-5 text-indigo-600 flex-shrink-0 mt-0.5" />
-                        <div>
-                          <div className="font-semibold text-sm">Risk Assessments</div>
-                          <div className="text-sm text-muted-foreground">
-                            Virtual audits of your safety protocols and hazard identification.
-                          </div>
-                        </div>
-                      </li>
-                      <li className="flex gap-3">
-                        <Check className="w-5 h-5 text-indigo-600 flex-shrink-0 mt-0.5" />
-                        <div>
-                          <div className="font-semibold text-sm">OSHA Response</div>
-                          <div className="text-sm text-muted-foreground">
-                            Expert guidance and representation during regulatory inquiries.
+                            Comprehensive analysis performed and reported by us
                           </div>
                         </div>
                       </li>
@@ -292,8 +248,8 @@ export default function ServicesPage() {
                   </div>
                 </div>
 
-                <Button size="lg" variant="outline">
-                  Meet Your Virtual Partner
+                <Button size="lg" variant="outline" asChild>
+                  <Link href="/services/tier-3-we-do-it">Learn About Pro Support</Link>
                 </Button>
               </CardContent>
             </Card>
