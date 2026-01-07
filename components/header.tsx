@@ -7,6 +7,7 @@ import { useState } from "react"
 
 export function Header() {
   const [servicesOpen, setServicesOpen] = useState(false)
+  const [affiliatesOpen, setAffiliatesOpen] = useState(false)
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -52,8 +53,8 @@ export function Header() {
 
                         <div
               className="relative"
-              onMouseEnter={() => setServicesOpen(true)}
-              onMouseLeave={() => setServicesOpen(false)}
+              onMouseEnter={() => setAffiliatesOpen(true)}
+              onMouseLeave={() => setAffiliatesOpen(false)}
             >
               <Link
                 href="/services"
@@ -63,7 +64,7 @@ export function Header() {
                 <ChevronDown className="h-4 w-4" />
               </Link>
 
-              {servicesOpen && (
+              {affiliatesOpen && (
                 <div className="absolute top-full left-0 pt-2 z-50">
                   <div className="w-80 bg-white border rounded-lg shadow-lg py-2">
                     <Link
