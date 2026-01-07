@@ -8,6 +8,7 @@ import { useState } from "react"
 export function Header() {
   const [servicesOpen, setServicesOpen] = useState(false)
   const [affiliatesOpen, setAffiliatesOpen] = useState(false)
+  const [trainingsOpen, setTrainingsOpen] = useState(false)
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -53,8 +54,8 @@ export function Header() {
 
                         <div
               className="relative"
-              onMouseEnter={() => setAffiliatesOpen(true)}
-              onMouseLeave={() => setAffiliatesOpen(false)}
+              onMouseEnter={() => setTrainingsOpen(true)}
+              onMouseLeave={() => setTrainingsOpen(false)}
             >
               <Link
                 href="/services"
@@ -64,7 +65,7 @@ export function Header() {
                 <ChevronDown className="h-4 w-4" />
               </Link>
 
-              {affiliatesOpen && (
+              {trainingsOpen && (
                 <div className="absolute top-full left-0 pt-2 z-50">
                   <div className="w-80 bg-white border rounded-lg shadow-lg py-2">
                     <Link
@@ -83,13 +84,37 @@ export function Header() {
                 </div>
               )}
             </div>
-
+                        <div
+              className="relative"
+              onMouseEnter={() => setAffiliatesOpen(true)}
+              onMouseLeave={() => setAffiliatesOpen(false)}
+            >
             <Link
               href="/webinars"
               className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
             >
               Webinars
+              <ChevronDown className="h-4 w-4" />
             </Link>
+                          {affiliatesOpen && (
+                <div className="absolute top-full left-0 pt-2 z-50">
+                  <div className="w-80 bg-white border rounded-lg shadow-lg py-2">
+                    <Link
+                      href="/services/tier-3-we-do-it"
+                      className="block px-4 py-3 text-sm hover:bg-gray-50 transition-colors"
+                    >
+                      <div className="font-semibold text-foreground">Resell Posters</div>
+                    </Link>
+                    <Link
+                      href="/services/tier-2-you-do-it"
+                      className="block px-4 py-3 text-sm hover:bg-gray-50 transition-colors"
+                    >
+                      <div className="font-semibold text-foreground">Refer Clients</div>
+                    </Link>
+                  </div>
+                </div>
+              )}
+            </div>
             <Link
               href="/about"
               className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
