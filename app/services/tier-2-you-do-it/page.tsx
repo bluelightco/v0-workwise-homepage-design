@@ -18,8 +18,8 @@ export default function Tier2Page() {
             </p>
             <div className="flex items-center justify-center gap-4">
               <div className="bg-indigo-600 text-white px-6 py-3 rounded-lg">
-                <div className="text-sm">Custom</div>
-                <div className="text-3xl font-bold">Pricing</div>
+                <div className="text-sm">$149</div>
+                <div className="text-3xl font-bold">per month</div>
               </div>
             </div>
           </div>
