@@ -54,8 +54,8 @@ export function Header() {
 
                         <div
               className="relative"
-              onMouseEnter={() => setTrainingsOpen(true)}
-              onMouseLeave={() => setTrainingsOpen(false)}
+              onMouseEnter={() => setAffiliatesOpen(true)}
+              onMouseLeave={() => setAffiliatesOpen(false)}
             >
               <Link
                 href="/services"
@@ -65,7 +65,7 @@ export function Header() {
                 <ChevronDown className="h-4 w-4" />
               </Link>
 
-              {trainingsOpen && (
+              {affiliatesOpen && (
                 <div className="absolute top-full left-0 pt-2 z-50">
                   <div className="w-80 bg-white border rounded-lg shadow-lg py-2">
                     <Link
@@ -84,19 +84,19 @@ export function Header() {
                 </div>
               )}
             </div>
-                        <div
+            <div
               className="relative"
-              onMouseEnter={() => setAffiliatesOpen(true)}
-              onMouseLeave={() => setAffiliatesOpen(false)}
+              onMouseEnter={() => setTrainingsOpen(true)}
+              onMouseLeave={() => setTrainingsOpen(false)}
             >
             <Link
               href="/webinars"
               className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors flex items-center gap-1"
             >
-              Education
+              Webinars
               <ChevronDown className="h-4 w-4" />
             </Link>
-                          {affiliatesOpen && (
+               {trainingsOpen && (
                 <div className="absolute top-full left-0 pt-2 z-50">
                   <div className="w-80 bg-white border rounded-lg shadow-lg py-2">
                     <Link
