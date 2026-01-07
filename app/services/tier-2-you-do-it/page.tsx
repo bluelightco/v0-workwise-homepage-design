@@ -234,12 +234,6 @@ export default function Tier2Page() {
                         </div>
                       </li>
                     </ul>
-                    <div className="mt-6 p-4 bg-amber-50 border border-amber-200 rounded-lg">
-                      <p className="text-sm text-amber-900">
-                        <span className="font-semibold">Note:</span> All tools and workflows are fully self-serve — no
-                        active support or updates from our team included
-                      </p>
-                    </div>
                   </CardContent>
                 </Card>
               </div>
