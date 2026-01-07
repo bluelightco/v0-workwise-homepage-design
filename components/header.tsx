@@ -41,7 +41,7 @@ export function Header() {
                       href="/services/tier-2-you-do-it"
                       className="block px-4 py-3 text-sm hover:bg-gray-50 transition-colors"
                     >
-                      <div className="font-semibold text-foreground">Essential Tools</div>
+                      <div className="font-semibold text-foreground">Essential Toolkit</div>
                       <div className="text-xs text-muted-foreground">Self-service compliance tools and support</div>
                     </Link>
                     <Link
