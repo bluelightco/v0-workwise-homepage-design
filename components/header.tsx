@@ -93,7 +93,7 @@ export function Header() {
               href="/webinars"
               className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors flex items-center gap-1"
             >
-              Webinars
+              Education
               <ChevronDown className="h-4 w-4" />
             </Link>
                           {affiliatesOpen && (
