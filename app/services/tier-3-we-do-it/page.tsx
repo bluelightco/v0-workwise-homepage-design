@@ -1,11 +1,11 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Check, Briefcase, HardHat } from "lucide-react"
+import { Check, Shield, Users, BookOpen, Calendar, Bell, FileText, TrendingUp, HeadphonesIcon } from "lucide-react"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 
-export default function Tier3Page() {
+export default function ProSupportPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
@@ -16,50 +16,47 @@ export default function Tier3Page() {
             <div className="inline-block bg-white/20 text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
               PREMIUM
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">Virtual Director</h1>
-            <p className="text-2xl mb-4 text-slate-100">"We Do It"</p>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">Pro Support</h1>
             <p className="text-xl text-slate-200 max-w-3xl mx-auto mb-8">
-              Gain a dedicated HR and Safety Business Partner who works virtually to build your infrastructure, manage
-              liability, and handle complex employee relations.
+              Everything in the Essential Toolkit, plus fully managed compliance (Virtual and Onsite)
             </p>
             <div className="flex items-center justify-center gap-4">
               <div className="bg-indigo-600 text-white px-6 py-3 rounded-lg">
-                <div className="text-sm">Custom</div>
-                <div className="text-3xl font-bold">Pricing</div>
+                <div className="text-sm">Starting at</div>
+                <div className="text-3xl font-bold">
+                  $349<span className="text-lg font-normal">/mo</span>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* What's Included from Previous Tiers */}
+        {/* What's Included from Essential Toolkit */}
         <section className="py-12 bg-slate-50">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <h3 className="text-2xl font-bold mb-6">Everything in You Post It & You Do It:</h3>
+              <h3 className="text-2xl font-bold mb-6">Everything in Essential Toolkit:</h3>
               <div className="flex flex-wrap justify-center gap-4 text-sm mb-8">
-                <span className="bg-white px-4 py-2 rounded-full">Auto-Update Service</span>
-                <span className="bg-white px-4 py-2 rounded-full">Remote Coverage</span>
-                <span className="bg-white px-4 py-2 rounded-full">$40K Guarantee</span>
-                <span className="bg-white px-4 py-2 rounded-full">Training Tracker (LMS)</span>
+                <span className="bg-white px-4 py-2 rounded-full">Poster Auto-Updates</span>
                 <span className="bg-white px-4 py-2 rounded-full">Digital Library</span>
-                <span className="bg-white px-4 py-2 rounded-full">Resource Library</span>
-                <span className="bg-white px-4 py-2 rounded-full">Digital Onboarding</span>
-                <span className="bg-white px-4 py-2 rounded-full">AI Support</span>
+                <span className="bg-white px-4 py-2 rounded-full">LMS Training Modules</span>
+                <span className="bg-white px-4 py-2 rounded-full">Newsletter Updates</span>
+                <span className="bg-white px-4 py-2 rounded-full">10% Webinar Discount</span>
               </div>
               <h3 className="text-2xl font-bold text-indigo-600">Plus:</h3>
             </div>
           </div>
         </section>
 
-        {/* New Features - HR Consulting */}
+        {/* Managed Compliance */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-12">
-                <Briefcase className="w-16 h-16 text-indigo-600 mx-auto mb-4" />
-                <h2 className="text-4xl font-bold mb-4">HR Consulting Services</h2>
+                <Shield className="w-16 h-16 text-indigo-600 mx-auto mb-4" />
+                <h2 className="text-4xl font-bold mb-4">Managed Compliance</h2>
                 <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                  Your dedicated HR Business Partner handles the complex work so you can focus on running your business.
+                  Expert-led compliance management with virtual or onsite support
                 </p>
               </div>
 
@@ -67,27 +64,15 @@ export default function Tier3Page() {
                 <Card>
                   <CardContent className="p-8">
                     <div className="flex gap-4">
-                      <Check className="w-6 h-6 text-indigo-600 flex-shrink-0 mt-1" />
+                      <BookOpen className="w-8 h-8 text-indigo-600 flex-shrink-0 mt-1" />
                       <div>
-                        <h3 className="font-bold text-xl mb-3">Handbook Development</h3>
-                        <p className="text-muted-foreground mb-4">
-                          Custom-written employee handbooks tailored to your culture and local laws. We draft policies
-                          that protect your business while reflecting your values.
+                        <h3 className="font-bold text-xl mb-3">
+                          Access to EMS for tracking employee compliance and training
+                        </h3>
+                        <p className="text-muted-foreground">
+                          Complete employee management system to track all compliance requirements, training
+                          certifications, and deadlines.
                         </p>
-                        <ul className="space-y-2 text-sm">
-                          <li className="flex gap-2">
-                            <Check className="w-4 h-4 text-indigo-600 flex-shrink-0 mt-0.5" />
-                            <span>State and industry-specific policies</span>
-                          </li>
-                          <li className="flex gap-2">
-                            <Check className="w-4 h-4 text-indigo-600 flex-shrink-0 mt-0.5" />
-                            <span>Annual reviews and updates</span>
-                          </li>
-                          <li className="flex gap-2">
-                            <Check className="w-4 h-4 text-indigo-600 flex-shrink-0 mt-0.5" />
-                            <span>Employee acknowledgment tracking</span>
-                          </li>
-                        </ul>
                       </div>
                     </div>
                   </CardContent>
@@ -96,27 +81,13 @@ export default function Tier3Page() {
                 <Card>
                   <CardContent className="p-8">
                     <div className="flex gap-4">
-                      <Check className="w-6 h-6 text-indigo-600 flex-shrink-0 mt-1" />
+                      <FileText className="w-8 h-8 text-indigo-600 flex-shrink-0 mt-1" />
                       <div>
-                        <h3 className="font-bold text-xl mb-3">Employee Relations</h3>
-                        <p className="text-muted-foreground mb-4">
-                          Guidance on disciplinary actions, terminations, and internal investigations. We coach you
-                          through difficult conversations and document everything properly.
+                        <h3 className="font-bold text-xl mb-3">All-Access Digital library</h3>
+                        <p className="text-muted-foreground">
+                          Unlimited access to resources, templates, and guidance documents for comprehensive compliance
+                          management.
                         </p>
-                        <ul className="space-y-2 text-sm">
-                          <li className="flex gap-2">
-                            <Check className="w-4 h-4 text-indigo-600 flex-shrink-0 mt-0.5" />
-                            <span>Performance improvement plans</span>
-                          </li>
-                          <li className="flex gap-2">
-                            <Check className="w-4 h-4 text-indigo-600 flex-shrink-0 mt-0.5" />
-                            <span>Termination scripting and support</span>
-                          </li>
-                          <li className="flex gap-2">
-                            <Check className="w-4 h-4 text-indigo-600 flex-shrink-0 mt-0.5" />
-                            <span>Harassment/discrimination investigations</span>
-                          </li>
-                        </ul>
                       </div>
                     </div>
                   </CardContent>
@@ -125,27 +96,12 @@ export default function Tier3Page() {
                 <Card>
                   <CardContent className="p-8">
                     <div className="flex gap-4">
-                      <Check className="w-6 h-6 text-indigo-600 flex-shrink-0 mt-1" />
+                      <Users className="w-8 h-8 text-indigo-600 flex-shrink-0 mt-1" />
                       <div>
-                        <h3 className="font-bold text-xl mb-3">Compensation Analysis</h3>
-                        <p className="text-muted-foreground mb-4">
-                          Benchmarking data to ensure competitive and compliant pay structures. We help you attract
-                          talent while managing costs.
+                        <h3 className="font-bold text-xl mb-3">All-Access LMS training modules</h3>
+                        <p className="text-muted-foreground">
+                          Full library of learning management system courses for all employees across your organization.
                         </p>
-                        <ul className="space-y-2 text-sm">
-                          <li className="flex gap-2">
-                            <Check className="w-4 h-4 text-indigo-600 flex-shrink-0 mt-0.5" />
-                            <span>Market rate surveys by role</span>
-                          </li>
-                          <li className="flex gap-2">
-                            <Check className="w-4 h-4 text-indigo-600 flex-shrink-0 mt-0.5" />
-                            <span>Pay equity audits</span>
-                          </li>
-                          <li className="flex gap-2">
-                            <Check className="w-4 h-4 text-indigo-600 flex-shrink-0 mt-0.5" />
-                            <span>Benefits benchmarking</span>
-                          </li>
-                        </ul>
                       </div>
                     </div>
                   </CardContent>
@@ -154,27 +110,87 @@ export default function Tier3Page() {
                 <Card>
                   <CardContent className="p-8">
                     <div className="flex gap-4">
-                      <Check className="w-6 h-6 text-indigo-600 flex-shrink-0 mt-1" />
+                      <Calendar className="w-8 h-8 text-indigo-600 flex-shrink-0 mt-1" />
                       <div>
-                        <h3 className="font-bold text-xl mb-3">Strategic HR Planning</h3>
-                        <p className="text-muted-foreground mb-4">
-                          Organizational design, succession planning, and workforce strategy. We help you build a
-                          scalable HR infrastructure.
+                        <h3 className="font-bold text-xl mb-3">2 Free Webinars / Year</h3>
+                        <p className="text-muted-foreground">
+                          Complimentary access to two expert-led webinar trainings annually on critical compliance
+                          topics.
                         </p>
-                        <ul className="space-y-2 text-sm">
-                          <li className="flex gap-2">
-                            <Check className="w-4 h-4 text-indigo-600 flex-shrink-0 mt-0.5" />
-                            <span>Org chart development</span>
-                          </li>
-                          <li className="flex gap-2">
-                            <Check className="w-4 h-4 text-indigo-600 flex-shrink-0 mt-0.5" />
-                            <span>Talent retention strategies</span>
-                          </li>
-                          <li className="flex gap-2">
-                            <Check className="w-4 h-4 text-indigo-600 flex-shrink-0 mt-0.5" />
-                            <span>Culture development initiatives</span>
-                          </li>
-                        </ul>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card>
+                  <CardContent className="p-8">
+                    <div className="flex gap-4">
+                      <HeadphonesIcon className="w-8 h-8 text-indigo-600 flex-shrink-0 mt-1" />
+                      <div>
+                        <h3 className="font-bold text-xl mb-3">Expert-led compliance management</h3>
+                        <p className="text-muted-foreground">
+                          Dedicated compliance professionals managing your regulatory requirements and keeping you
+                          audit-ready.
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card>
+                  <CardContent className="p-8">
+                    <div className="flex gap-4">
+                      <Check className="w-8 h-8 text-indigo-600 flex-shrink-0 mt-1" />
+                      <div>
+                        <h3 className="font-bold text-xl mb-3">Virtual or onsite support</h3>
+                        <p className="text-muted-foreground">
+                          Flexible service delivery with both remote assistance and in-person site visits when needed.
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card>
+                  <CardContent className="p-8">
+                    <div className="flex gap-4">
+                      <Check className="w-8 h-8 text-indigo-600 flex-shrink-0 mt-1" />
+                      <div>
+                        <h3 className="font-bold text-xl mb-3">Handling multi-location compliance postings</h3>
+                        <p className="text-muted-foreground">
+                          Expert management of poster compliance across all your locations with proper state and local
+                          variations.
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card>
+                  <CardContent className="p-8">
+                    <div className="flex gap-4">
+                      <Bell className="w-8 h-8 text-indigo-600 flex-shrink-0 mt-1" />
+                      <div>
+                        <h3 className="font-bold text-xl mb-3">Notifications/reminders for compliance deadlines</h3>
+                        <p className="text-muted-foreground">
+                          Proactive alerts and reminders ensure you never miss critical filing dates or renewal
+                          requirements.
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card className="md:col-span-2">
+                  <CardContent className="p-8">
+                    <div className="flex gap-4">
+                      <Bell className="w-8 h-8 text-indigo-600 flex-shrink-0 mt-1" />
+                      <div>
+                        <h3 className="font-bold text-xl mb-3">Newsletter updates (optional)</h3>
+                        <p className="text-muted-foreground">
+                          Regular updates on compliance news, regulatory changes, and best practices delivered to your
+                          inbox.
+                        </p>
                       </div>
                     </div>
                   </CardContent>
@@ -184,15 +200,15 @@ export default function Tier3Page() {
           </div>
         </section>
 
-        {/* Safety Consulting */}
+        {/* Fractional HR & Safety Services */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-12">
-                <HardHat className="w-16 h-16 text-indigo-600 mx-auto mb-4" />
-                <h2 className="text-4xl font-bold mb-4">Safety Consulting Services</h2>
+                <Users className="w-16 h-16 text-indigo-600 mx-auto mb-4" />
+                <h2 className="text-4xl font-bold mb-4">Fractional HR & Safety Services</h2>
                 <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                  Your dedicated Safety Business Partner ensures OSHA compliance and builds a proactive safety culture.
+                  We do it for you - comprehensive HR and safety management handled by our expert team
                 </p>
               </div>
 
@@ -202,25 +218,11 @@ export default function Tier3Page() {
                     <div className="flex gap-4">
                       <Check className="w-6 h-6 text-indigo-600 flex-shrink-0 mt-1" />
                       <div>
-                        <h3 className="font-bold text-xl mb-3">IIPP Development</h3>
-                        <p className="text-muted-foreground mb-4">
-                          Creation of your mandatory Injury & Illness Prevention Program. We write comprehensive,
-                          site-specific safety plans.
+                        <h3 className="font-bold text-xl mb-3">SOPs and HR/Safety policies</h3>
+                        <p className="text-muted-foreground">
+                          Fully created, maintained, and implemented by our team. We develop comprehensive standard
+                          operating procedures and policies tailored to your organization.
                         </p>
-                        <ul className="space-y-2 text-sm">
-                          <li className="flex gap-2">
-                            <Check className="w-4 h-4 text-indigo-600 flex-shrink-0 mt-0.5" />
-                            <span>Hazard assessment and control plans</span>
-                          </li>
-                          <li className="flex gap-2">
-                            <Check className="w-4 h-4 text-indigo-600 flex-shrink-0 mt-0.5" />
-                            <span>Emergency action procedures</span>
-                          </li>
-                          <li className="flex gap-2">
-                            <Check className="w-4 h-4 text-indigo-600 flex-shrink-0 mt-0.5" />
-                            <span>Annual program updates</span>
-                          </li>
-                        </ul>
                       </div>
                     </div>
                   </CardContent>
@@ -231,25 +233,11 @@ export default function Tier3Page() {
                     <div className="flex gap-4">
                       <Check className="w-6 h-6 text-indigo-600 flex-shrink-0 mt-1" />
                       <div>
-                        <h3 className="font-bold text-xl mb-3">Risk Assessments</h3>
-                        <p className="text-muted-foreground mb-4">
-                          Virtual audits of your safety protocols and hazard identification. We identify gaps before
-                          regulators do.
+                        <h3 className="font-bold text-xl mb-3">Employee training programs</h3>
+                        <p className="text-muted-foreground">
+                          Fully designed, delivered, and tracked by our experts. Custom training programs created and
+                          executed for your workforce.
                         </p>
-                        <ul className="space-y-2 text-sm">
-                          <li className="flex gap-2">
-                            <Check className="w-4 h-4 text-indigo-600 flex-shrink-0 mt-0.5" />
-                            <span>Job hazard analyses</span>
-                          </li>
-                          <li className="flex gap-2">
-                            <Check className="w-4 h-4 text-indigo-600 flex-shrink-0 mt-0.5" />
-                            <span>PPE assessments</span>
-                          </li>
-                          <li className="flex gap-2">
-                            <Check className="w-4 h-4 text-indigo-600 flex-shrink-0 mt-0.5" />
-                            <span>Safety committee facilitation</span>
-                          </li>
-                        </ul>
                       </div>
                     </div>
                   </CardContent>
@@ -260,25 +248,11 @@ export default function Tier3Page() {
                     <div className="flex gap-4">
                       <Check className="w-6 h-6 text-indigo-600 flex-shrink-0 mt-1" />
                       <div>
-                        <h3 className="font-bold text-xl mb-3">OSHA Response</h3>
-                        <p className="text-muted-foreground mb-4">
-                          Expert guidance and representation during regulatory inquiries. We handle inspections,
-                          citations, and appeals.
+                        <h3 className="font-bold text-xl mb-3">Unlimited consultation & advisory</h3>
+                        <p className="text-muted-foreground">
+                          Proactively identify issues, provide recommendations, and execute solutions. Ongoing strategic
+                          guidance for your HR and safety needs.
                         </p>
-                        <ul className="space-y-2 text-sm">
-                          <li className="flex gap-2">
-                            <Check className="w-4 h-4 text-indigo-600 flex-shrink-0 mt-0.5" />
-                            <span>Inspection preparation and walkthroughs</span>
-                          </li>
-                          <li className="flex gap-2">
-                            <Check className="w-4 h-4 text-indigo-600 flex-shrink-0 mt-0.5" />
-                            <span>Citation abatement strategies</span>
-                          </li>
-                          <li className="flex gap-2">
-                            <Check className="w-4 h-4 text-indigo-600 flex-shrink-0 mt-0.5" />
-                            <span>Recordkeeping compliance (300 Logs)</span>
-                          </li>
-                        </ul>
                       </div>
                     </div>
                   </CardContent>
@@ -289,25 +263,56 @@ export default function Tier3Page() {
                     <div className="flex gap-4">
                       <Check className="w-6 h-6 text-indigo-600 flex-shrink-0 mt-1" />
                       <div>
-                        <h3 className="font-bold text-xl mb-3">Incident Management</h3>
-                        <p className="text-muted-foreground mb-4">
-                          Post-incident investigations, root cause analysis, and corrective action planning. Turn
-                          incidents into learning opportunities.
+                        <h3 className="font-bold text-xl mb-3">Employee relations support</h3>
+                        <p className="text-muted-foreground">
+                          We act on behalf of the company handling investigations, disciplinary actions, and sensitive
+                          employee matters professionally.
                         </p>
-                        <ul className="space-y-2 text-sm">
-                          <li className="flex gap-2">
-                            <Check className="w-4 h-4 text-indigo-600 flex-shrink-0 mt-0.5" />
-                            <span>Accident investigation protocols</span>
-                          </li>
-                          <li className="flex gap-2">
-                            <Check className="w-4 h-4 text-indigo-600 flex-shrink-0 mt-0.5" />
-                            <span>Workers' comp coordination</span>
-                          </li>
-                          <li className="flex gap-2">
-                            <Check className="w-4 h-4 text-indigo-600 flex-shrink-0 mt-0.5" />
-                            <span>Return-to-work programs</span>
-                          </li>
-                        </ul>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card>
+                  <CardContent className="p-8">
+                    <div className="flex gap-4">
+                      <TrendingUp className="w-6 h-6 text-indigo-600 flex-shrink-0 mt-1" />
+                      <div>
+                        <h3 className="font-bold text-xl mb-3">Salary benchmarking and analysis</h3>
+                        <p className="text-muted-foreground">
+                          Performed and reported by us. Comprehensive market analysis to ensure competitive compensation
+                          structures.
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card>
+                  <CardContent className="p-8">
+                    <div className="flex gap-4">
+                      <Bell className="w-6 h-6 text-indigo-600 flex-shrink-0 mt-1" />
+                      <div>
+                        <h3 className="font-bold text-xl mb-3">Proactive updates and recommendations</h3>
+                        <p className="text-muted-foreground">
+                          We lead implementation of compliance changes, keeping you ahead of regulatory requirements and
+                          industry best practices.
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card className="md:col-span-2">
+                  <CardContent className="p-8">
+                    <div className="flex gap-4">
+                      <Check className="w-6 h-6 text-indigo-600 flex-shrink-0 mt-1" />
+                      <div>
+                        <h3 className="font-bold text-xl mb-3">Other HR/Safety services</h3>
+                        <p className="text-muted-foreground">
+                          Led by our team. Comprehensive support for audits, risk assessments, handbook development, and
+                          any specialized HR or safety needs your organization requires.
+                        </p>
                       </div>
                     </div>
                   </CardContent>
@@ -353,9 +358,10 @@ export default function Tier3Page() {
         <section className="py-20 bg-slate-800 text-white">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-4xl font-bold mb-6">Ready to Partner with Experts?</h2>
+              <h2 className="text-4xl font-bold mb-6">Ready for Pro Support?</h2>
               <p className="text-xl text-slate-300 mb-8">
-                Schedule a consultation to discuss your specific needs and get a custom proposal for Tier 3 services.
+                Schedule a consultation to discuss how our fully managed compliance services can protect and grow your
+                business.
               </p>
               <Button size="lg" className="bg-indigo-600 hover:bg-indigo-700" asChild>
                 <Link href="/contact">Schedule a Consultation</Link>
