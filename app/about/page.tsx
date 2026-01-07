@@ -43,6 +43,9 @@ export default function AboutPage() {
               <p className="text-lg leading-relaxed">
                 At WorkWise Compliance, our mission is to empower businesses with effortless workplace compliance solutions and essential workplace resources, enabling them to thrive in today's dynamic regulatory landscape.
               </p>
+              <p className="text-lg leading-relaxed">
+                Our vision is to revolutionize the way businesses approach compliance, becoming the go-to destination for comprehensive compliance solutions and trusted resources.
+              </p>
               <div className="bg-purple-50 border-l-4 border-purple-600 p-6 mt-8">
                 <p className="text-lg font-semibold text-slate-900">
                   Our Mission: To empower businesses with effortless compliance solutions, allowing owners to focus on
