@@ -33,32 +33,50 @@ export function Header() {
               {servicesOpen && (
                 <div className="absolute top-full left-0 pt-2 z-50">
                   <div className="w-80 bg-white border rounded-lg shadow-lg py-2">
-                    <Link href="/shop-posters" className="block px-4 py-3 text-sm hover:bg-gray-50 transition-colors">
-                      <div className="font-semibold text-foreground">Posters</div>
-                      <div className="text-xs text-muted-foreground">Posters + automatic updates for the year</div>
+                    <Link
+                      href="/services/tier-3-we-do-it"
+                      className="block px-4 py-3 text-sm hover:bg-gray-50 transition-colors"
+                    >
+                      <div className="font-semibold text-foreground">HR & Safety</div>
                     </Link>
                     <Link
                       href="/services/tier-2-you-do-it"
                       className="block px-4 py-3 text-sm hover:bg-gray-50 transition-colors"
                     >
-                      <div className="font-semibold text-foreground">Essential Toolkit</div>
-                      <div className="text-xs text-muted-foreground">Self-service compliance tools and support</div>
+                      <div className="font-semibold text-foreground">Digital</div>
                     </Link>
+                  </div>
+                </div>
+              )}
+            </div>
+
+                        <div
+              className="relative"
+              onMouseEnter={() => setServicesOpen(true)}
+              onMouseLeave={() => setServicesOpen(false)}
+            >
+              <Link
+                href="/services"
+                className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors flex items-center gap-1"
+              >
+                Affiliates
+                <ChevronDown className="h-4 w-4" />
+              </Link>
+
+              {servicesOpen && (
+                <div className="absolute top-full left-0 pt-2 z-50">
+                  <div className="w-80 bg-white border rounded-lg shadow-lg py-2">
                     <Link
                       href="/services/tier-3-we-do-it"
                       className="block px-4 py-3 text-sm hover:bg-gray-50 transition-colors"
                     >
-                      <div className="font-semibold text-foreground">Pro Support</div>
-                      <div className="text-xs text-muted-foreground">Fully managed compliance (Virtual / Onsite)</div>
+                      <div className="font-semibold text-foreground">Resell Posters</div>
                     </Link>
                     <Link
-                      href="/services/essential-add-ons"
+                      href="/services/tier-2-you-do-it"
                       className="block px-4 py-3 text-sm hover:bg-gray-50 transition-colors"
                     >
-                      <div className="font-semibold text-foreground">HR Add-Ons</div>
-                      <div className="text-xs text-muted-foreground">
-                        Track payroll, benefits, and leave, plus talent acquisition
-                      </div>
+                      <div className="font-semibold text-foreground">Refer Clients</div>
                     </Link>
                   </div>
                 </div>
