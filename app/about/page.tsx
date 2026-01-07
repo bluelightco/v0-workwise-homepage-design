@@ -33,7 +33,7 @@ export default function AboutPage() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold text-slate-900 mb-8 text-center">Two Paths, One Mission.</h2>
+            <h2 className="text-4xl font-bold text-slate-900 mb-8 text-center">Our Mission.</h2>
             <div className="prose prose-lg max-w-none text-slate-700 space-y-6">
               <p className="text-lg leading-relaxed">
                 For over 35 years, Workwise Compliance has been the silent guardian for businesses across America,
@@ -41,14 +41,7 @@ export default function AboutPage() {
                 companies audit-ready. We built our reputation on reliability and our "We Pay The Fine" guarantee.
               </p>
               <p className="text-lg leading-relaxed">
-                Meanwhile, Bizhaven was born from a desire to do more than just supply products. Founded on the belief
-                that "A company is only as good as the people it keeps," Bizhaven disrupted the industry by offering
-                hands-on, face-to-face HR and safety consulting that felt less like outsourcing and more like family.
-              </p>
-              <p className="text-lg leading-relaxed">
-                Today, we are one. By bringing Bizhaven under the Workwise banner, we have created a singular solution
-                for every stage of business. Whether you need a simple poster subscription or a dedicated Virtual HR
-                Director, we have the tools, the technology, and the people to make it happen.
+                At WorkWise Compliance, our mission is to empower businesses with effortless workplace compliance solutions and essential workplace resources, enabling them to thrive in today's dynamic regulatory landscape.
               </p>
               <div className="bg-purple-50 border-l-4 border-purple-600 p-6 mt-8">
                 <p className="text-lg font-semibold text-slate-900">
