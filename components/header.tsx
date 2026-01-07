@@ -69,13 +69,13 @@ export function Header() {
                 <div className="absolute top-full left-0 pt-2 z-50">
                   <div className="w-80 bg-white border rounded-lg shadow-lg py-2">
                     <Link
-                      href="/services/tier-3-we-do-it"
+                      href="/resell-refer"
                       className="block px-4 py-3 text-sm hover:bg-gray-50 transition-colors"
                     >
                       <div className="font-semibold text-foreground">Resell Posters</div>
                     </Link>
                     <Link
-                      href="/services/tier-2-you-do-it"
+                      href="/resell-refer"
                       className="block px-4 py-3 text-sm hover:bg-gray-50 transition-colors"
                     >
                       <div className="font-semibold text-foreground">Refer Clients</div>
