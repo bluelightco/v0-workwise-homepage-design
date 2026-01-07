@@ -52,7 +52,14 @@ export function Header() {
               )}
             </div>
 
-                        <div
+            <Link
+              href="/pricing"
+              className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
+            >
+              Pricing
+            </Link>
+
+            <div
               className="relative"
               onMouseEnter={() => setAffiliatesOpen(true)}
               onMouseLeave={() => setAffiliatesOpen(false)}
@@ -68,16 +75,10 @@ export function Header() {
               {affiliatesOpen && (
                 <div className="absolute top-full left-0 pt-2 z-50">
                   <div className="w-80 bg-white border rounded-lg shadow-lg py-2">
-                    <Link
-                      href="/resell-refer"
-                      className="block px-4 py-3 text-sm hover:bg-gray-50 transition-colors"
-                    >
+                    <Link href="/resell-refer" className="block px-4 py-3 text-sm hover:bg-gray-50 transition-colors">
                       <div className="font-semibold text-foreground">Resell Posters</div>
                     </Link>
-                    <Link
-                      href="/resell-refer"
-                      className="block px-4 py-3 text-sm hover:bg-gray-50 transition-colors"
-                    >
+                    <Link href="/resell-refer" className="block px-4 py-3 text-sm hover:bg-gray-50 transition-colors">
                       <div className="font-semibold text-foreground">Refer Clients</div>
                     </Link>
                   </div>
@@ -89,14 +90,14 @@ export function Header() {
               onMouseEnter={() => setTrainingsOpen(true)}
               onMouseLeave={() => setTrainingsOpen(false)}
             >
-            <Link
-              href="/webinars"
-              className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors flex items-center gap-1"
-            >
-              Webinars
-              <ChevronDown className="h-4 w-4" />
-            </Link>
-               {trainingsOpen && (
+              <Link
+                href="/webinars"
+                className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors flex items-center gap-1"
+              >
+                Webinars
+                <ChevronDown className="h-4 w-4" />
+              </Link>
+              {trainingsOpen && (
                 <div className="absolute top-full left-0 pt-2 z-50">
                   <div className="w-80 bg-white border rounded-lg shadow-lg py-2">
                     <Link
