@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Card, CardContent, CardFooter } from "@/components/ui/card"
-import { Search } from "lucide-react"
+import { Search, Building2, ArrowRight } from "lucide-react"
 import Link from "next/link"
 import { useState } from "react"
 
@@ -112,6 +112,35 @@ export default function ShopPostersPage() {
               Find the right compliance poster for your state and industry. All posters are attorney-reviewed and
               guaranteed compliant.
             </p>
+          </div>
+        </section>
+
+        {/* Multi-location Banner */}
+        <section className="py-6 bg-white border-b">
+          <div className="container mx-auto px-4 max-w-7xl">
+            <div className="bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-xl p-6 flex flex-col md:flex-row items-center justify-between gap-4">
+              <div className="flex items-center gap-4">
+                <div className="bg-primary/10 p-3 rounded-full">
+                  <Building2 className="w-6 h-6 text-primary" />
+                </div>
+                <div>
+                  <p className="font-semibold text-lg">Have multiple locations?</p>
+                  <p className="text-muted-foreground text-sm">
+                    Schedule a call and we'll help put together a custom package tailored to your business.
+                  </p>
+                </div>
+              </div>
+              <Button
+                asChild
+                variant="outline"
+                className="border-primary text-primary hover:bg-primary hover:text-white whitespace-nowrap bg-transparent"
+              >
+                <Link href="/contact">
+                  Schedule a Call
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
           </div>
         </section>
 
