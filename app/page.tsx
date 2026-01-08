@@ -1,6 +1,6 @@
 import { Header } from "@/components/header"
 import { HeroSection } from "@/components/hero-section"
-import { TrustedBySection } from "@/components/trusted-by-section"
+import { GoogleReviewsSection } from "@/components/google-reviews-section"
 import { ProductFeaturesSection } from "@/components/product-features-section"
 import { OutcomesSection } from "@/components/outcomes-section"
 import { InnovationSection } from "@/components/innovation-section"
@@ -18,7 +18,7 @@ export default function Home() {
       <Header />
       <main>
         <HeroSection />
-        <TrustedBySection />
+        <GoogleReviewsSection />
         <ProductFeaturesSection />
         <OutcomesSection />
         <InnovationSection />
