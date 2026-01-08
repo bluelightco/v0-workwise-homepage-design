@@ -3,7 +3,7 @@
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
-import { Check, ArrowRight, Phone, Building2 } from "lucide-react"
+import { Check, ArrowRight, Phone } from "lucide-react"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import Link from "next/link"
@@ -27,35 +27,6 @@ export default function PricingPage() {
             <p className="text-xl text-white/90 max-w-3xl mx-auto">
               Choose the plan that fits your business needs. Scale up as you grow.
             </p>
-          </div>
-        </section>
-
-        {/* Multi-Location Banner */}
-        <section className="py-6 bg-white border-b">
-          <div className="container mx-auto px-4 max-w-7xl">
-            <div className="bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-xl p-6 flex flex-col md:flex-row items-center justify-between gap-4">
-              <div className="flex items-center gap-4">
-                <div className="bg-primary/10 p-3 rounded-full">
-                  <Building2 className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <p className="font-semibold text-lg">Have multiple locations?</p>
-                  <p className="text-muted-foreground text-sm">
-                    Schedule a call and we'll help put together a custom package tailored to your business.
-                  </p>
-                </div>
-              </div>
-              <Button
-                asChild
-                variant="outline"
-                className="border-primary text-primary hover:bg-primary hover:text-white whitespace-nowrap bg-transparent"
-              >
-                <Link href="/contact">
-                  Schedule a Call
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-            </div>
           </div>
         </section>
 
@@ -84,7 +55,7 @@ export default function PricingPage() {
                   </CardHeader>
                   <CardContent className="p-8">
                     <div className="mb-6">
-                      <p className="text-sm font-semibold text-muted-foreground mb-4">WHAT&apos;S INCLUDED</p>
+                      <p className="text-sm font-semibold text-muted-foreground mb-4">WHAT YOU GET    </p>
                       <ul className="space-y-4">
                         <li className="flex gap-3">
                           <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
@@ -104,7 +75,7 @@ export default function PricingPage() {
                             </p>
                           </div>
                         </li>
-
+                        
                         <li className="flex gap-3">
                           <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                           <div>
