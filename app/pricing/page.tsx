@@ -3,7 +3,7 @@
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
-import { Check, ArrowRight } from "lucide-react"
+import { Check, ArrowRight, Phone } from "lucide-react"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import Link from "next/link"
@@ -24,27 +24,9 @@ export default function PricingPage() {
         <section className="bg-gradient-to-br from-primary to-primary/80 text-white py-20">
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">Simple, Transparent Pricing</h1>
-            <p className="text-xl text-white/90 max-w-3xl mx-auto mb-8">
+            <p className="text-xl text-white/90 max-w-3xl mx-auto">
               Choose the plan that fits your business needs. Scale up as you grow.
             </p>
-
-            <div className="flex items-center justify-center gap-4">
-              <span className={`text-lg font-medium ${!isAnnual ? "text-white" : "text-white/60"}`}>Monthly</span>
-              <button
-                onClick={() => setIsAnnual(!isAnnual)}
-                className={`relative w-16 h-8 rounded-full transition-colors ${isAnnual ? "bg-white" : "bg-white/30"}`}
-              >
-                <span
-                  className={`absolute top-1 w-6 h-6 rounded-full transition-all ${
-                    isAnnual ? "left-9 bg-primary" : "left-1 bg-white"
-                  }`}
-                />
-              </button>
-              <span className={`text-lg font-medium ${isAnnual ? "text-white" : "text-white/60"}`}>Annual</span>
-              {isAnnual && (
-                <span className="bg-green-500 text-white text-sm font-semibold px-3 py-1 rounded-full">Save 20%</span>
-              )}
-            </div>
           </div>
         </section>
 
@@ -52,6 +34,26 @@ export default function PricingPage() {
         <section className="py-20 bg-slate-50">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
+              <div className="flex items-center justify-center gap-4 mb-12">
+                <span className={`text-lg font-medium ${!isAnnual ? "text-foreground" : "text-muted-foreground"}`}>
+                  Monthly
+                </span>
+                <button
+                  onClick={() => setIsAnnual(!isAnnual)}
+                  className={`relative w-16 h-8 rounded-full transition-colors ${isAnnual ? "bg-primary" : "bg-muted"}`}
+                >
+                  <span
+                    className={`absolute top-1 w-6 h-6 rounded-full transition-all bg-white ${
+                      isAnnual ? "left-9" : "left-1"
+                    }`}
+                  />
+                </button>
+                <span className={`text-lg font-medium ${isAnnual ? "text-foreground" : "text-muted-foreground"}`}>
+                  Annual
+                </span>
+                <span className="bg-green-500 text-white text-sm font-semibold px-3 py-1 rounded-full">Save 20%</span>
+              </div>
+
               <div className="grid md:grid-cols-2 gap-8">
                 {/* Essential Toolkit */}
                 <Card className="border-2 hover:shadow-lg transition-shadow">
@@ -163,18 +165,11 @@ export default function PricingPage() {
                       <h3 className="text-2xl font-bold mb-2">HR & Safety Partner</h3>
                       <p className="text-slate-200">We Do It For You</p>
                     </div>
-                    <div className="flex items-baseline justify-center gap-2">
-                      <span className="text-lg text-slate-300">Starting at</span>
+                    <div className="flex flex-col items-center justify-center gap-2 mt-4">
+                      <Phone className="w-8 h-8 text-white/80" />
+                      <span className="text-2xl font-bold">Schedule a Call</span>
+                      <p className="text-sm text-slate-300">Custom pricing based on your needs</p>
                     </div>
-                    <div className="flex items-baseline justify-center gap-2">
-                      <span className="text-5xl font-bold">${isAnnual ? proAnnual.toLocaleString() : proMonthly}</span>
-                      <span className="text-slate-200">/{isAnnual ? "year" : "month"}</span>
-                    </div>
-                    {isAnnual && (
-                      <p className="text-sm text-green-400 font-medium mt-2">
-                        Save ${(proMonthly * 12 - proAnnual).toLocaleString()}/year
-                      </p>
-                    )}
                   </CardHeader>
                   <CardContent className="p-8">
                     <div className="bg-slate-50 rounded-lg p-4 mb-6">
@@ -324,8 +319,8 @@ export default function PricingPage() {
                     </div>
 
                     <Button className="w-full bg-slate-800 hover:bg-slate-900" size="lg" asChild>
-                      <Link href="/services/tier-3-we-do-it">
-                        Schedule Consultation
+                      <Link href="/contact">
+                        Schedule a Call
                         <ArrowRight className="ml-2 h-5 w-5" />
                       </Link>
                     </Button>
