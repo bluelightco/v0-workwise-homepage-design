@@ -73,6 +73,12 @@ export default function PricingPage() {
                         Save ${(essentialMonthly * 12 - essentialAnnual).toLocaleString()}/year
                       </p>
                     )}
+                    <Button className="w-full mt-6" size="lg" asChild>
+                      <Link href="/services/tier-2-you-do-it">
+                        Get Started
+                        <ArrowRight className="ml-2 h-5 w-5" />
+                      </Link>
+                    </Button>
                   </CardHeader>
                   <CardContent className="p-8">
                     <div className="mb-6">
@@ -142,13 +148,6 @@ export default function PricingPage() {
                       </ul>
                     </div>
 
-                    <Button className="w-full" size="lg" asChild>
-                      <Link href="/services/tier-2-you-do-it">
-                        Get Started
-                        <ArrowRight className="ml-2 h-5 w-5" />
-                      </Link>
-                    </Button>
-
                     <p className="text-center text-sm text-muted-foreground mt-4">
                       Perfect for small businesses and DIY HR teams
                     </p>
@@ -170,6 +169,12 @@ export default function PricingPage() {
                       <span className="text-2xl font-bold">Schedule a Call</span>
                       <p className="text-sm text-slate-300">Custom pricing based on your needs</p>
                     </div>
+                    <Button className="w-full mt-6 bg-white text-slate-800 hover:bg-slate-100" size="lg" asChild>
+                      <Link href="/contact">
+                        Schedule a Call
+                        <ArrowRight className="ml-2 h-5 w-5" />
+                      </Link>
+                    </Button>
                   </CardHeader>
                   <CardContent className="p-8">
                     <div className="bg-slate-50 rounded-lg p-4 mb-6">
@@ -317,13 +322,6 @@ export default function PricingPage() {
                         </li>
                       </ul>
                     </div>
-
-                    <Button className="w-full bg-slate-800 hover:bg-slate-900" size="lg" asChild>
-                      <Link href="/contact">
-                        Schedule a Call
-                        <ArrowRight className="ml-2 h-5 w-5" />
-                      </Link>
-                    </Button>
 
                     <p className="text-center text-sm text-muted-foreground mt-4">
                       We do the work — you focus on your business
