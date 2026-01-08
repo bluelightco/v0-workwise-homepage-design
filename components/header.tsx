@@ -95,18 +95,18 @@ export function Header() {
         </div>
 
         <div className="flex items-center gap-3">
+          <Button variant="ghost" size="sm" asChild>
+            <Link href="/login">Login</Link>
+          </Button>
+          <Button size="sm" asChild className="bg-primary hover:bg-primary/90">
+            <Link href="/shop-posters">Shop Posters</Link>
+          </Button>
           <Link href="/cart" className="relative p-2 hover:bg-accent rounded-md transition-colors">
             <ShoppingCart className="h-5 w-5 text-foreground/80" />
             <span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
               3
             </span>
           </Link>
-          <Button variant="ghost" size="sm" asChild>
-            <Link href="/login">Login</Link>
-          </Button>
-          <Button size="sm" asChild className="bg-primary hover:bg-primary/90">
-            <Link href="/get-started">Get Started</Link>
-          </Button>
         </div>
       </div>
     </header>
