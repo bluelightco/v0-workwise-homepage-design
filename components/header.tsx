@@ -2,12 +2,9 @@
 
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { ShoppingCart, ChevronDown } from "lucide-react"
-import { useState } from "react"
+import { ShoppingCart } from "lucide-react"
 
 export function Header() {
-  const [servicesOpen, setServicesOpen] = useState(false)
-
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
@@ -17,38 +14,12 @@ export function Header() {
           </Link>
 
           <nav className="hidden md:flex items-center gap-6">
-            <div
-              className="relative"
-              onMouseEnter={() => setServicesOpen(true)}
-              onMouseLeave={() => setServicesOpen(false)}
+            <Link
+              href="/services"
+              className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
             >
-              <Link
-                href="/services"
-                className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors flex items-center gap-1"
-              >
-                Services
-                
-              </Link>
-
-              {servicesOpen && (
-                <div className="absolute top-full left-0 pt-2 z-50">
-                  <div className="w-80 bg-white border rounded-lg shadow-lg py-2">
-                    <Link
-                      href="/services/tier-3-we-do-it"
-                      className="block px-4 py-3 text-sm hover:bg-gray-50 transition-colors"
-                    >
-                      <div className="font-semibold text-foreground">HR & Safety</div>
-                    </Link>
-                    <Link
-                      href="/services/tier-2-you-do-it"
-                      className="block px-4 py-3 text-sm hover:bg-gray-50 transition-colors"
-                    >
-                      <div className="font-semibold text-foreground">Digital</div>
-                    </Link>
-                  </div>
-                </div>
-              )}
-            </div>
+              Services
+            </Link>
 
             <Link
               href="/pricing"
