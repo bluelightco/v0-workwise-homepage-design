@@ -113,7 +113,7 @@ export default function ResellReferPage() {
                     </li>
                   </ul>
 
-                  <Button className="w-full bg-transparent" variant="outline" size="lg">
+                  <Button className="w-full" size="lg">
                     Join Referral Program
                   </Button>
                 </CardContent>
