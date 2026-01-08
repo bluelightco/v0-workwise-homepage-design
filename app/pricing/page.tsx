@@ -37,7 +37,7 @@ export default function PricingPage() {
               <div className="grid md:grid-cols-3 gap-8">
                 {/* Labor Law Posters */}
                 <Card className="border-2 hover:shadow-lg transition-shadow">
-                  <CardHeader className="bg-white p-8 text-center">
+                  <CardHeader className="bg-gradient-to-br from-primary/5 to-primary/10 p-8 text-center">
                     <div className="mb-4">
                       <h3 className="text-2xl font-bold mb-2">Labor Law Posters</h3>
                       <p className="text-muted-foreground">Stay compliant with required postings</p>
@@ -105,7 +105,7 @@ export default function PricingPage() {
 
                 {/* Compliance Toolkit */}
                 <Card className="border-2 hover:shadow-lg transition-shadow">
-                  <CardHeader className="bg-white p-8 text-center">
+                  <CardHeader className="bg-gradient-to-br from-primary/5 to-primary/10 p-8 text-center">
                     <div className="mb-4">
                       <h3 className="text-2xl font-bold mb-2">Workplace Essentials </h3>
                       <p className="text-muted-foreground">Self-service compliance tools</p>
