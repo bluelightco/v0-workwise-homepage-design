@@ -82,7 +82,7 @@ export default function PricingPage() {
                   </CardHeader>
                   <CardContent className="p-8">
                     <div className="mb-6">
-                      <p className="text-sm font-semibold text-muted-foreground mb-4">CORE FEATURES</p>
+                      <p className="text-sm font-semibold text-muted-foreground mb-4">WHAT YOU GET  </p>
                       <ul className="space-y-4">
                         <li className="flex gap-3">
                           <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
@@ -126,10 +126,7 @@ export default function PricingPage() {
                           <Check className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
                           <span className="text-sm">Additional posters at 10% discount</span>
                         </li>
-                        <li className="flex gap-3">
-                          <Check className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
-                          <span className="text-sm">Additional LMS courses at 10% discount</span>
-                        </li>
+                        
                         <li className="flex gap-3">
                           <Check className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
                           <span className="text-sm">Specialty guides and resources</span>
