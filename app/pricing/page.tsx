@@ -268,7 +268,7 @@ export default function PricingPage() {
                         <li className="flex gap-3">
                           <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                           <div>
-                            <p className="font-semibold">Unlimited Consultation   </p>
+                            <p className="font-semibold">Unlimited Consultation</p>
                             <p className="text-sm text-muted-foreground">
                               Direct handling of conflicts, complaints, and HR r
                             </p>
