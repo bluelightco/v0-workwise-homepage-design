@@ -3,7 +3,7 @@
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
-import { Check, ArrowRight, Phone } from "lucide-react"
+import { Check, ArrowRight, Phone, Building2 } from "lucide-react"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import Link from "next/link"
@@ -34,6 +34,30 @@ export default function PricingPage() {
         <section className="py-20 bg-slate-50">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
+              <div className="bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-xl p-6 mb-10 flex flex-col md:flex-row items-center justify-between gap-4">
+                <div className="flex items-center gap-4">
+                  <div className="bg-primary/10 p-3 rounded-full">
+                    <Building2 className="w-6 h-6 text-primary" />
+                  </div>
+                  <div>
+                    <p className="font-semibold text-lg">Have multiple locations?</p>
+                    <p className="text-muted-foreground text-sm">
+                      Schedule a call and we'll help put together a custom package tailored to your business.
+                    </p>
+                  </div>
+                </div>
+                <Button
+                  asChild
+                  variant="outline"
+                  className="border-primary text-primary hover:bg-primary hover:text-white whitespace-nowrap bg-transparent"
+                >
+                  <Link href="/contact">
+                    Schedule a Call
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+              </div>
+
               <div className="flex items-center justify-center gap-4 mb-12">
                 <span className={`text-lg font-medium ${!isAnnual ? "text-foreground" : "text-muted-foreground"}`}>
                   Monthly
@@ -59,7 +83,7 @@ export default function PricingPage() {
                 <Card className="border-2 hover:shadow-lg transition-shadow">
                   <CardHeader className="bg-white p-8 text-center">
                     <div className="mb-4">
-                      <h3 className="text-2xl font-bold mb-2">Essentials           </h3>
+                      <h3 className="text-2xl font-bold mb-2">Essentials </h3>
                       <p className="text-muted-foreground">Self-service compliance tools</p>
                     </div>
                     <div className="flex items-baseline justify-center gap-2">
