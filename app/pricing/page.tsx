@@ -3,7 +3,7 @@
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
-import { Check, ArrowRight, Phone } from "lucide-react"
+import { Check, ArrowRight, Phone, Users } from "lucide-react"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import Link from "next/link"
@@ -178,7 +178,7 @@ export default function PricingPage() {
                   </CardHeader>
                   <CardContent className="p-8">
                     <div className="bg-slate-50 rounded-lg p-4 mb-6 flex items-start gap-3">
-                      <Phone className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <Users className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                       <div>
                         <p className="text-sm font-semibold mb-1">DEDICATED EXPERTS WHO DO THE WORK FOR YOU</p>
                         <p className="text-xs text-muted-foreground">
