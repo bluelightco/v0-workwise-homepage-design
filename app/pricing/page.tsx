@@ -199,7 +199,7 @@ export default function PricingPage() {
                         <li className="flex gap-3">
                           <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                           <div>
-                            <p className="font-semibold">Employee Relations & Investigations</p>
+                            <p className="font-semibold">Employee Relations Guidance </p>
                             <p className="text-sm text-muted-foreground">
                               Direct handling of conflicts, complaints, and HR risk mitigation
                             </p>
@@ -217,9 +217,9 @@ export default function PricingPage() {
                         <li className="flex gap-3">
                           <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                           <div>
-                            <p className="font-semibold">Proactive Risk Identification</p>
+                            <p className="font-semibold">Risk Assessment  </p>
                             <p className="text-sm text-muted-foreground">
-                              Monitoring and guidance to prevent compliance gaps before they become problems
+                              Guidance to prevent compliance gaps before they become problems
                             </p>
                           </div>
                         </li>
@@ -350,7 +350,7 @@ export default function PricingPage() {
                     </tr>
                     <tr className="border-b border-border">
                       <td className="p-4">LMS Training Courses</td>
-                      <td className="text-center p-4">Up to 2</td>
+                      <td className="text-center p-4">All-Access </td>
                       <td className="text-center p-4 bg-slate-50">
                         <div className="font-semibold">All-Access</div>
                       </td>
