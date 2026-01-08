@@ -33,7 +33,7 @@ export default function PricingPage() {
         {/* Pricing Tiers */}
         <section className="py-20 bg-slate-50">
           <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
+            <div className="max-w-7xl mx-auto">
               <div className="flex items-center justify-center gap-4 mb-12">
                 <span className={`text-lg font-medium ${!isAnnual ? "text-foreground" : "text-muted-foreground"}`}>
                   Monthly
@@ -54,7 +54,74 @@ export default function PricingPage() {
                 <span className="bg-green-500 text-white text-sm font-semibold px-3 py-1 rounded-full">Save 20%</span>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-8">
+              <div className="grid md:grid-cols-3 gap-8">
+                {/* Labor Law Posters */}
+                <Card className="border-2 hover:shadow-lg transition-shadow">
+                  <CardHeader className="bg-white p-8 text-center">
+                    <div className="mb-4">
+                      <h3 className="text-2xl font-bold mb-2">Labor Law Posters</h3>
+                      <p className="text-muted-foreground">Stay compliant with required postings</p>
+                    </div>
+                    <div className="flex items-baseline justify-center gap-2">
+                      <span className="text-3xl font-bold text-primary">Starting at $24.95</span>
+                    </div>
+                    <p className="text-sm text-muted-foreground mt-2">per poster</p>
+                    <Button className="w-full mt-6" size="lg" asChild>
+                      <Link href="/shop-posters">
+                        Shop Posters
+                        <ArrowRight className="ml-2 h-5 w-5" />
+                      </Link>
+                    </Button>
+                  </CardHeader>
+                  <CardContent className="p-8">
+                    <div className="mb-6">
+                      <p className="text-sm font-semibold text-muted-foreground mb-4">WHAT&apos;S INCLUDED</p>
+                      <ul className="space-y-4">
+                        <li className="flex gap-3">
+                          <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                          <div>
+                            <p className="font-semibold">State & Federal Posters</p>
+                            <p className="text-sm text-muted-foreground">
+                              All required workplace postings for your state
+                            </p>
+                          </div>
+                        </li>
+                        <li className="flex gap-3">
+                          <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                          <div>
+                            <p className="font-semibold">Auto-Update Subscription</p>
+                            <p className="text-sm text-muted-foreground">
+                              Optional subscription ensures you always have the latest version
+                            </p>
+                          </div>
+                        </li>
+                        <li className="flex gap-3">
+                          <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                          <div>
+                            <p className="font-semibold">$40K Penalty Protection</p>
+                            <p className="text-sm text-muted-foreground">
+                              Coverage included with auto-update subscription
+                            </p>
+                          </div>
+                        </li>
+                        <li className="flex gap-3">
+                          <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                          <div>
+                            <p className="font-semibold">Industry-Specific Options</p>
+                            <p className="text-sm text-muted-foreground">
+                              OSHA, healthcare, restaurant, and more available
+                            </p>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <p className="text-center text-sm text-muted-foreground mt-4">
+                      Simple poster compliance — no subscription required
+                    </p>
+                  </CardContent>
+                </Card>
+
                 {/* Essential Toolkit */}
                 <Card className="border-2 hover:shadow-lg transition-shadow">
                   <CardHeader className="bg-white p-8 text-center">
@@ -487,7 +554,9 @@ export default function PricingPage() {
                   </p>
                 </div>
                 <div className="bg-white p-6 rounded-lg">
-                  <h3 className="font-bold text-xl mb-2">What's included in the poster auto-update subscription?</h3>
+                  <h3 className="font-bold text-xl mb-2">
+                    What&apos;s included in the poster auto-update subscription?
+                  </h3>
                   <p className="text-muted-foreground">
                     Your posters are automatically updated whenever labor laws change, ensuring continuous compliance.
                     Essential Toolkit includes 1 poster, while HR & Safety Partner includes all necessary posters for
