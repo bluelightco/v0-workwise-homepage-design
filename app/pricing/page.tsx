@@ -59,7 +59,7 @@ export default function PricingPage() {
                 <Card className="border-2 hover:shadow-lg transition-shadow">
                   <CardHeader className="bg-white p-8 text-center">
                     <div className="mb-4">
-                      <h3 className="text-2xl font-bold mb-2">Essentials</h3>
+                      <h3 className="text-2xl font-bold mb-2">Essentials Solo  </h3>
                       <p className="text-muted-foreground">Self-service compliance tools</p>
                     </div>
                     <div className="flex items-baseline justify-center gap-2">
