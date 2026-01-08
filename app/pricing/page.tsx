@@ -279,7 +279,7 @@ export default function PricingPage() {
                     </div>
 
                     <div className="mb-8">
-                      <p className="text-sm font-semibold text-muted-foreground mb-4">OPTIONAL ADD-ON SERVICES</p>
+                      <p className="text-sm font-semibold text-muted-foreground mb-4">OPTIONAL SERVICES</p>
                       <ul className="space-y-3">
                         <li className="flex gap-3">
                           <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
