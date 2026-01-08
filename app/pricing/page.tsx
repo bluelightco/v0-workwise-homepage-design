@@ -375,25 +375,13 @@ export default function PricingPage() {
                     <tr className="border-b border-border">
                       <td className="p-4">Poster Auto-Updates</td>
                       <td className="text-center p-4">
-                        <div className="text-sm">Optional subscription</div>
+                        <div className="text-sm">Optional</div>
                       </td>
                       <td className="text-center p-4">
                         <div className="text-sm">State & Federal per location</div>
                       </td>
                       <td className="text-center p-4 bg-slate-50">
                         <div className="text-sm font-semibold">All locations included</div>
-                      </td>
-                    </tr>
-                    <tr className="border-b border-border">
-                      <td className="p-4">$40K Penalty Protection</td>
-                      <td className="text-center p-4">
-                        <Check className="w-5 h-5 text-primary mx-auto" />
-                      </td>
-                      <td className="text-center p-4">
-                        <Check className="w-5 h-5 text-primary mx-auto" />
-                      </td>
-                      <td className="text-center p-4 bg-slate-50">
-                        <Check className="w-5 h-5 text-primary mx-auto" />
                       </td>
                     </tr>
                     <tr className="border-b border-border">

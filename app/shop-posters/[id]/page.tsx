@@ -111,10 +111,6 @@ export default function PosterDetailPage() {
                               </li>
                               <li className="flex items-start gap-2">
                                 <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
-                                <span>$40,000 penalty coverage included</span>
-                              </li>
-                              <li className="flex items-start gap-2">
-                                <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
                                 <span>Automatic compliance monitoring</span>
                               </li>
                             </ul>
@@ -433,13 +429,6 @@ export default function PosterDetailPage() {
                       </div>
                     </li>
                   </ul>
-                  <div className="mt-6 p-4 bg-primary/5 border border-primary/20 rounded-lg">
-                    <p className="font-semibold text-primary mb-2">Subscribe for Automatic Updates</p>
-                    <p className="text-sm text-muted-foreground">
-                      With our You-Post-It Auto-Updates subscription, you'll automatically receive new posters whenever
-                      California labor laws change - at no additional cost.
-                    </p>
-                  </div>
                 </div>
               </TabsContent>
 
@@ -480,13 +469,6 @@ export default function PosterDetailPage() {
                       </div>
                     </li>
                   </ul>
-                  <div className="mt-6 p-4 bg-green-50 border border-green-200 rounded-lg">
-                    <p className="font-semibold text-green-800 mb-2">$40,000 Penalty Coverage Included</p>
-                    <p className="text-sm text-green-700">
-                      You-Post-It Auto-Updates subscribers receive up to $40,000 in penalty coverage if you're fined for
-                      an outdated poster we provided.
-                    </p>
-                  </div>
                 </div>
               </TabsContent>
 
@@ -543,8 +525,8 @@ export default function PosterDetailPage() {
                 <h3 className="font-semibold text-lg mb-2">What's the difference between subscription and buy once?</h3>
                 <p className="text-muted-foreground">
                   The subscription option (You-Post-It Auto-Updates) automatically sends you updated posters whenever
-                  California labor laws change, includes $40,000 penalty coverage, and saves you 10%. The buy-once
-                  option provides the current poster with no automatic updates.
+                  California labor laws change and saves you 10%. The buy-once option provides the current poster with
+                  no automatic updates.
                 </p>
               </div>
               <div>
