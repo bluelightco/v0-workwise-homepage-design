@@ -116,15 +116,15 @@ export default function PricingPage() {
                   </CardContent>
                 </Card>
 
-                {/* Pro Support */}
+                {/* HR & Safety Partner */}
                 <Card className="border-2 border-primary shadow-lg relative">
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-semibold">
                     MOST POPULAR
                   </div>
                   <CardHeader className="bg-gradient-to-br from-slate-700 to-slate-900 text-white p-8 text-center rounded-t-lg">
                     <div className="mb-4">
-                      <h3 className="text-2xl font-bold mb-2">Pro Support</h3>
-                      <p className="text-slate-200">Fully managed compliance</p>
+                      <h3 className="text-2xl font-bold mb-2">HR & Safety Partner</h3>
+                      <p className="text-slate-200">We Do It For You</p>
                     </div>
                     <div className="flex items-baseline justify-center gap-2">
                       <span className="text-lg text-slate-300">Starting at</span>
@@ -136,98 +136,155 @@ export default function PricingPage() {
                   </CardHeader>
                   <CardContent className="p-8">
                     <div className="bg-slate-50 rounded-lg p-4 mb-6">
-                      <p className="text-sm font-semibold mb-2">INCLUDES EVERYTHING IN ESSENTIAL TOOLKIT, PLUS:</p>
+                      <p className="text-sm font-semibold mb-2">DEDICATED EXPERTS WHO DO THE WORK FOR YOU</p>
+                      <p className="text-xs text-muted-foreground">
+                        Proactive HR & Safety solution that lowers your liability and maximizes human capital
+                      </p>
                     </div>
 
                     <div className="mb-6">
-                      <p className="text-sm font-semibold text-muted-foreground mb-4">MANAGED COMPLIANCE</p>
+                      <p className="text-sm font-semibold text-muted-foreground mb-4">WHAT YOU GET</p>
                       <ul className="space-y-4">
                         <li className="flex gap-3">
                           <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                           <div>
-                            <p className="font-semibold">EMS Employee Tracking System</p>
-                            <p className="text-sm text-muted-foreground">Track compliance and training</p>
+                            <p className="font-semibold">Dedicated HR & Safety Professional</p>
+                            <p className="text-sm text-muted-foreground">
+                              Your strategic business partner for policies, compliance, and day-to-day operations
+                            </p>
                           </div>
                         </li>
                         <li className="flex gap-3">
                           <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                           <div>
-                            <p className="font-semibold">All-Access Digital Library & LMS</p>
-                            <p className="text-sm text-muted-foreground">Unlimited resources and training courses</p>
+                            <p className="font-semibold">Same-Day Support</p>
+                            <p className="text-sm text-muted-foreground">
+                              Real responses when you need them for HR questions, safety concerns, or employee issues
+                            </p>
                           </div>
                         </li>
                         <li className="flex gap-3">
                           <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                           <div>
-                            <p className="font-semibold">2 Free Webinars / Year</p>
-                            <p className="text-sm text-muted-foreground">Expert-led training sessions</p>
+                            <p className="font-semibold">Policies, SOPs & Compliance Programs</p>
+                            <p className="text-sm text-muted-foreground">
+                              Custom-developed HR regulations, workplace safety, OSHA & DOT guidance
+                            </p>
                           </div>
                         </li>
                         <li className="flex gap-3">
                           <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                           <div>
-                            <p className="font-semibold">Expert-Led Compliance Management</p>
-                            <p className="text-sm text-muted-foreground">Virtual or onsite support</p>
+                            <p className="font-semibold">Employee Relations & Investigations</p>
+                            <p className="text-sm text-muted-foreground">
+                              Direct handling of conflicts, complaints, and HR risk mitigation
+                            </p>
                           </div>
                         </li>
                         <li className="flex gap-3">
                           <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                           <div>
-                            <p className="font-semibold">Multi-Location Compliance Handling</p>
-                            <p className="text-sm text-muted-foreground">Managed poster placement</p>
+                            <p className="font-semibold">Training Delivery</p>
+                            <p className="text-sm text-muted-foreground">
+                              In-person or virtual HR and Safety training, tailored to your team
+                            </p>
                           </div>
                         </li>
                         <li className="flex gap-3">
                           <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                           <div>
-                            <p className="font-semibold">Compliance Deadline Notifications</p>
-                            <p className="text-sm text-muted-foreground">Never miss a filing date</p>
+                            <p className="font-semibold">Proactive Risk Identification</p>
+                            <p className="text-sm text-muted-foreground">
+                              Monitoring and guidance to prevent compliance gaps before they become problems
+                            </p>
+                          </div>
+                        </li>
+                        <li className="flex gap-3">
+                          <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                          <div>
+                            <p className="font-semibold">Salary Benchmarking & Analysis</p>
+                            <p className="text-sm text-muted-foreground">
+                              Market-aligned compensation guidance to support HR decisions
+                            </p>
+                          </div>
+                        </li>
+                        <li className="flex gap-3">
+                          <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                          <div>
+                            <p className="font-semibold">Document Management & Digital Tools</p>
+                            <p className="text-sm text-muted-foreground">
+                              Access to forms, templates, checklists, and posters
+                            </p>
                           </div>
                         </li>
                       </ul>
                     </div>
 
+                    <div className="mb-6">
+                      <p className="text-sm font-semibold text-muted-foreground mb-4">TRAINING CATALOG INCLUDED</p>
+                      <div className="grid grid-cols-2 gap-4">
+                        <div>
+                          <p className="text-xs font-semibold text-primary mb-2">HR TRAINING</p>
+                          <ul className="space-y-1 text-xs text-muted-foreground">
+                            <li>Onboarding & Orientation</li>
+                            <li>Harassment & Workplace Conduct</li>
+                            <li>Performance Management</li>
+                            <li>Leadership Development</li>
+                            <li>Diversity, Equity & Inclusion</li>
+                          </ul>
+                        </div>
+                        <div>
+                          <p className="text-xs font-semibold text-primary mb-2">SAFETY TRAINING</p>
+                          <ul className="space-y-1 text-xs text-muted-foreground">
+                            <li>OSHA Compliance</li>
+                            <li>Emergency Preparedness</li>
+                            <li>First Aid & CPR</li>
+                            <li>Hazard Awareness</li>
+                            <li>PPE Training</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
                     <div className="mb-8">
-                      <p className="text-sm font-semibold text-muted-foreground mb-4">
-                        FRACTIONAL HR & SAFETY SERVICES
-                      </p>
+                      <p className="text-sm font-semibold text-muted-foreground mb-4">OPTIONAL ADD-ON SERVICES</p>
                       <ul className="space-y-3">
                         <li className="flex gap-3">
                           <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                          <span className="text-sm">SOPs and HR/Safety policies - fully created & maintained</span>
+                          <span className="text-sm">Payroll Administration - Accurate processing & tax compliance</span>
                         </li>
                         <li className="flex gap-3">
                           <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                          <span className="text-sm">Employee training programs - designed & delivered</span>
+                          <span className="text-sm">Benefits Administration - Health, dental, vision, retirement</span>
                         </li>
                         <li className="flex gap-3">
                           <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                          <span className="text-sm">Unlimited consultation & advisory</span>
+                          <span className="text-sm">Leaves Management - FMLA, ADA, and other leave policies</span>
                         </li>
                         <li className="flex gap-3">
                           <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                          <span className="text-sm">Employee relations support</span>
+                          <span className="text-sm">Recruitment Administration - Job postings & applicant flow</span>
                         </li>
                         <li className="flex gap-3">
                           <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                          <span className="text-sm">Salary benchmarking & analysis</span>
+                          <span className="text-sm">Fractional Talent Acquisition (up to 20 hrs/month)</span>
                         </li>
                         <li className="flex gap-3">
                           <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                          <span className="text-sm">Proactive compliance implementation</span>
+                          <span className="text-sm">Part-Time Talent Acquisition (up to 40 hrs/month)</span>
                         </li>
                       </ul>
                     </div>
 
                     <Button className="w-full bg-slate-800 hover:bg-slate-900" size="lg" asChild>
                       <Link href="/services/tier-3-we-do-it">
-                        Get Started
+                        Schedule Consultation
                         <ArrowRight className="ml-2 h-5 w-5" />
                       </Link>
                     </Button>
 
                     <p className="text-center text-sm text-muted-foreground mt-4">
-                      Perfect for high-risk industries and scaling businesses
+                      We do the work — you focus on your business
                     </p>
                   </CardContent>
                 </Card>
@@ -247,7 +304,7 @@ export default function PricingPage() {
                     <tr className="border-b-2 border-border">
                       <th className="text-left p-4 font-bold">Feature</th>
                       <th className="text-center p-4 font-bold">Essential Toolkit</th>
-                      <th className="text-center p-4 font-bold bg-slate-50">Pro Support</th>
+                      <th className="text-center p-4 font-bold bg-slate-50">HR & Safety Partner</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -293,35 +350,56 @@ export default function PricingPage() {
                       </td>
                     </tr>
                     <tr className="border-b border-border">
-                      <td className="p-4">EMS Employee Tracking</td>
+                      <td className="p-4">Dedicated HR & Safety Professional</td>
                       <td className="text-center p-4">-</td>
                       <td className="text-center p-4 bg-slate-50">
                         <Check className="w-5 h-5 text-primary mx-auto" />
                       </td>
                     </tr>
                     <tr className="border-b border-border">
-                      <td className="p-4">Expert-Led Management</td>
+                      <td className="p-4">Same-Day Support</td>
                       <td className="text-center p-4">-</td>
                       <td className="text-center p-4 bg-slate-50">
                         <Check className="w-5 h-5 text-primary mx-auto" />
                       </td>
                     </tr>
                     <tr className="border-b border-border">
-                      <td className="p-4">Virtual/Onsite Support</td>
+                      <td className="p-4">Policies, SOPs & Compliance Programs</td>
                       <td className="text-center p-4">-</td>
                       <td className="text-center p-4 bg-slate-50">
                         <Check className="w-5 h-5 text-primary mx-auto" />
                       </td>
                     </tr>
                     <tr className="border-b border-border">
-                      <td className="p-4">Fractional HR & Safety</td>
+                      <td className="p-4">Employee Relations & Investigations</td>
                       <td className="text-center p-4">-</td>
                       <td className="text-center p-4 bg-slate-50">
                         <Check className="w-5 h-5 text-primary mx-auto" />
                       </td>
                     </tr>
                     <tr className="border-b border-border">
-                      <td className="p-4">Unlimited Consultation</td>
+                      <td className="p-4">Training Delivery</td>
+                      <td className="text-center p-4">-</td>
+                      <td className="text-center p-4 bg-slate-50">
+                        <Check className="w-5 h-5 text-primary mx-auto" />
+                      </td>
+                    </tr>
+                    <tr className="border-b border-border">
+                      <td className="p-4">Proactive Risk Identification</td>
+                      <td className="text-center p-4">-</td>
+                      <td className="text-center p-4 bg-slate-50">
+                        <Check className="w-5 h-5 text-primary mx-auto" />
+                      </td>
+                    </tr>
+                    <tr className="border-b border-border">
+                      <td className="p-4">Salary Benchmarking & Analysis</td>
+                      <td className="text-center p-4">-</td>
+                      <td className="text-center p-4 bg-slate-50">
+                        <Check className="w-5 h-5 text-primary mx-auto" />
+                      </td>
+                    </tr>
+                    <tr className="border-b border-border">
+                      <td className="p-4">Document Management & Digital Tools</td>
                       <td className="text-center p-4">-</td>
                       <td className="text-center p-4 bg-slate-50">
                         <Check className="w-5 h-5 text-primary mx-auto" />
@@ -351,8 +429,8 @@ export default function PricingPage() {
                   <h3 className="font-bold text-xl mb-2">What's included in the poster auto-update subscription?</h3>
                   <p className="text-muted-foreground">
                     Your posters are automatically updated whenever labor laws change, ensuring continuous compliance.
-                    Essential Toolkit includes 1 poster, while Pro Support includes all necessary posters for your
-                    locations.
+                    Essential Toolkit includes 1 poster, while HR & Safety Partner includes all necessary posters for
+                    your locations.
                   </p>
                 </div>
                 <div className="bg-white p-6 rounded-lg">
