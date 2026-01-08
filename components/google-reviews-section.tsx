@@ -75,7 +75,7 @@ export function GoogleReviewsSection() {
               <Star key={i} className="h-6 w-6 fill-yellow-400 text-yellow-400" />
             ))}
             <span className="ml-2 text-2xl font-bold">5.0</span>
-            <span className="text-muted-foreground ml-1">from 127 reviews</span>
+            <span className="text-muted-foreground ml-1">from 270 reviews</span>
           </div>
           <h2 className="text-xl md:text-2xl font-semibold">
             Trusted by <span className="font-bold">5,000+</span> companies across California
