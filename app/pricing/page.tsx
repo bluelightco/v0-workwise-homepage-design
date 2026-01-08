@@ -23,9 +23,9 @@ export default function PricingPage() {
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-primary to-primary/80 text-white py-20">
           <div className="container mx-auto px-4 text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">Simple, Transparent Pricing</h1>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">HR & Safety Compliance, Simplified</h1>
             <p className="text-xl text-white/90 max-w-3xl mx-auto">
-              Choose the plan that fits your business needs. Scale up as you grow.
+              From posters to full-service support — find the right level for your business
             </p>
           </div>
         </section>
