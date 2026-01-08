@@ -387,13 +387,14 @@ export default function PricingPage() {
         {/* Comparison Table */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
-            <div className="max-w-5xl mx-auto">
+            <div className="max-w-6xl mx-auto">
               <h2 className="text-4xl font-bold text-center mb-12">Compare Plans</h2>
               <div className="overflow-x-auto">
                 <table className="w-full border-collapse">
                   <thead>
                     <tr className="border-b-2 border-border">
                       <th className="text-left p-4 font-bold">Feature</th>
+                      <th className="text-center p-4 font-bold">Labor Law Posters</th>
                       <th className="text-center p-4 font-bold">Essential Toolkit</th>
                       <th className="text-center p-4 font-bold bg-slate-50">HR & Safety Partner</th>
                     </tr>
@@ -402,6 +403,9 @@ export default function PricingPage() {
                     <tr className="border-b border-border">
                       <td className="p-4">Poster Auto-Updates</td>
                       <td className="text-center p-4">
+                        <div className="text-sm">Optional subscription</div>
+                      </td>
+                      <td className="text-center p-4">
                         <div className="text-sm">State & Federal per location</div>
                       </td>
                       <td className="text-center p-4 bg-slate-50">
@@ -409,7 +413,20 @@ export default function PricingPage() {
                       </td>
                     </tr>
                     <tr className="border-b border-border">
+                      <td className="p-4">$40K Penalty Protection</td>
+                      <td className="text-center p-4">
+                        <Check className="w-5 h-5 text-primary mx-auto" />
+                      </td>
+                      <td className="text-center p-4">
+                        <Check className="w-5 h-5 text-primary mx-auto" />
+                      </td>
+                      <td className="text-center p-4 bg-slate-50">
+                        <Check className="w-5 h-5 text-primary mx-auto" />
+                      </td>
+                    </tr>
+                    <tr className="border-b border-border">
                       <td className="p-4">Digital Library</td>
+                      <td className="text-center p-4">-</td>
                       <td className="text-center p-4">
                         <Check className="w-5 h-5 text-primary mx-auto" />
                       </td>
@@ -419,6 +436,7 @@ export default function PricingPage() {
                     </tr>
                     <tr className="border-b border-border">
                       <td className="p-4">LMS Training Courses</td>
+                      <td className="text-center p-4">-</td>
                       <td className="text-center p-4">
                         <div className="font-semibold">All-Access</div>
                       </td>
@@ -429,12 +447,14 @@ export default function PricingPage() {
                     <tr className="border-b border-border">
                       <td className="p-4">Live Training (Webinar/Onsite)</td>
                       <td className="text-center p-4">-</td>
+                      <td className="text-center p-4">-</td>
                       <td className="text-center p-4 bg-slate-50">
                         <Check className="w-5 h-5 text-primary mx-auto" />
                       </td>
                     </tr>
                     <tr className="border-b border-border">
                       <td className="p-4">Newsletter Updates</td>
+                      <td className="text-center p-4">-</td>
                       <td className="text-center p-4">
                         <Check className="w-5 h-5 text-primary mx-auto" />
                       </td>
@@ -444,6 +464,7 @@ export default function PricingPage() {
                     </tr>
                     <tr className="border-b border-border">
                       <td className="p-4">Webinar Discount</td>
+                      <td className="text-center p-4">-</td>
                       <td className="text-center p-4">10%</td>
                       <td className="text-center p-4 bg-slate-50">
                         <div className="font-semibold">2 Free/Year</div>
@@ -452,12 +473,14 @@ export default function PricingPage() {
                     <tr className="border-b border-border">
                       <td className="p-4">Dedicated HR & Safety Professional</td>
                       <td className="text-center p-4">-</td>
+                      <td className="text-center p-4">-</td>
                       <td className="text-center p-4 bg-slate-50">
                         <Check className="w-5 h-5 text-primary mx-auto" />
                       </td>
                     </tr>
                     <tr className="border-b border-border">
                       <td className="p-4">Same-Day Support</td>
+                      <td className="text-center p-4">-</td>
                       <td className="text-center p-4">-</td>
                       <td className="text-center p-4 bg-slate-50">
                         <Check className="w-5 h-5 text-primary mx-auto" />
@@ -466,12 +489,14 @@ export default function PricingPage() {
                     <tr className="border-b border-border">
                       <td className="p-4">Policies, SOPs & Compliance Programs</td>
                       <td className="text-center p-4">-</td>
+                      <td className="text-center p-4">-</td>
                       <td className="text-center p-4 bg-slate-50">
                         <Check className="w-5 h-5 text-primary mx-auto" />
                       </td>
                     </tr>
                     <tr className="border-b border-border">
                       <td className="p-4">Employee Relations Guidance</td>
+                      <td className="text-center p-4">-</td>
                       <td className="text-center p-4">-</td>
                       <td className="text-center p-4 bg-slate-50">
                         <Check className="w-5 h-5 text-primary mx-auto" />
@@ -480,12 +505,14 @@ export default function PricingPage() {
                     <tr className="border-b border-border">
                       <td className="p-4">Risk Assessment</td>
                       <td className="text-center p-4">-</td>
+                      <td className="text-center p-4">-</td>
                       <td className="text-center p-4 bg-slate-50">
                         <Check className="w-5 h-5 text-primary mx-auto" />
                       </td>
                     </tr>
                     <tr className="border-b border-border">
                       <td className="p-4">Salary Benchmarking & Analysis</td>
+                      <td className="text-center p-4">-</td>
                       <td className="text-center p-4">-</td>
                       <td className="text-center p-4 bg-slate-50">
                         <Check className="w-5 h-5 text-primary mx-auto" />
@@ -494,12 +521,14 @@ export default function PricingPage() {
                     <tr className="border-b border-border">
                       <td className="p-4">Document Management & Digital Tools</td>
                       <td className="text-center p-4">-</td>
+                      <td className="text-center p-4">-</td>
                       <td className="text-center p-4 bg-slate-50">
                         <Check className="w-5 h-5 text-primary mx-auto" />
                       </td>
                     </tr>
                     <tr className="border-b border-border">
                       <td className="p-4">Payroll Administration</td>
+                      <td className="text-center p-4">-</td>
                       <td className="text-center p-4">-</td>
                       <td className="text-center p-4 bg-slate-50">
                         <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded">Add-On</span>
@@ -508,12 +537,14 @@ export default function PricingPage() {
                     <tr className="border-b border-border">
                       <td className="p-4">Benefits Administration</td>
                       <td className="text-center p-4">-</td>
+                      <td className="text-center p-4">-</td>
                       <td className="text-center p-4 bg-slate-50">
                         <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded">Add-On</span>
                       </td>
                     </tr>
                     <tr className="border-b border-border">
                       <td className="p-4">Leaves Management</td>
+                      <td className="text-center p-4">-</td>
                       <td className="text-center p-4">-</td>
                       <td className="text-center p-4 bg-slate-50">
                         <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded">Add-On</span>
@@ -522,12 +553,14 @@ export default function PricingPage() {
                     <tr className="border-b border-border">
                       <td className="p-4">Recruitment Administration</td>
                       <td className="text-center p-4">-</td>
+                      <td className="text-center p-4">-</td>
                       <td className="text-center p-4 bg-slate-50">
                         <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded">Add-On</span>
                       </td>
                     </tr>
                     <tr className="border-b border-border">
                       <td className="p-4">Talent Acquisition</td>
+                      <td className="text-center p-4">-</td>
                       <td className="text-center p-4">-</td>
                       <td className="text-center p-4 bg-slate-50">
                         <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded">Add-On</span>
