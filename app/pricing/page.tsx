@@ -222,6 +222,12 @@ export default function PricingPage() {
 
                     <div className="mb-6">
                       <p className="text-sm font-semibold text-muted-foreground mb-4">TRAINING CATALOG INCLUDED</p>
+                      <div className="bg-primary/10 border border-primary/20 rounded-lg p-3 mb-4">
+                        <p className="text-sm font-semibold text-primary">Live Webinar or Onsite Delivery</p>
+                        <p className="text-xs text-muted-foreground">
+                          All training sessions are delivered live by our experts — virtually or at your location
+                        </p>
+                      </div>
                       <div className="grid grid-cols-2 gap-4">
                         <div>
                           <p className="text-xs font-semibold text-primary mb-2">HR TRAINING</p>
