@@ -116,7 +116,6 @@ export default function PricingPage() {
                             <p className="text-sm text-muted-foreground">Compliance news and regulatory changes</p>
                           </div>
                         </li>
-                        
                       </ul>
                     </div>
 
@@ -142,7 +141,9 @@ export default function PricingPage() {
                       </ul>
                     </div>
 
-                    
+                    <p className="text-center text-sm text-muted-foreground mt-4">
+                      All the tools you need — compliance on your terms
+                    </p>
                   </CardContent>
                 </Card>
 
@@ -158,7 +159,6 @@ export default function PricingPage() {
                     </div>
                     <div className="flex flex-col items-center justify-center gap-2 mt-4">
                       <Phone className="w-8 h-8 text-white/80" />
-                      
                       <p className="text-sm text-slate-300">Custom pricing based on your needs</p>
                     </div>
                     <Button className="w-full mt-6 bg-white text-slate-800 hover:bg-slate-100" size="lg" asChild>
