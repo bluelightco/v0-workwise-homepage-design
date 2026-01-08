@@ -55,8 +55,17 @@ export default function PricingPage() {
                   </CardHeader>
                   <CardContent className="p-8">
                     <div className="mb-6">
-                      <p className="text-sm font-semibold text-muted-foreground mb-4">WHAT YOU GET    </p>
+                      <p className="text-sm font-semibold text-muted-foreground mb-4">WHAT YOU GET </p>
                       <ul className="space-y-4">
+                        <li className="flex gap-3">
+                          <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                          <div>
+                            <p className="font-semibold">Single & Multiple Locations</p>
+                            <p className="text-sm text-muted-foreground">
+                              Scalable solutions for one location or hundreds
+                            </p>
+                          </div>
+                        </li>
                         <li className="flex gap-3">
                           <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                           <div>
@@ -75,7 +84,7 @@ export default function PricingPage() {
                             </p>
                           </div>
                         </li>
-                        
+
                         <li className="flex gap-3">
                           <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                           <div>
