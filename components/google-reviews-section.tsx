@@ -78,7 +78,7 @@ export function GoogleReviewsSection() {
             <span className="text-muted-foreground ml-1">from 270 reviews</span>
           </div>
           <h2 className="text-xl md:text-2xl font-semibold">
-            Trusted by <span className="font-bold">5,000+</span> companies across California
+            Trusted by <span className="font-bold">60,000+</span> companies across California
           </h2>
         </div>
 
