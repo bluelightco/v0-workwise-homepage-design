@@ -37,7 +37,7 @@ export default function PricingPage() {
               <div className="grid md:grid-cols-3 gap-8">
                 {/* Labor Law Posters */}
                 <Card className="border-2 hover:shadow-lg transition-shadow">
-                  <CardHeader className="bg-gradient-to-br from-primary/5 to-primary/10 p-8 text-center">
+                  <CardHeader className="bg-white p-8 text-center">
                     <div className="mb-4">
                       <h3 className="text-2xl font-bold mb-2">Labor Law Posters</h3>
                       <p className="text-muted-foreground">Stay compliant with required postings</p>
@@ -105,7 +105,7 @@ export default function PricingPage() {
 
                 {/* Compliance Toolkit */}
                 <Card className="border-2 hover:shadow-lg transition-shadow">
-                  <CardHeader className="bg-gradient-to-br from-primary/5 to-primary/10 p-8 text-center">
+                  <CardHeader className="bg-white p-8 text-center">
                     <div className="mb-4">
                       <h3 className="text-2xl font-bold mb-2">Workplace Essentials </h3>
                       <p className="text-muted-foreground">Self-service compliance tools</p>
@@ -222,16 +222,16 @@ export default function PricingPage() {
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-semibold">
                     MOST POPULAR
                   </div>
-                  <CardHeader className="bg-gradient-to-br from-slate-700 to-slate-900 text-white p-8 text-center rounded-t-lg">
+                  <CardHeader className="bg-white p-8 text-center rounded-t-lg">
                     <div className="mb-4">
                       <h3 className="text-2xl font-bold mb-2">HR & Safety Partner</h3>
-                      <p className="text-slate-200">Dedicated experts who do the work for you</p>
+                      <p className="text-muted-foreground">Dedicated experts who do the work for you</p>
                     </div>
                     <div className="flex flex-col items-center justify-center gap-2 mt-4">
-                      <Phone className="w-8 h-8 text-white/80" />
-                      <p className="text-sm text-slate-300">Custom pricing based on your needs</p>
+                      <Phone className="w-8 h-8 text-primary" />
+                      <p className="text-sm text-muted-foreground">Custom pricing based on your needs</p>
                     </div>
-                    <Button className="w-full mt-6 bg-white text-slate-800 hover:bg-slate-100" size="lg" asChild>
+                    <Button className="w-full mt-6" size="lg" asChild>
                       <Link href="/contact">
                         Schedule a Call
                         <ArrowRight className="ml-2 h-5 w-5" />
