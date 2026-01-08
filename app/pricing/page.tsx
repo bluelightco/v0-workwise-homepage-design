@@ -270,7 +270,7 @@ export default function PricingPage() {
                           <div>
                             <p className="font-semibold">Unlimited Consultation</p>
                             <p className="text-sm text-muted-foreground">
-                              Direct handling of conflicts, complaints, and HR risk assessment 
+                              Direct handling of conflicts, complaints, and HR risk & safety questions
                             </p>
                           </div>
                         </li>
