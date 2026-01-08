@@ -103,11 +103,11 @@ export default function PricingPage() {
                   </CardContent>
                 </Card>
 
-                {/* Essential Toolkit */}
+                {/* Compliance Toolkit */}
                 <Card className="border-2 hover:shadow-lg transition-shadow">
                   <CardHeader className="bg-white p-8 text-center">
                     <div className="mb-4">
-                      <h3 className="text-2xl font-bold mb-2">{"HR & Safety Essentials"} </h3>
+                      <h3 className="text-2xl font-bold mb-2">Compliance Toolkit</h3>
                       <p className="text-muted-foreground">Self-service compliance tools</p>
                     </div>
                     <div className="flex items-center justify-center gap-3 mb-4">
@@ -367,7 +367,7 @@ export default function PricingPage() {
                     <tr className="border-b-2 border-border">
                       <th className="text-left p-4 font-bold">Feature</th>
                       <th className="text-center p-4 font-bold">Labor Law Posters</th>
-                      <th className="text-center p-4 font-bold">Essential Toolkit</th>
+                      <th className="text-center p-4 font-bold">Compliance Toolkit</th>
                       <th className="text-center p-4 font-bold bg-slate-50">HR & Safety Partner</th>
                     </tr>
                   </thead>
@@ -552,7 +552,7 @@ export default function PricingPage() {
                   </h3>
                   <p className="text-muted-foreground">
                     Your posters are automatically updated whenever labor laws change, ensuring continuous compliance.
-                    Essential Toolkit includes 1 poster, while HR & Safety Partner includes all necessary posters for
+                    Compliance Toolkit includes 1 poster, while HR & Safety Partner includes all necessary posters for
                     your locations.
                   </p>
                 </div>
