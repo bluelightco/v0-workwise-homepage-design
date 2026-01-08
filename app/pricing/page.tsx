@@ -273,11 +273,10 @@ export default function PricingPage() {
                         </li>
                         <li className="flex gap-3">
                           <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                          <span className="text-sm">Fractional Talent Acquisition (up to 20 hrs/month)</span>
-                        </li>
-                        <li className="flex gap-3">
-                          <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                          <span className="text-sm">Part-Time Talent Acquisition (up to 40 hrs/month)</span>
+                          <span className="text-sm">
+                            Talent Acquisition - Full-cycle, end-to-end recruiting with dedicated support for candidate
+                            sourcing, hiring, and strategic talent consulting
+                          </span>
                         </li>
                       </ul>
                     </div>
@@ -406,6 +405,41 @@ export default function PricingPage() {
                     </tr>
                     <tr className="border-b border-border">
                       <td className="p-4">Document Management & Digital Tools</td>
+                      <td className="text-center p-4">-</td>
+                      <td className="text-center p-4 bg-slate-50">
+                        <Check className="w-5 h-5 text-primary mx-auto" />
+                      </td>
+                    </tr>
+                    <tr className="border-b border-border">
+                      <td className="p-4">Payroll Administration</td>
+                      <td className="text-center p-4">-</td>
+                      <td className="text-center p-4 bg-slate-50">
+                        <Check className="w-5 h-5 text-primary mx-auto" />
+                      </td>
+                    </tr>
+                    <tr className="border-b border-border">
+                      <td className="p-4">Benefits Administration</td>
+                      <td className="text-center p-4">-</td>
+                      <td className="text-center p-4 bg-slate-50">
+                        <Check className="w-5 h-5 text-primary mx-auto" />
+                      </td>
+                    </tr>
+                    <tr className="border-b border-border">
+                      <td className="p-4">Leaves Management</td>
+                      <td className="text-center p-4">-</td>
+                      <td className="text-center p-4 bg-slate-50">
+                        <Check className="w-5 h-5 text-primary mx-auto" />
+                      </td>
+                    </tr>
+                    <tr className="border-b border-border">
+                      <td className="p-4">Recruitment Administration</td>
+                      <td className="text-center p-4">-</td>
+                      <td className="text-center p-4 bg-slate-50">
+                        <Check className="w-5 h-5 text-primary mx-auto" />
+                      </td>
+                    </tr>
+                    <tr className="border-b border-border">
+                      <td className="p-4">Talent Acquisition</td>
                       <td className="text-center p-4">-</td>
                       <td className="text-center p-4 bg-slate-50">
                         <Check className="w-5 h-5 text-primary mx-auto" />
