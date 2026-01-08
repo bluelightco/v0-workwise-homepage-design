@@ -17,14 +17,7 @@ export function HeroSection() {
           <p className="text-xl md:text-2xl text-white/90 text-pretty leading-relaxed max-w-3xl text-left">
             The all-in-one platform that simplifies employment laws and workplace safety for growing businesses.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-start pt-4">
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg px-8 py-6">
-              Request a Demo
-            </Button>
-            <Button size="lg" className="text-lg px-8 py-6 bg-gray-300 text-gray-800 hover:bg-violet-400">
-              Take a Tour
-            </Button>
-          </div>
+          
         </div>
       </div>
     </section>
