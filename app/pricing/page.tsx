@@ -106,7 +106,9 @@ export default function PricingPage() {
                           <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                           <div>
                             <p className="font-semibold">LMS Training Modules</p>
-                            <p className="text-sm text-muted-foreground">Up to 2 select courses included</p>
+                            <p className="text-sm text-muted-foreground">
+                              Full access to our complete library of on-demand compliance courses
+                            </p>
                           </div>
                         </li>
                         <li className="flex gap-3">
@@ -350,7 +352,9 @@ export default function PricingPage() {
                     </tr>
                     <tr className="border-b border-border">
                       <td className="p-4">LMS Training Courses</td>
-                      <td className="text-center p-4">Up to 2 courses</td>
+                      <td className="text-center p-4">
+                        <div className="font-semibold">All-Access</div>
+                      </td>
                       <td className="text-center p-4 bg-slate-50">
                         <div className="font-semibold">All-Access</div>
                       </td>
