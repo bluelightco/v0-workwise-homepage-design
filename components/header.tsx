@@ -72,13 +72,6 @@ export function Header() {
             </Link>
 
             <Link
-              href="/shop-posters"
-              className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
-            >
-              Posters
-            </Link>
-
-            <Link
               href="/blog"
               className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
             >
