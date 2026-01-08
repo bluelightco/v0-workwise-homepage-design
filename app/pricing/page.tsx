@@ -34,26 +34,6 @@ export default function PricingPage() {
         <section className="py-20 bg-slate-50">
           <div className="container mx-auto px-4">
             <div className="max-w-7xl mx-auto">
-              <div className="flex items-center justify-center gap-4 mb-12">
-                <span className={`text-lg font-medium ${!isAnnual ? "text-foreground" : "text-muted-foreground"}`}>
-                  Monthly
-                </span>
-                <button
-                  onClick={() => setIsAnnual(!isAnnual)}
-                  className={`relative w-16 h-8 rounded-full transition-colors ${isAnnual ? "bg-primary" : "bg-muted"}`}
-                >
-                  <span
-                    className={`absolute top-1 w-6 h-6 rounded-full transition-all bg-white ${
-                      isAnnual ? "left-9" : "left-1"
-                    }`}
-                  />
-                </button>
-                <span className={`text-lg font-medium ${isAnnual ? "text-foreground" : "text-muted-foreground"}`}>
-                  Annual
-                </span>
-                <span className="bg-green-500 text-white text-sm font-semibold px-3 py-1 rounded-full">Save 20%</span>
-              </div>
-
               <div className="grid md:grid-cols-3 gap-8">
                 {/* Labor Law Posters */}
                 <Card className="border-2 hover:shadow-lg transition-shadow">
@@ -128,6 +108,29 @@ export default function PricingPage() {
                     <div className="mb-4">
                       <h3 className="text-2xl font-bold mb-2">Essentials </h3>
                       <p className="text-muted-foreground">Self-service compliance tools</p>
+                    </div>
+                    <div className="flex items-center justify-center gap-3 mb-4">
+                      <span
+                        className={`text-sm font-medium ${!isAnnual ? "text-foreground" : "text-muted-foreground"}`}
+                      >
+                        Monthly
+                      </span>
+                      <button
+                        onClick={() => setIsAnnual(!isAnnual)}
+                        className={`relative w-12 h-6 rounded-full transition-colors ${isAnnual ? "bg-primary" : "bg-muted"}`}
+                      >
+                        <span
+                          className={`absolute top-0.5 w-5 h-5 rounded-full transition-all bg-white ${
+                            isAnnual ? "left-6" : "left-0.5"
+                          }`}
+                        />
+                      </button>
+                      <span className={`text-sm font-medium ${isAnnual ? "text-foreground" : "text-muted-foreground"}`}>
+                        Annual
+                      </span>
+                      <span className="bg-green-500 text-white text-xs font-semibold px-2 py-0.5 rounded-full">
+                        Save 20%
+                      </span>
                     </div>
                     <div className="flex items-baseline justify-center gap-2">
                       <span className="text-5xl font-bold text-primary">
@@ -312,8 +315,6 @@ export default function PricingPage() {
                         </li>
                       </ul>
                     </div>
-
-                    
 
                     <div className="mb-8">
                       <p className="text-sm font-semibold text-muted-foreground mb-4">OPTIONAL SERVICES</p>
