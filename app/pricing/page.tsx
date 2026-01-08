@@ -142,9 +142,7 @@ export default function PricingPage() {
                       </ul>
                     </div>
 
-                    <p className="text-center text-sm text-muted-foreground mt-4">
-                      Perfect for small businesses and DIY HR teams
-                    </p>
+                    
                   </CardContent>
                 </Card>
 
