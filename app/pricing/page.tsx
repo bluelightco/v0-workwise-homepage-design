@@ -82,7 +82,7 @@ export default function PricingPage() {
                   </CardHeader>
                   <CardContent className="p-8">
                     <div className="mb-6">
-                      <p className="text-sm font-semibold text-muted-foreground mb-4">WHAT YOU GET  </p>
+                      <p className="text-sm font-semibold text-muted-foreground mb-4">WHAT YOU GET </p>
                       <ul className="space-y-4">
                         <li className="flex gap-3">
                           <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
@@ -126,7 +126,7 @@ export default function PricingPage() {
                           <Check className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
                           <span className="text-sm">Additional posters at 10% discount</span>
                         </li>
-                        
+
                         <li className="flex gap-3">
                           <Check className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
                           <span className="text-sm">Specialty guides and resources</span>
@@ -217,7 +217,7 @@ export default function PricingPage() {
                         <li className="flex gap-3">
                           <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                           <div>
-                            <p className="font-semibold">Risk Assessment  </p>
+                            <p className="font-semibold">Risk Assessment </p>
                             <p className="text-sm text-muted-foreground">
                               Guidance to prevent compliance gaps before they become problems
                             </p>
@@ -333,10 +333,10 @@ export default function PricingPage() {
                     <tr className="border-b border-border">
                       <td className="p-4">Poster Auto-Updates</td>
                       <td className="text-center p-4">
-                        <Check className="w-5 h-5 text-primary mx-auto" />
+                        <div className="text-sm">State & Federal per location</div>
                       </td>
                       <td className="text-center p-4 bg-slate-50">
-                        <Check className="w-5 h-5 text-primary mx-auto" />
+                        <div className="text-sm font-semibold">All locations included</div>
                       </td>
                     </tr>
                     <tr className="border-b border-border">
@@ -350,9 +350,16 @@ export default function PricingPage() {
                     </tr>
                     <tr className="border-b border-border">
                       <td className="p-4">LMS Training Courses</td>
-                      <td className="text-center p-4">All-Access </td>
+                      <td className="text-center p-4">Up to 2 courses</td>
                       <td className="text-center p-4 bg-slate-50">
                         <div className="font-semibold">All-Access</div>
+                      </td>
+                    </tr>
+                    <tr className="border-b border-border">
+                      <td className="p-4">Live Training (Webinar/Onsite)</td>
+                      <td className="text-center p-4">-</td>
+                      <td className="text-center p-4 bg-slate-50">
+                        <Check className="w-5 h-5 text-primary mx-auto" />
                       </td>
                     </tr>
                     <tr className="border-b border-border">
@@ -393,21 +400,14 @@ export default function PricingPage() {
                       </td>
                     </tr>
                     <tr className="border-b border-border">
-                      <td className="p-4">Employee Relations & Investigations</td>
+                      <td className="p-4">Employee Relations Guidance</td>
                       <td className="text-center p-4">-</td>
                       <td className="text-center p-4 bg-slate-50">
                         <Check className="w-5 h-5 text-primary mx-auto" />
                       </td>
                     </tr>
                     <tr className="border-b border-border">
-                      <td className="p-4">Training Delivery</td>
-                      <td className="text-center p-4">-</td>
-                      <td className="text-center p-4 bg-slate-50">
-                        <Check className="w-5 h-5 text-primary mx-auto" />
-                      </td>
-                    </tr>
-                    <tr className="border-b border-border">
-                      <td className="p-4">Proactive Risk Identification</td>
+                      <td className="p-4">Risk Assessment</td>
                       <td className="text-center p-4">-</td>
                       <td className="text-center p-4 bg-slate-50">
                         <Check className="w-5 h-5 text-primary mx-auto" />
@@ -431,35 +431,35 @@ export default function PricingPage() {
                       <td className="p-4">Payroll Administration</td>
                       <td className="text-center p-4">-</td>
                       <td className="text-center p-4 bg-slate-50">
-                        <Check className="w-5 h-5 text-primary mx-auto" />
+                        <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded">Add-On</span>
                       </td>
                     </tr>
                     <tr className="border-b border-border">
                       <td className="p-4">Benefits Administration</td>
                       <td className="text-center p-4">-</td>
                       <td className="text-center p-4 bg-slate-50">
-                        <Check className="w-5 h-5 text-primary mx-auto" />
+                        <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded">Add-On</span>
                       </td>
                     </tr>
                     <tr className="border-b border-border">
                       <td className="p-4">Leaves Management</td>
                       <td className="text-center p-4">-</td>
                       <td className="text-center p-4 bg-slate-50">
-                        <Check className="w-5 h-5 text-primary mx-auto" />
+                        <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded">Add-On</span>
                       </td>
                     </tr>
                     <tr className="border-b border-border">
                       <td className="p-4">Recruitment Administration</td>
                       <td className="text-center p-4">-</td>
                       <td className="text-center p-4 bg-slate-50">
-                        <Check className="w-5 h-5 text-primary mx-auto" />
+                        <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded">Add-On</span>
                       </td>
                     </tr>
                     <tr className="border-b border-border">
                       <td className="p-4">Talent Acquisition</td>
                       <td className="text-center p-4">-</td>
                       <td className="text-center p-4 bg-slate-50">
-                        <Check className="w-5 h-5 text-primary mx-auto" />
+                        <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded">Add-On</span>
                       </td>
                     </tr>
                   </tbody>
