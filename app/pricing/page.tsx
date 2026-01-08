@@ -1,3 +1,6 @@
+"use client"
+
+import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import { Check, ArrowRight } from "lucide-react"
@@ -6,6 +9,13 @@ import Footer from "@/components/footer"
 import Link from "next/link"
 
 export default function PricingPage() {
+  const [isAnnual, setIsAnnual] = useState(false)
+
+  const essentialMonthly = 99
+  const proMonthly = 349
+  const essentialAnnual = Math.round(essentialMonthly * 12 * 0.8)
+  const proAnnual = Math.round(proMonthly * 12 * 0.8)
+
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
@@ -14,9 +24,27 @@ export default function PricingPage() {
         <section className="bg-gradient-to-br from-primary to-primary/80 text-white py-20">
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">Simple, Transparent Pricing</h1>
-            <p className="text-xl text-white/90 max-w-3xl mx-auto">
+            <p className="text-xl text-white/90 max-w-3xl mx-auto mb-8">
               Choose the plan that fits your business needs. Scale up as you grow.
             </p>
+
+            <div className="flex items-center justify-center gap-4">
+              <span className={`text-lg font-medium ${!isAnnual ? "text-white" : "text-white/60"}`}>Monthly</span>
+              <button
+                onClick={() => setIsAnnual(!isAnnual)}
+                className={`relative w-16 h-8 rounded-full transition-colors ${isAnnual ? "bg-white" : "bg-white/30"}`}
+              >
+                <span
+                  className={`absolute top-1 w-6 h-6 rounded-full transition-all ${
+                    isAnnual ? "left-9 bg-primary" : "left-1 bg-white"
+                  }`}
+                />
+              </button>
+              <span className={`text-lg font-medium ${isAnnual ? "text-white" : "text-white/60"}`}>Annual</span>
+              {isAnnual && (
+                <span className="bg-green-500 text-white text-sm font-semibold px-3 py-1 rounded-full">Save 20%</span>
+              )}
+            </div>
           </div>
         </section>
 
@@ -33,9 +61,16 @@ export default function PricingPage() {
                       <p className="text-muted-foreground">Self-service compliance tools</p>
                     </div>
                     <div className="flex items-baseline justify-center gap-2">
-                      <span className="text-5xl font-bold text-primary">$149</span>
-                      <span className="text-muted-foreground">/month</span>
+                      <span className="text-5xl font-bold text-primary">
+                        ${isAnnual ? essentialAnnual.toLocaleString() : essentialMonthly}
+                      </span>
+                      <span className="text-muted-foreground">/{isAnnual ? "year" : "month"}</span>
                     </div>
+                    {isAnnual && (
+                      <p className="text-sm text-green-600 font-medium mt-2">
+                        Save ${(essentialMonthly * 12 - essentialAnnual).toLocaleString()}/year
+                      </p>
+                    )}
                   </CardHeader>
                   <CardContent className="p-8">
                     <div className="mb-6">
@@ -45,7 +80,9 @@ export default function PricingPage() {
                           <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                           <div>
                             <p className="font-semibold">Auto-Update Poster Subscription</p>
-                            <p className="text-sm text-muted-foreground">1 poster included; additional a la carte</p>
+                            <p className="text-sm text-muted-foreground">
+                              State & Federal included per location. Industry specific posters available as an addon.
+                            </p>
                           </div>
                         </li>
                         <li className="flex gap-3">
@@ -130,9 +167,14 @@ export default function PricingPage() {
                       <span className="text-lg text-slate-300">Starting at</span>
                     </div>
                     <div className="flex items-baseline justify-center gap-2">
-                      <span className="text-5xl font-bold">$349</span>
-                      <span className="text-slate-200">/month</span>
+                      <span className="text-5xl font-bold">${isAnnual ? proAnnual.toLocaleString() : proMonthly}</span>
+                      <span className="text-slate-200">/{isAnnual ? "year" : "month"}</span>
                     </div>
+                    {isAnnual && (
+                      <p className="text-sm text-green-400 font-medium mt-2">
+                        Save ${(proMonthly * 12 - proAnnual).toLocaleString()}/year
+                      </p>
+                    )}
                   </CardHeader>
                   <CardContent className="p-8">
                     <div className="bg-slate-50 rounded-lg p-4 mb-6">
