@@ -57,24 +57,22 @@ export default function PricingPage() {
               <div className="grid md:grid-cols-2 gap-8">
                 {/* Essential Toolkit */}
                 <Card className="border-2 hover:shadow-lg transition-shadow">
-                  <CardHeader className="bg-white p-8 text-center min-h-[280px] flex flex-col justify-between">
-                    <div>
-                      <div className="mb-4">
-                        <h3 className="text-2xl font-bold mb-2">Essential Toolkit</h3>
-                        <p className="text-muted-foreground">Self-service compliance tools</p>
-                      </div>
-                      <div className="flex items-baseline justify-center gap-2">
-                        <span className="text-5xl font-bold text-primary">
-                          ${isAnnual ? essentialAnnual.toLocaleString() : essentialMonthly}
-                        </span>
-                        <span className="text-muted-foreground">/{isAnnual ? "year" : "month"}</span>
-                      </div>
-                      {isAnnual && (
-                        <p className="text-sm text-green-600 font-medium mt-2">
-                          Save ${(essentialMonthly * 12 - essentialAnnual).toLocaleString()}/year
-                        </p>
-                      )}
+                  <CardHeader className="bg-white p-8 text-center">
+                    <div className="mb-4">
+                      <h3 className="text-2xl font-bold mb-2">Essential Toolkit</h3>
+                      <p className="text-muted-foreground">Self-service compliance tools</p>
                     </div>
+                    <div className="flex items-baseline justify-center gap-2">
+                      <span className="text-5xl font-bold text-primary">
+                        ${isAnnual ? essentialAnnual.toLocaleString() : essentialMonthly}
+                      </span>
+                      <span className="text-muted-foreground">/{isAnnual ? "year" : "month"}</span>
+                    </div>
+                    {isAnnual && (
+                      <p className="text-sm text-green-600 font-medium mt-2">
+                        Save ${(essentialMonthly * 12 - essentialAnnual).toLocaleString()}/year
+                      </p>
+                    )}
                     <Button className="w-full mt-6" size="lg" asChild>
                       <Link href="/services/tier-2-you-do-it">
                         Get Started
@@ -161,17 +159,15 @@ export default function PricingPage() {
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-semibold">
                     MOST POPULAR
                   </div>
-                  <CardHeader className="bg-gradient-to-br from-slate-700 to-slate-900 text-white p-8 text-center rounded-t-lg min-h-[280px] flex flex-col justify-between">
-                    <div>
-                      <div className="mb-4">
-                        <h3 className="text-2xl font-bold mb-2">HR & Safety Partner</h3>
-                        <p className="text-slate-200">We Do It For You</p>
-                      </div>
-                      <div className="flex flex-col items-center justify-center gap-1">
-                        <Phone className="w-6 h-6 text-white/80" />
-                        <span className="text-xl font-bold">Schedule a Call</span>
-                        <p className="text-sm text-slate-300">Custom pricing based on your needs</p>
-                      </div>
+                  <CardHeader className="bg-gradient-to-br from-slate-700 to-slate-900 text-white p-8 text-center rounded-t-lg">
+                    <div className="mb-4">
+                      <h3 className="text-2xl font-bold mb-2">HR & Safety Partner</h3>
+                      <p className="text-slate-200">Dedicated experts who do the work for you</p>
+                    </div>
+                    <div className="flex flex-col items-center justify-center gap-2 mt-4">
+                      <Phone className="w-8 h-8 text-white/80" />
+                      <span className="text-2xl font-bold">Schedule a Call</span>
+                      <p className="text-sm text-slate-300">Custom pricing based on your needs</p>
                     </div>
                     <Button className="w-full mt-6 bg-white text-slate-800 hover:bg-slate-100" size="lg" asChild>
                       <Link href="/contact">
@@ -181,16 +177,6 @@ export default function PricingPage() {
                     </Button>
                   </CardHeader>
                   <CardContent className="p-8">
-                    <div className="bg-slate-50 rounded-lg p-4 mb-6 flex items-start gap-3">
-                      <Phone className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <div>
-                        <p className="text-sm font-semibold mb-1">DEDICATED EXPERTS WHO DO THE WORK FOR YOU</p>
-                        <p className="text-xs text-muted-foreground">
-                          Proactive HR & Safety solution that lowers your liability and maximizes human capital
-                        </p>
-                      </div>
-                    </div>
-
                     <div className="mb-6">
                       <p className="text-sm font-semibold text-muted-foreground mb-4">WHAT YOU GET</p>
                       <ul className="space-y-4">
