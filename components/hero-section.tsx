@@ -10,7 +10,7 @@ export function HeroSection() {
 
       <div className="relative container mx-auto px-4 py-20 md:py-32">
         <div className="max-w-4xl space-y-8 text-left">
-          <h1 className="text-5xl md:text-6xl font-bold leading-tight text-balance text-white text-left lg:text-5xl">
+          <h1 className="font-bold leading-tight text-balance text-white text-left text-6xl">
             {"Simplifying HR & Safety Compliance"}
           </h1>
           <p className="text-xl text-white/90 text-pretty leading-relaxed max-w-3xl md:text-2xl">
