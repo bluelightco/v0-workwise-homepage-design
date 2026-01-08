@@ -277,7 +277,7 @@ export default function PricingPage() {
                         <li className="flex gap-3">
                           <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                           <div>
-                            <p className="font-semibold">Training Delivery</p>
+                            <p className="font-semibold">{"Customized Training"}</p>
                             <p className="text-sm text-muted-foreground">
                               In-person or virtual HR and Safety training, tailored to your team
                             </p>
@@ -313,37 +313,7 @@ export default function PricingPage() {
                       </ul>
                     </div>
 
-                    <div className="mb-6">
-                      <p className="text-sm font-semibold text-muted-foreground mb-4">TRAINING CATALOG INCLUDED</p>
-                      <div className="bg-primary/10 border border-primary/20 rounded-lg p-3 mb-4">
-                        <p className="text-sm font-semibold text-primary">Live Webinar or Onsite Delivery</p>
-                        <p className="text-xs text-muted-foreground">
-                          All training sessions are delivered live by our experts — virtually or at your location
-                        </p>
-                      </div>
-                      <div className="grid grid-cols-2 gap-4">
-                        <div>
-                          <p className="text-xs font-semibold text-primary mb-2">HR TRAINING</p>
-                          <ul className="space-y-1 text-xs text-muted-foreground">
-                            <li>Onboarding & Orientation</li>
-                            <li>Harassment & Workplace Conduct</li>
-                            <li>Performance Management</li>
-                            <li>Leadership Development</li>
-                            <li>Diversity, Equity & Inclusion</li>
-                          </ul>
-                        </div>
-                        <div>
-                          <p className="text-xs font-semibold text-primary mb-2">SAFETY TRAINING</p>
-                          <ul className="space-y-1 text-xs text-muted-foreground">
-                            <li>OSHA Compliance</li>
-                            <li>Emergency Preparedness</li>
-                            <li>First Aid & CPR</li>
-                            <li>Hazard Awareness</li>
-                            <li>PPE Training</li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
+                    
 
                     <div className="mb-8">
                       <p className="text-sm font-semibold text-muted-foreground mb-4">OPTIONAL SERVICES</p>
