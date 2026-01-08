@@ -116,13 +116,7 @@ export default function PricingPage() {
                             <p className="text-sm text-muted-foreground">Compliance news and regulatory changes</p>
                           </div>
                         </li>
-                        <li className="flex gap-3">
-                          <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                          <div>
-                            <p className="font-semibold">10% Discount on Webinar Trainings</p>
-                            <p className="text-sm text-muted-foreground">Exclusive savings on live sessions</p>
-                          </div>
-                        </li>
+                        
                       </ul>
                     </div>
 
