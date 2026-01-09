@@ -80,7 +80,7 @@ export function GoogleReviewsSection() {
             </div>
             <span className="text-xl font-bold">5.0</span>
           </div>
-          <p className="text-muted-foreground">Trusted by 60,000+ companies Nationwide</p>
+          <p className="text-muted-foreground">Trusted by 60,000+ Companies Nationwide</p>
         </div>
 
         <div className="max-w-6xl mx-auto">
