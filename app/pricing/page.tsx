@@ -3,7 +3,7 @@
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
-import { Check, ArrowRight, Phone, Monitor, Users } from "lucide-react"
+import { Check, ArrowRight, Phone, Monitor, Users, FileText, Briefcase } from "lucide-react"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import Link from "next/link"
@@ -107,7 +107,10 @@ export default function PricingPage() {
                 <Card className="border-2 hover:shadow-lg transition-shadow gap-0">
                   <CardHeader className="bg-white p-6 text-center min-h-[200px] flex flex-col justify-between">
                     <div className="text-center">
-                      <h3 className="text-xl font-bold mb-2">Labor Law Posters</h3>
+                      <div className="flex items-center justify-center gap-2 mb-2">
+                        <FileText className="w-5 h-5 text-primary" />
+                        <h3 className="text-xl font-bold">Labor Law Posters</h3>
+                      </div>
                       <p className="text-sm text-muted-foreground">Stay compliant with required postings</p>
                     </div>
                     <div className="flex flex-col items-center w-full mx-0 my-2">
@@ -159,7 +162,10 @@ export default function PricingPage() {
                 <Card className="border-2 hover:shadow-lg transition-shadow gap-0">
                   <CardHeader className="bg-white p-6 text-center min-h-[200px] flex flex-col justify-between">
                     <div className="text-center">
-                      <h3 className="text-xl font-bold mb-2">Workplace Essentials</h3>
+                      <div className="flex items-center justify-center gap-2 mb-2">
+                        <Briefcase className="w-5 h-5 text-primary" />
+                        <h3 className="text-xl font-bold">Workplace Essentials</h3>
+                      </div>
                       <p className="text-sm text-muted-foreground">Foundational HR & Safety support</p>
                     </div>
                     <div className="flex flex-col items-center w-full mx-0 my-2">
