@@ -2,12 +2,9 @@
 
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { ShoppingCart, ChevronDown } from "lucide-react"
-import { useState } from "react"
+import { ShoppingCart } from "lucide-react"
 
 export function Header() {
-  const [servicesOpen, setServicesOpen] = useState(false)
-
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
@@ -17,56 +14,26 @@ export function Header() {
           </Link>
 
           <nav className="hidden md:flex items-center gap-6">
-            <div
-              className="relative"
-              onMouseEnter={() => setServicesOpen(true)}
-              onMouseLeave={() => setServicesOpen(false)}
+            <Link
+              href="/services"
+              className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
             >
-              <Link
-                href="/services"
-                className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors flex items-center gap-1"
-              >
-                Services
-                <ChevronDown className="h-4 w-4" />
-              </Link>
+              Services
+            </Link>
 
-              {servicesOpen && (
-                <div className="absolute top-full left-0 pt-2 z-50">
-                  <div className="w-80 bg-white border rounded-lg shadow-lg py-2">
-                    <Link
-                      href="/services/tier-1-you-post-it"
-                      className="block px-4 py-3 text-sm hover:bg-gray-50 transition-colors"
-                    >
-                      <div className="font-semibold text-foreground">You Post It</div>
-                      <div className="text-xs text-muted-foreground">Posters + automatic updates for the year</div>
-                    </Link>
-                    <Link
-                      href="/services/tier-2-you-do-it"
-                      className="block px-4 py-3 text-sm hover:bg-gray-50 transition-colors"
-                    >
-                      <div className="font-semibold text-foreground">You Do It</div>
-                      <div className="text-xs text-muted-foreground">Self-service compliance tools and support</div>
-                    </Link>
-                    <Link
-                      href="/services/tier-3-we-do-it"
-                      className="block px-4 py-3 text-sm hover:bg-gray-50 transition-colors"
-                    >
-                      <div className="font-semibold text-foreground">We Do It</div>
-                      <div className="text-xs text-muted-foreground">Fully managed compliance (Virtual / Onsite)</div>
-                    </Link>
-                    <Link
-                      href="/services/essential-add-ons"
-                      className="block px-4 py-3 text-sm hover:bg-gray-50 transition-colors"
-                    >
-                      <div className="font-semibold text-foreground">Essential Add-Ons</div>
-                      <div className="text-xs text-muted-foreground">
-                        Track payroll, benefits, and leave, plus talent acquisition
-                      </div>
-                    </Link>
-                  </div>
-                </div>
-              )}
-            </div>
+            <Link
+              href="/pricing"
+              className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
+            >
+              Pricing
+            </Link>
+
+            <Link
+              href="/resell-refer"
+              className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
+            >
+              Affiliates
+            </Link>
 
             <Link
               href="/webinars"
@@ -74,24 +41,14 @@ export function Header() {
             >
               Webinars
             </Link>
-            <Link
-              href="/resell-refer"
-              className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
-            >
-              Resell & Refer
-            </Link>
-            <Link
-              href="/about"
-              className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
-            >
-              About
-            </Link>
+
             <Link
               href="/blog"
               className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
             >
               Blog
             </Link>
+
             <Link
               href="/contact"
               className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
@@ -102,18 +59,18 @@ export function Header() {
         </div>
 
         <div className="flex items-center gap-3">
+          <Button variant="ghost" size="sm" asChild>
+            <Link href="/login">Login</Link>
+          </Button>
+          <Button size="sm" asChild className="bg-primary hover:bg-primary/90">
+            <Link href="/shop-posters">Shop Posters</Link>
+          </Button>
           <Link href="/cart" className="relative p-2 hover:bg-accent rounded-md transition-colors">
             <ShoppingCart className="h-5 w-5 text-foreground/80" />
             <span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
               3
             </span>
           </Link>
-          <Button variant="ghost" size="sm" asChild>
-            <Link href="/login">Login</Link>
-          </Button>
-          <Button size="sm" asChild className="bg-primary hover:bg-primary/90">
-            <Link href="/get-started">Get Started</Link>
-          </Button>
         </div>
       </div>
     </header>

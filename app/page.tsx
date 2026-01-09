@@ -1,12 +1,14 @@
 import { Header } from "@/components/header"
 import { HeroSection } from "@/components/hero-section"
-import { KeyFeatures } from "@/components/key-features"
-import { StatsBar } from "@/components/stats-bar"
+import { GoogleReviewsSection } from "@/components/google-reviews-section"
+import { ProductFeaturesSection } from "@/components/product-features-section"
+import { OutcomesSection } from "@/components/outcomes-section"
+import { InnovationSection } from "@/components/innovation-section"
+import { ROISection } from "@/components/roi-section"
 import { ThreeTierSection } from "@/components/three-tier-section"
-import { RealPeopleSection } from "@/components/real-people-section"
-import { ToolsSection } from "@/components/tools-section"
-import { TrustedBySection } from "@/components/trusted-by-section"
-import { TestimonialSection } from "@/components/testimonial-section"
+import { OnSiteSection } from "@/components/on-site-section"
+import { RecognitionSection } from "@/components/recognition-section"
+import { ResourcesSection } from "@/components/resources-section"
 import { FinalCTA } from "@/components/final-cta"
 import { Footer } from "@/components/footer"
 
@@ -16,14 +18,15 @@ export default function Home() {
       <Header />
       <main>
         <HeroSection />
-        <KeyFeatures />
-        <StatsBar />
+        <GoogleReviewsSection />
+        <ProductFeaturesSection />
+        <OutcomesSection />
+        <InnovationSection />
+        <ROISection />
         <ThreeTierSection />
-        <RealPeopleSection />
-        <ToolsSection />
-        <TrustedBySection />
-        <TestimonialSection />
-        <StatsBar variant="dark" />
+        <OnSiteSection />
+        <RecognitionSection />
+        <ResourcesSection />
         <FinalCTA />
       </main>
       <Footer />

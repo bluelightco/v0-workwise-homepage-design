@@ -16,7 +16,7 @@ export default function EssentialAddOnsPage() {
         <section className="relative bg-gradient-to-br from-slate-700 to-slate-900 text-white py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">Essential Add-Ons</h1>
+              <h1 className="text-4xl md:text-5xl font-bold mb-4">HR Add-Ons</h1>
               <p className="text-xl text-slate-200 mb-8">
                 Enhance your compliance platform with powerful tools for workforce management and talent acquisition
               </p>
