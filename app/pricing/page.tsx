@@ -111,7 +111,7 @@ export default function PricingPage() {
                         <FileText className="w-5 h-5 text-primary" />
                         <h3 className="text-xl font-bold">Labor Law Posters</h3>
                       </div>
-                      <p className="text-sm text-muted-foreground">Stay compliant with required postings</p>
+                      <p className="text-sm text-muted-foreground text-center">Stay compliant with required postings</p>
                     </div>
                     <div className="flex flex-col items-center w-full mx-0 my-2">
                       <div className="flex items-baseline justify-center gap-1">
@@ -151,6 +151,13 @@ export default function PricingPage() {
                           <p className="text-xs text-muted-foreground">Ongoing compliance made easy</p>
                         </div>
                       </li>
+                      <li className="flex gap-2">
+                        <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                        <div>
+                          <p className="text-sm font-medium">HR & Safety Newsletter</p>
+                          <p className="text-xs text-muted-foreground">Stay informed on compliance updates</p>
+                        </div>
+                      </li>
                     </ul>
                     <p className="text-center text-xs text-muted-foreground mt-4 pt-4 border-t">
                       Low-friction entry point or add-on
@@ -158,15 +165,15 @@ export default function PricingPage() {
                   </CardContent>
                 </Card>
 
-                {/* Workplace Essentials */}
+                {/* Essentials */}
                 <Card className="border-2 hover:shadow-lg transition-shadow gap-0">
                   <CardHeader className="bg-white p-6 text-center min-h-[200px] flex flex-col justify-between">
                     <div className="text-center">
                       <div className="flex items-center justify-center gap-2 mb-2">
                         <Briefcase className="w-5 h-5 text-primary" />
-                        <h3 className="text-xl font-bold">Workplace Essentials</h3>
+                        <h3 className="text-xl font-bold">Essentials</h3>
                       </div>
-                      <p className="text-sm text-muted-foreground">Foundational HR & Safety support</p>
+                      <p className="text-sm text-muted-foreground text-center">Foundational HR & Safety support</p>
                     </div>
                     <div className="flex flex-col items-center w-full mx-0 my-2">
                       <div className="flex items-baseline justify-center gap-1">
@@ -221,6 +228,20 @@ export default function PricingPage() {
                           <p className="text-xs text-muted-foreground">Clear, actionable resources</p>
                         </div>
                       </li>
+                      <li className="flex gap-2">
+                        <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                        <div>
+                          <p className="text-sm font-medium">HR & Safety Newsletter</p>
+                          <p className="text-xs text-muted-foreground">Stay informed on compliance updates</p>
+                        </div>
+                      </li>
+                      <li className="flex gap-2">
+                        <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                        <div>
+                          <p className="text-sm font-medium">Digital Tools & Templates</p>
+                          <p className="text-xs text-muted-foreground">Ready-to-use HR & Safety resources</p>
+                        </div>
+                      </li>
                     </ul>
                     <p className="text-center text-xs text-muted-foreground mt-4 pt-4 border-t">
                       Perfect for small businesses
@@ -239,7 +260,9 @@ export default function PricingPage() {
                         <Monitor className="w-5 h-5 text-primary" />
                         <h3 className="text-xl font-bold">Virtual +</h3>
                       </div>
-                      <p className="text-sm text-muted-foreground">Dedicated virtual HR & Safety partner</p>
+                      <p className="text-sm text-muted-foreground text-center">
+                        Dedicated Virtual HR &amp; Safety partner
+                      </p>
                     </div>
                     <div className="flex flex-col items-center w-full mx-0 my-2">
                       {virtualPlusPrice === "schedule" ? (
@@ -282,7 +305,7 @@ export default function PricingPage() {
                     <ul className="space-y-3">
                       <li className="flex gap-2">
                         <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                        <p className="text-sm font-medium">Everything in Workplace Essentials</p>
+                        <p className="text-sm font-medium">Everything in Essentials</p>
                       </li>
                       <li className="flex gap-2">
                         <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
@@ -321,7 +344,7 @@ export default function PricingPage() {
                       </li>
                     </ul>
                     <p className="text-center text-xs text-muted-foreground mt-4 pt-4 border-t">
-                      The sweet spot between DIY and full-service
+                      Expert support without the overhead of a full-time hire
                     </p>
                   </CardContent>
                 </Card>
@@ -334,7 +357,9 @@ export default function PricingPage() {
                         <Users className="w-5 h-5 text-primary" />
                         <h3 className="text-xl font-bold">Onsite Pro</h3>
                       </div>
-                      <p className="text-sm text-muted-foreground">Premium, fully personalized service</p>
+                      <p className="text-sm text-muted-foreground text-center">
+                        {"HR & Safety Support, where you are"}
+                      </p>
                     </div>
                     <div className="flex flex-col items-center w-full mx-0 my-2">
                       <div className="flex items-baseline justify-center gap-1">
@@ -362,27 +387,47 @@ export default function PricingPage() {
                       <li className="flex gap-2">
                         <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
                         <div>
-                          <p className="text-sm font-medium">Onsite HR & Safety Partner</p>
-                          <p className="text-xs text-muted-foreground">Audits, training & ongoing guidance</p>
+                          <p className="text-sm font-medium">Onsite Safety Inspections</p>
+                          <p className="text-xs text-muted-foreground">Job site & mock OSHA inspections</p>
                         </div>
                       </li>
                       <li className="flex gap-2">
                         <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
                         <div>
-                          <p className="text-sm font-medium">Hands-On Implementation</p>
-                          <p className="text-xs text-muted-foreground">We execute, not just advise</p>
+                          <p className="text-sm font-medium">Certified Onsite Training</p>
+                          <p className="text-xs text-muted-foreground">
+                            CPR, OSHA 10/30-Hour, Forklift, Fall Protection & more
+                          </p>
                         </div>
                       </li>
                       <li className="flex gap-2">
                         <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
                         <div>
-                          <p className="text-sm font-medium">Dedicated Onsite Presence</p>
-                          <p className="text-xs text-muted-foreground">Regular visits & ongoing support</p>
+                          <p className="text-sm font-medium">Specialized Safety Training</p>
+                          <p className="text-xs text-muted-foreground">
+                            PPE, Machine Guarding, Confined Space, MEWP & FIT Testing
+                          </p>
+                        </div>
+                      </li>
+                      <li className="flex gap-2">
+                        <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                        <div>
+                          <p className="text-sm font-medium">Onsite HR Support</p>
+                          <p className="text-xs text-muted-foreground">
+                            Performance management, discipline & terminations
+                          </p>
+                        </div>
+                      </li>
+                      <li className="flex gap-2">
+                        <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                        <div>
+                          <p className="text-sm font-medium">Leadership Development</p>
+                          <p className="text-xs text-muted-foreground">Coaching, workshops & management training</p>
                         </div>
                       </li>
                     </ul>
                     <p className="text-center text-xs text-muted-foreground mt-4 pt-4 border-t">
-                      White-glove service for your business
+                      Your dedicated onsite HR & Safety team
                     </p>
                   </CardContent>
                 </Card>
@@ -402,7 +447,7 @@ export default function PricingPage() {
                     <tr className="border-b-2 border-border">
                       <th className="text-left p-4 font-bold">Feature</th>
                       <th className="text-center p-4 font-bold">Labor Law Posters</th>
-                      <th className="text-center p-4 font-bold">Workplace Essentials</th>
+                      <th className="text-center p-4 font-bold">Essentials</th>
                       <th className="text-center p-4 font-bold bg-primary/5">Virtual +</th>
                       <th className="text-center p-4 font-bold">Onsite Pro</th>
                     </tr>
@@ -439,7 +484,22 @@ export default function PricingPage() {
                       </td>
                     </tr>
                     <tr className="border-b border-border">
-                      <td className="p-4">Employee Management System </td>
+                      <td className="p-4">HR & Safety Newsletter</td>
+                      <td className="text-center p-4">
+                        <Check className="w-5 h-5 text-primary mx-auto" />
+                      </td>
+                      <td className="text-center p-4">
+                        <Check className="w-5 h-5 text-primary mx-auto" />
+                      </td>
+                      <td className="text-center p-4 bg-primary/5">
+                        <Check className="w-5 h-5 text-primary mx-auto" />
+                      </td>
+                      <td className="text-center p-4">
+                        <Check className="w-5 h-5 text-primary mx-auto" />
+                      </td>
+                    </tr>
+                    <tr className="border-b border-border">
+                      <td className="p-4">Employee Management System</td>
                       <td className="text-center p-4">-</td>
                       <td className="text-center p-4">
                         <Check className="w-5 h-5 text-primary mx-auto" />
@@ -480,7 +540,9 @@ export default function PricingPage() {
                     <tr className="border-b border-border">
                       <td className="p-4">Digital Tools & Templates</td>
                       <td className="text-center p-4">-</td>
-                      <td className="text-center p-4">-</td>
+                      <td className="text-center p-4">
+                        <Check className="w-5 h-5 text-primary mx-auto" />
+                      </td>
                       <td className="text-center p-4 bg-primary/5">
                         <Check className="w-5 h-5 text-primary mx-auto" />
                       </td>
@@ -545,6 +607,51 @@ export default function PricingPage() {
                     </tr>
                     <tr className="border-b border-border">
                       <td className="p-4">Onsite Audits & Training</td>
+                      <td className="text-center p-4">-</td>
+                      <td className="text-center p-4">-</td>
+                      <td className="text-center p-4 bg-primary/5">-</td>
+                      <td className="text-center p-4">
+                        <Check className="w-5 h-5 text-primary mx-auto" />
+                      </td>
+                    </tr>
+                    <tr className="border-b border-border">
+                      <td className="p-4">Job Site & Mock OSHA Inspections</td>
+                      <td className="text-center p-4">-</td>
+                      <td className="text-center p-4">-</td>
+                      <td className="text-center p-4 bg-primary/5">-</td>
+                      <td className="text-center p-4">
+                        <Check className="w-5 h-5 text-primary mx-auto" />
+                      </td>
+                    </tr>
+                    <tr className="border-b border-border">
+                      <td className="p-4">Certified Onsite Training (CPR, OSHA, Forklift)</td>
+                      <td className="text-center p-4">-</td>
+                      <td className="text-center p-4">-</td>
+                      <td className="text-center p-4 bg-primary/5">-</td>
+                      <td className="text-center p-4">
+                        <Check className="w-5 h-5 text-primary mx-auto" />
+                      </td>
+                    </tr>
+                    <tr className="border-b border-border">
+                      <td className="p-4">Specialized Safety Training (PPE, Confined Space, MEWP)</td>
+                      <td className="text-center p-4">-</td>
+                      <td className="text-center p-4">-</td>
+                      <td className="text-center p-4 bg-primary/5">-</td>
+                      <td className="text-center p-4">
+                        <Check className="w-5 h-5 text-primary mx-auto" />
+                      </td>
+                    </tr>
+                    <tr className="border-b border-border">
+                      <td className="p-4">Onsite HR Support (Performance, Discipline, Terminations)</td>
+                      <td className="text-center p-4">-</td>
+                      <td className="text-center p-4">-</td>
+                      <td className="text-center p-4 bg-primary/5">-</td>
+                      <td className="text-center p-4">
+                        <Check className="w-5 h-5 text-primary mx-auto" />
+                      </td>
+                    </tr>
+                    <tr className="border-b border-border">
+                      <td className="p-4">Leadership Coaching & Management Training</td>
                       <td className="text-center p-4">-</td>
                       <td className="text-center p-4">-</td>
                       <td className="text-center p-4 bg-primary/5">-</td>
