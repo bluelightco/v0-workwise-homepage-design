@@ -75,6 +75,25 @@ export function GoogleReviewsSection() {
     }
   }, [])
 
+  // Auto-rotate carousel
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (scrollContainerRef.current) {
+        const { scrollLeft, scrollWidth, clientWidth } = scrollContainerRef.current
+        const isAtEnd = scrollLeft >= scrollWidth - clientWidth - 10
+
+        if (isAtEnd) {
+          // Reset to beginning
+          scrollContainerRef.current.scrollTo({ left: 0, behavior: "smooth" })
+        } else {
+          scroll("right")
+        }
+      }
+    }, 5000)
+
+    return () => clearInterval(interval)
+  }, [])
+
   const scroll = (direction: "left" | "right") => {
     if (scrollContainerRef.current) {
       const scrollAmount = 350
@@ -118,11 +137,11 @@ export function GoogleReviewsSection() {
           <p className="text-muted-foreground">Trusted by 60,000+ Companies Nationwide</p>
         </div>
 
-        <div className="relative">
+        <div className="flex items-center gap-4">
           <Button
             variant="outline"
             size="icon"
-            className={`absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-background shadow-md ${!canScrollLeft ? "opacity-0 pointer-events-none" : ""}`}
+            className={`flex-shrink-0 bg-background shadow-md transition-opacity ${!canScrollLeft ? "opacity-30 pointer-events-none" : ""}`}
             onClick={() => scroll("left")}
             aria-label="Scroll left"
           >
@@ -131,7 +150,7 @@ export function GoogleReviewsSection() {
 
           <div
             ref={scrollContainerRef}
-            className="flex gap-6 overflow-x-auto scrollbar-hide px-8 pb-4 snap-x snap-mandatory"
+            className="flex gap-6 overflow-x-auto scrollbar-hide pb-4 snap-x snap-mandatory flex-1"
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
           >
             {reviews.map((review, index) => (
@@ -162,7 +181,7 @@ export function GoogleReviewsSection() {
           <Button
             variant="outline"
             size="icon"
-            className={`absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-background shadow-md ${!canScrollRight ? "opacity-0 pointer-events-none" : ""}`}
+            className={`flex-shrink-0 bg-background shadow-md transition-opacity ${!canScrollRight ? "opacity-30 pointer-events-none" : ""}`}
             onClick={() => scroll("right")}
             aria-label="Scroll right"
           >
