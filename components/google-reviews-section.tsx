@@ -133,9 +133,20 @@ export function GoogleReviewsSection() {
       setIsPaused(true)
       startResumeTimer()
 
-      const scrollAmount = 350
-      scrollContainerRef.current.scrollBy({
-        left: direction === "left" ? -scrollAmount : scrollAmount,
+      const container = scrollContainerRef.current
+      const gap = 24
+      // Get actual card width from the first card element
+      const firstCard = container.querySelector("div > div") as HTMLElement
+      const cardWidth = firstCard ? firstCard.offsetWidth + gap : 320 + gap
+
+      // Calculate current card index and snap to next/previous full card
+      const currentScroll = container.scrollLeft
+      const currentCardIndex = Math.round(currentScroll / cardWidth)
+      const targetCardIndex = direction === "left" ? currentCardIndex - 1 : currentCardIndex + 1
+      const targetScroll = targetCardIndex * cardWidth
+
+      container.scrollTo({
+        left: targetScroll,
         behavior: "smooth",
       })
     }
