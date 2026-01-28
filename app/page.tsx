@@ -19,11 +19,11 @@ export default function Home() {
       <main>
         <HeroSection />
         <GoogleReviewsSection />
+        <ThreeTierSection />
         <ProductFeaturesSection />
         <OutcomesSection />
         <InnovationSection />
         <ROISection />
-        <ThreeTierSection />
         <OnSiteSection />
         <RecognitionSection />
         <ResourcesSection />
