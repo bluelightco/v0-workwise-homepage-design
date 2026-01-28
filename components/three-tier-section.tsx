@@ -2,44 +2,58 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from "@/components/ui/button"
 import { Check } from "lucide-react"
 import { cn } from "@/lib/utils"
+import Link from "next/link"
 
 const tiers = [
   {
-    name: "You Post It",
-    subtitle: "Compliance Essentials",
+    name: "Labor Law Posters",
+    subtitle: "Stay Compliant with Required Postings",
     description: "The foundation of a compliant workplace. We track the changing laws; you simply post the updates.",
+    price: "$19",
+    priceNote: "/poster",
     features: [
-      "Automatic State & Federal Poster updates for 1 year",
-      "City & County specific posters",
-      'Backed by our $40,000+ "We Pay The Fine" Guarantee',
+      "Single or Multi-Location: Scalable for any business size",
+      "Automatic Updates: When laws change, you're covered",
+      "Subscribe & Save: Ongoing compliance made easy",
+      "HR & Safety Newsletter: Stay informed on compliance updates",
     ],
     cta: "Shop Posters",
+    ctaLink: "/shop-posters",
     variant: "light" as const,
   },
   {
-    name: "You Do It",
-    subtitle: "Self-Service HR & Safety Tools",
+    name: "Essentials",
+    subtitle: "Foundational HR & Safety Support",
     description:
       "Give your internal team the professional-grade tools they need to manage compliance and mitigate risk.",
+    price: "$89",
+    priceNote: "/mo",
     features: [
-      "EMS Platform Access: Training trackers, document center, and newsletters",
-      "Library: Access to attorney-reviewed checklists and forms",
-      "A La Carte: Add-ons for AI Chatbot support and custom forms",
+      "1 Labor Law Poster Included: State & Federal compliance",
+      "Employee Management System: Onboarding, time-off, docs & more",
+      "LMS Training Modules: On-demand compliance courses",
+      "Step-by-Step Compliance Guides: Clear, actionable resources",
     ],
-    cta: "Explore Tools",
+    cta: "Get Started",
+    ctaLink: "/contact",
     variant: "medium" as const,
   },
   {
-    name: "We Do It",
-    subtitle: "Remote Full-Service HR & Safety",
+    name: "Virtual +",
+    subtitle: "Dedicated Virtual HR & Safety Partner",
     description:
-      "A complete virtual department. We lower your liability and overhead by managing your HR and Safety programs for you.",
+      "Expert support without the overhead of a full-time hire. Your dedicated partner for all HR and Safety needs.",
+    price: "$375",
+    priceNote: "/mo",
+    popular: true,
     features: [
-      "Virtual Service Model: Unlimited support from a dedicated HR & Safety Business Partner",
-      "Strategic Support: Handbook creation, compensation analysis, and IIPP development",
-      "Full EMS Access: Included",
+      "Everything in Essentials included",
+      "Dedicated Virtual Partner: Your HR & Safety business partner",
+      "Compliance & Policy Guidance: Expert support on employee relations",
+      "Unlimited Consultation: Proactive updates & recommendations",
     ],
-    cta: "Go Virtual",
+    cta: "Schedule a Call",
+    ctaLink: "/contact",
     variant: "dark" as const,
   },
 ]
@@ -67,12 +81,24 @@ export function ThreeTierSection() {
               )}
             >
               <CardHeader className="space-y-3">
-                <div className="text-sm font-semibold uppercase tracking-wide">{tier.name}</div>
-                <CardTitle className="text-xl">{tier.subtitle}</CardTitle>
+                {tier.popular && (
+                  <div className="inline-flex self-start bg-primary text-primary-foreground px-2 py-0.5 rounded-full text-xs font-semibold">
+                    MOST POPULAR
+                  </div>
+                )}
+                <CardTitle className="text-xl">{tier.name}</CardTitle>
+                <div className="flex items-baseline gap-1">
+                  <span className={cn("text-3xl font-bold", tier.variant === "dark" ? "text-primary-foreground" : "text-primary")}>
+                    {tier.price}
+                  </span>
+                  <span className={cn("text-sm", tier.variant === "dark" ? "text-primary-foreground/80" : "text-muted-foreground")}>
+                    {tier.priceNote}
+                  </span>
+                </div>
                 <CardDescription
                   className={cn("leading-relaxed", tier.variant === "dark" && "text-primary-foreground/90")}
                 >
-                  {tier.description}
+                  {tier.subtitle}
                 </CardDescription>
               </CardHeader>
 
@@ -94,8 +120,10 @@ export function ThreeTierSection() {
               </CardContent>
 
               <CardFooter>
-                <Button variant={tier.variant === "dark" ? "secondary" : "outline"} className="w-full">
-                  {tier.cta}
+                <Button variant={tier.variant === "dark" ? "secondary" : "outline"} className="w-full" asChild>
+                  <Link href={tier.ctaLink}>
+                    {tier.cta}
+                  </Link>
                 </Button>
               </CardFooter>
             </Card>
