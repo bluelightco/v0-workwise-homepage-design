@@ -29,17 +29,10 @@ export function Header() {
             </Link>
 
             <Link
-              href="/resell-refer"
-              className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
-            >
-              Affiliates
-            </Link>
-
-            <Link
               href="/webinars"
               className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
             >
-              Webinars
+              Training
             </Link>
 
             <Link
@@ -47,6 +40,13 @@ export function Header() {
               className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
             >
               Blog
+            </Link>
+
+            <Link
+              href="/resell-refer"
+              className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
+            >
+              Affiliates
             </Link>
 
             <Link
