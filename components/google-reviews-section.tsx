@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import { Star, ChevronLeft, ChevronRight } from "lucide-react"
-import { useRef, useState, useEffect } from "react"
+import { useRef, useState, useEffect, useCallback } from "react"
 import { Button } from "@/components/ui/button"
 
 const reviews = [
@@ -59,6 +59,23 @@ const loopedReviews = [...reviews, ...reviews, ...reviews]
 export function GoogleReviewsSection() {
   const scrollContainerRef = useRef<HTMLDivElement>(null)
   const [isPaused, setIsPaused] = useState(false)
+  const resumeTimeoutRef = useRef<NodeJS.Timeout | null>(null)
+
+  // Clear any existing resume timeout
+  const clearResumeTimeout = useCallback(() => {
+    if (resumeTimeoutRef.current) {
+      clearTimeout(resumeTimeoutRef.current)
+      resumeTimeoutRef.current = null
+    }
+  }, [])
+
+  // Start a 10-second timer to resume auto-scroll
+  const startResumeTimer = useCallback(() => {
+    clearResumeTimeout()
+    resumeTimeoutRef.current = setTimeout(() => {
+      setIsPaused(false)
+    }, 10000)
+  }, [clearResumeTimeout])
 
   // Initialize scroll position to middle set
   useEffect(() => {
@@ -105,8 +122,17 @@ export function GoogleReviewsSection() {
     return () => container.removeEventListener("scroll", handleScroll)
   }, [])
 
+  // Cleanup timeout on unmount
+  useEffect(() => {
+    return () => clearResumeTimeout()
+  }, [clearResumeTimeout])
+
   const scroll = (direction: "left" | "right") => {
     if (scrollContainerRef.current) {
+      // Pause auto-scroll and start resume timer
+      setIsPaused(true)
+      startResumeTimer()
+
       const scrollAmount = 350
       scrollContainerRef.current.scrollBy({
         left: direction === "left" ? -scrollAmount : scrollAmount,
