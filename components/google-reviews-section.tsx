@@ -53,45 +53,56 @@ const reviews = [
   },
 ]
 
+// Duplicate reviews for seamless infinite loop
+const loopedReviews = [...reviews, ...reviews, ...reviews]
+
 export function GoogleReviewsSection() {
   const scrollContainerRef = useRef<HTMLDivElement>(null)
-  const [canScrollLeft, setCanScrollLeft] = useState(false)
-  const [canScrollRight, setCanScrollRight] = useState(true)
+  const [isPaused, setIsPaused] = useState(false)
 
-  const checkScrollPosition = () => {
-    if (scrollContainerRef.current) {
-      const { scrollLeft, scrollWidth, clientWidth } = scrollContainerRef.current
-      setCanScrollLeft(scrollLeft > 0)
-      setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 10)
-    }
-  }
-
+  // Initialize scroll position to middle set
   useEffect(() => {
-    checkScrollPosition()
-    const container = scrollContainerRef.current
-    if (container) {
-      container.addEventListener("scroll", checkScrollPosition)
-      return () => container.removeEventListener("scroll", checkScrollPosition)
+    if (scrollContainerRef.current) {
+      const cardWidth = 350 + 24 // card width + gap
+      const middleStart = cardWidth * reviews.length
+      scrollContainerRef.current.scrollLeft = middleStart
     }
   }, [])
 
-  // Auto-rotate carousel
+  // Continuous auto-scroll
   useEffect(() => {
+    if (isPaused) return
+
     const interval = setInterval(() => {
       if (scrollContainerRef.current) {
-        const { scrollLeft, scrollWidth, clientWidth } = scrollContainerRef.current
-        const isAtEnd = scrollLeft >= scrollWidth - clientWidth - 10
-
-        if (isAtEnd) {
-          // Reset to beginning
-          scrollContainerRef.current.scrollTo({ left: 0, behavior: "smooth" })
-        } else {
-          scroll("right")
-        }
+        scrollContainerRef.current.scrollLeft += 1
       }
-    }, 5000)
+    }, 20)
 
     return () => clearInterval(interval)
+  }, [isPaused])
+
+  // Handle infinite loop reset
+  useEffect(() => {
+    const container = scrollContainerRef.current
+    if (!container) return
+
+    const handleScroll = () => {
+      const cardWidth = 350 + 24 // card width + gap
+      const singleSetWidth = cardWidth * reviews.length
+      
+      // If scrolled past the last set, jump back to middle set
+      if (container.scrollLeft >= singleSetWidth * 2) {
+        container.scrollLeft = singleSetWidth
+      }
+      // If scrolled before the first set, jump to middle set
+      if (container.scrollLeft <= 0) {
+        container.scrollLeft = singleSetWidth
+      }
+    }
+
+    container.addEventListener("scroll", handleScroll)
+    return () => container.removeEventListener("scroll", handleScroll)
   }, [])
 
   const scroll = (direction: "left" | "right") => {
@@ -141,7 +152,7 @@ export function GoogleReviewsSection() {
           <Button
             variant="outline"
             size="icon"
-            className={`flex-shrink-0 bg-background shadow-md transition-opacity ${!canScrollLeft ? "opacity-30 pointer-events-none" : ""}`}
+            className="flex-shrink-0 bg-background shadow-md"
             onClick={() => scroll("left")}
             aria-label="Scroll left"
           >
@@ -150,10 +161,12 @@ export function GoogleReviewsSection() {
 
           <div
             ref={scrollContainerRef}
-            className="flex gap-6 overflow-x-auto scrollbar-hide pb-4 snap-x snap-mandatory flex-1"
+            className="flex gap-6 overflow-x-auto scrollbar-hide pb-4 flex-1"
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}
           >
-            {reviews.map((review, index) => (
+            {loopedReviews.map((review, index) => (
               <div
                 key={index}
                 className="bg-white rounded-xl p-6 shadow-sm border flex-shrink-0 w-[320px] md:w-[350px] snap-start"
@@ -181,7 +194,7 @@ export function GoogleReviewsSection() {
           <Button
             variant="outline"
             size="icon"
-            className={`flex-shrink-0 bg-background shadow-md transition-opacity ${!canScrollRight ? "opacity-30 pointer-events-none" : ""}`}
+            className="flex-shrink-0 bg-background shadow-md"
             onClick={() => scroll("right")}
             aria-label="Scroll right"
           >
