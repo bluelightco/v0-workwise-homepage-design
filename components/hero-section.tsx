@@ -1,3 +1,6 @@
+import { Button } from "@/components/ui/button"
+import Link from "next/link"
+
 export function HeroSection() {
   return (
     <section className="relative overflow-hidden">
