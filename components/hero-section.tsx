@@ -19,7 +19,7 @@ export function HeroSection() {
             affordable for every business owner.
           </p>
           <div className="px-100">
-            <Button asChild size="lg" className="bg-primary hover:bg-primary/90 w-full">
+            <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
               <Link href="/pricing">Get Started</Link>
             </Button>
           </div>
