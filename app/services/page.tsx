@@ -259,7 +259,7 @@ export default function ServicesPage() {
                 Operational HR support that complements core services to streamline compliance and internal processes.
               </p>
             </div>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
               {adminServices.map((service) => (
                 <ServiceCard key={service.title} {...service} />
               ))}
