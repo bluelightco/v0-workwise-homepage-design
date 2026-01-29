@@ -124,7 +124,7 @@ export default function AffiliatesPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-balance">
               Resell Our Products or Refer Our Services
             </h1>
-            <div className="space-y-4 text-lg md:text-xl text-primary-foreground/90 leading-relaxed max-w-3xl mx-auto">
+            <div className="space-y-4 text-lg md:text-xl text-primary-foreground/90 leading-relaxed max-w-4xl mx-auto">
               <p>Resell our digital products and get paid, all while enhancing the products you offer.</p>
               <p>Refer our HR and Safety services to the companies you serve and build a recurring revenue system, helping them mitigate exposure and better their bottom line.</p>
             </div>
