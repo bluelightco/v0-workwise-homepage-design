@@ -2,6 +2,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
 
 const resources = [
   {
@@ -30,9 +31,11 @@ export function ResourcesSection() {
             <p className="text-lg text-primary font-medium">Insights that help you run a better workplace</p>
             <p className="text-muted-foreground max-w-2xl">Practical articles on HR, Safety, compliance, and people operations—written for real businesses, not legal textbooks.</p>
           </div>
-          <Button variant="link" className="hidden md:flex items-center gap-2 font-semibold shrink-0">
-            View All Articles
-            <ArrowRight className="w-4 h-4" />
+          <Button asChild variant="link" className="hidden md:flex items-center gap-2 font-semibold shrink-0">
+            <Link href="/blog">
+              View All Articles
+              <ArrowRight className="w-4 h-4" />
+            </Link>
           </Button>
         </div>
 
@@ -60,8 +63,10 @@ export function ResourcesSection() {
         </div>
 
         <div className="text-center md:hidden">
-          <Button variant="outline" className="w-full bg-transparent">
-            View All Articles
+          <Button asChild variant="outline" className="w-full bg-transparent">
+            <Link href="/blog">
+              View All Articles
+            </Link>
           </Button>
         </div>
       </div>
