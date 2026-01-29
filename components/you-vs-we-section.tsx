@@ -1,6 +1,3 @@
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
 import { Check } from "lucide-react"
 
 export function YouVsWeSection() {
@@ -20,9 +17,9 @@ export function YouVsWeSection() {
   ]
 
   return (
-    <section className="py-16 md:py-24 bg-background">
+    <section className="py-16 md:py-24 bg-muted/30">
       <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               You do it <span className="text-primary">vs.</span> We do it
@@ -32,60 +29,52 @@ export function YouVsWeSection() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* You Do It Card */}
-            <Card className="border-2 hover:border-primary transition-colors">
-              <CardContent className="p-8">
-                <h3 className="text-2xl font-bold text-foreground mb-4">You Do It</h3>
-                <p className="text-muted-foreground mb-6">
-                  Self-service HR & Safety compliance made simple with the right tools and guidance.
-                </p>
+          <div className="flex flex-col md:flex-row">
+            {/* You Do It */}
+            <div className="flex-1 md:pr-12 pb-10 md:pb-0">
+              <h3 className="text-2xl font-bold text-foreground mb-3">You Do It</h3>
+              <p className="text-muted-foreground mb-6">
+                Self-service HR & Safety compliance made simple with the right tools and guidance.
+              </p>
 
-                <ul className="space-y-3 mb-8">
-                  {youDoItFeatures.map((feature, index) => (
-                    <li key={index} className="flex items-start gap-3">
-                      <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                      <span className="text-foreground">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
+              <ul className="space-y-3 mb-6">
+                {youDoItFeatures.map((feature, index) => (
+                  <li key={index} className="flex items-start gap-3">
+                    <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                    <span className="text-foreground">{feature}</span>
+                  </li>
+                ))}
+              </ul>
 
-                <p className="text-sm font-medium text-muted-foreground mb-6">
-                  Best for businesses that want control—with support in their corner.
-                </p>
+              <p className="text-sm font-medium text-muted-foreground italic">
+                Best for businesses that want control—with support in their corner.
+              </p>
+            </div>
 
-                <Button className="w-full" size="lg" asChild>
-                  <Link href="/pricing">View Self-Service Plans</Link>
-                </Button>
-              </CardContent>
-            </Card>
+            {/* Vertical Divider */}
+            <div className="hidden md:block w-px bg-border mx-4" />
+            <div className="md:hidden h-px bg-border my-6" />
 
-            {/* We Do It Card */}
-            <Card className="border-2 border-primary hover:shadow-lg transition-all">
-              <CardContent className="p-8">
-                <h3 className="text-2xl font-bold text-foreground mb-4">We Do It</h3>
-                <p className="text-muted-foreground mb-6">
-                  Partner with a dedicated HR & Safety compliance team who does the work for you.
-                </p>
+            {/* We Do It */}
+            <div className="flex-1 md:pl-12 pt-10 md:pt-0">
+              <h3 className="text-2xl font-bold text-foreground mb-3">We Do It</h3>
+              <p className="text-muted-foreground mb-6">
+                Partner with a dedicated HR & Safety compliance team who does the work for you.
+              </p>
 
-                <ul className="space-y-3 mb-8">
-                  {weDoItFeatures.map((feature, index) => (
-                    <li key={index} className="flex items-start gap-3">
-                      <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                      <span className="text-foreground">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
+              <ul className="space-y-3 mb-6">
+                {weDoItFeatures.map((feature, index) => (
+                  <li key={index} className="flex items-start gap-3">
+                    <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                    <span className="text-foreground">{feature}</span>
+                  </li>
+                ))}
+              </ul>
 
-                <p className="text-sm font-medium text-muted-foreground mb-6">
-                  Best for businesses that want peace of mind and expert execution.
-                </p>
-
-                <Button className="w-full" size="lg" asChild>
-                  <Link href="/pricing">View Full-Service Plans</Link>
-                </Button>
-              </CardContent>
-            </Card>
+              <p className="text-sm font-medium text-muted-foreground italic">
+                Best for businesses that want peace of mind and expert execution.
+              </p>
+            </div>
           </div>
         </div>
       </div>
