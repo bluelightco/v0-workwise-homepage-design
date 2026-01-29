@@ -101,14 +101,14 @@ export default function ShopPostersPage() {
   const categories = ["all", ...Array.from(new Set(posters.map((p) => p.category)))]
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen bg-background flex flex-col">
       <Header />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="py-16 bg-gradient-to-br from-primary to-primary/80 text-primary-foreground">
+        <section className="py-20 md:py-28 bg-gradient-to-br from-primary to-primary/80 text-primary-foreground">
           <div className="container mx-auto px-4 max-w-6xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-balance text-center">Shop Labor Law Posters</h1>
-            <p className="text-lg md:text-xl opacity-90 text-balance text-center max-w-3xl mx-auto">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-balance text-center">Shop Labor Law Posters</h1>
+            <p className="text-lg md:text-xl text-primary-foreground/90 text-balance text-center max-w-3xl mx-auto">
               Find the right compliance poster for your state and industry. All posters are attorney-reviewed and
               guaranteed compliant.
             </p>
@@ -116,15 +116,15 @@ export default function ShopPostersPage() {
         </section>
 
         {/* Multi-location Banner */}
-        <section className="py-6 bg-white border-b">
+        <section className="py-6 bg-background border-b">
           <div className="container mx-auto px-4 max-w-7xl">
-            <div className="bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-xl p-6 flex flex-col md:flex-row items-center justify-between gap-4">
+            <div className="bg-primary/5 border border-primary/20 rounded-xl p-6 flex flex-col md:flex-row items-center justify-between gap-4">
               <div className="flex items-center gap-4">
                 <div className="bg-primary/10 p-3 rounded-full">
                   <Building2 className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <p className="font-semibold text-lg">Have multiple locations?</p>
+                  <p className="font-semibold text-lg text-foreground">Have multiple locations?</p>
                   <p className="text-muted-foreground text-sm">
                     Schedule a call and we'll help put together a custom package tailored to your business.
                   </p>
@@ -133,7 +133,7 @@ export default function ShopPostersPage() {
               <Button
                 asChild
                 variant="outline"
-                className="border-primary text-primary hover:bg-primary hover:text-white whitespace-nowrap bg-transparent"
+                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground whitespace-nowrap bg-transparent"
               >
                 <Link href="/contact">
                   Schedule a Call
@@ -145,7 +145,7 @@ export default function ShopPostersPage() {
         </section>
 
         {/* Filters */}
-        <section className="py-8 bg-gray-50 border-b">
+        <section className="py-8 bg-muted/30 border-b">
           <div className="container mx-auto px-4 max-w-7xl">
             <div className="grid md:grid-cols-3 gap-4">
               <div className="relative">
@@ -186,7 +186,7 @@ export default function ShopPostersPage() {
         </section>
 
         {/* Poster Grid */}
-        <section className="py-12">
+        <section className="py-12 bg-background">
           <div className="container mx-auto px-4 max-w-7xl">
             <div className="mb-6">
               <p className="text-sm text-muted-foreground">
@@ -196,9 +196,9 @@ export default function ShopPostersPage() {
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {filteredPosters.map((poster) => (
-                <Card key={poster.id} className="overflow-hidden hover:shadow-lg transition-shadow">
+                <Card key={poster.id} className="overflow-hidden hover:shadow-lg transition-shadow bg-card">
                   <Link href={`/shop-posters/${poster.id}`}>
-                    <div className="aspect-[3/4] bg-gray-100 relative">
+                    <div className="aspect-[3/4] bg-muted/30 relative">
                       <img
                         src={poster.image || "/placeholder.svg"}
                         alt={poster.title}
@@ -208,13 +208,13 @@ export default function ShopPostersPage() {
                   </Link>
                   <CardContent className="p-4">
                     <Link href={`/shop-posters/${poster.id}`}>
-                      <h3 className="font-semibold text-lg mb-2 hover:text-primary transition-colors line-clamp-2">
+                      <h3 className="font-semibold text-lg mb-2 text-foreground hover:text-primary transition-colors line-clamp-2">
                         {poster.title}
                       </h3>
                     </Link>
                     <div className="flex gap-2 mb-3">
                       <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded">{poster.state}</span>
-                      <span className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">{poster.category}</span>
+                      <span className="text-xs bg-muted text-muted-foreground px-2 py-1 rounded">{poster.category}</span>
                     </div>
                     <p className="text-2xl font-bold text-primary">${poster.price.toFixed(2)}</p>
                   </CardContent>
@@ -247,14 +247,14 @@ export default function ShopPostersPage() {
         </section>
 
         {/* Info Section */}
-        <section className="py-16 bg-slate-800 text-slate-50">
+        <section className="py-16 md:py-24 bg-primary text-primary-foreground">
           <div className="container mx-auto px-4 max-w-4xl text-center">
-            <h2 className="text-3xl font-bold mb-4">Need Help Choosing?</h2>
-            <p className="text-lg text-slate-200 mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Need Help Choosing?</h2>
+            <p className="text-lg text-primary-foreground/90 mb-8">
               Not sure which poster is right for your business? Our compliance experts can help you determine exactly
               what you need based on your locations and industry.
             </p>
-            <Button size="lg" variant="secondary" asChild>
+            <Button size="lg" className="bg-background text-foreground hover:bg-background/90" asChild>
               <Link href="/contact">Contact Our Team</Link>
             </Button>
           </div>

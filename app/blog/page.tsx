@@ -93,25 +93,25 @@ export default function BlogPage() {
   ]
 
   return (
-    <>
+    <div className="min-h-screen bg-background flex flex-col">
       <Header />
-      <main>
+      <main className="flex-1">
         {/* Hero Section - Featured Insight */}
-        <section className="bg-gradient-to-br from-slate-700 to-slate-900 text-white py-20">
+        <section className="bg-gradient-to-br from-primary to-primary/80 text-primary-foreground py-20 md:py-28">
           <div className="container mx-auto px-4 max-w-4xl">
-            <div className="text-sm font-semibold tracking-wider mb-4">FEATURED INSIGHT</div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 text-balance">2026 Employment Law Survival Guide</h1>
-            <p className="text-xl mb-8 text-slate-50 leading-relaxed">
+            <div className="text-sm font-semibold tracking-wider mb-4 text-primary-foreground/80">FEATURED INSIGHT</div>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-balance">2026 Employment Law Survival Guide</h1>
+            <p className="text-lg md:text-xl mb-8 text-primary-foreground/90 leading-relaxed">
               California's new wage and hour laws are here. From changes in the "Regular Rate of Pay" to the new SB 553
               Workplace Violence requirements, find out exactly what you need to update in your employee handbook this
               quarter.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-white text-slate-700 hover:bg-slate-50">
+              <Button size="lg" className="bg-background text-foreground hover:bg-background/90">
                 Read Full Article
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 bg-transparent">
+              <Button size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10 bg-transparent">
                 Explore HR Consulting Services
               </Button>
             </div>
@@ -119,12 +119,12 @@ export default function BlogPage() {
         </section>
 
         {/* Topic Navigation */}
-        <section className="bg-gray-50 py-12 border-b">
+        <section className="bg-muted/30 py-12 border-b">
           <div className="container mx-auto px-4">
-            <h2 className="text-2xl font-bold mb-6 text-center">Browse by Topic</h2>
+            <h2 className="text-2xl font-bold mb-6 text-center text-foreground">Browse by Topic</h2>
             <div className="flex flex-wrap justify-center gap-3">
               {topics.map((topic) => (
-                <Button key={topic} variant="outline" className="bg-white hover:bg-primary hover:text-white">
+                <Button key={topic} variant="outline" className="bg-card hover:bg-primary hover:text-primary-foreground">
                   {topic}
                 </Button>
               ))}
@@ -133,21 +133,21 @@ export default function BlogPage() {
         </section>
 
         {/* Section 1: HR Strategy */}
-        <section className="py-16 bg-white">
+        <section className="py-16 md:py-24 bg-background">
           <div className="container mx-auto px-4">
             <div className="mb-12">
-              <h2 className="text-3xl font-bold mb-3">Human Resources & Compliance</h2>
+              <h2 className="text-3xl font-bold mb-3 text-foreground">Human Resources & Compliance</h2>
               <p className="text-lg text-muted-foreground">
                 Best practices for human resources management, regulatory compliance, and risk mitigation.
               </p>
             </div>
 
             {/* Featured Article */}
-            <Card className="mb-8 p-8 bg-gradient-to-br from-purple-50 to-white border-l-4 border-l-primary">
+            <Card className="mb-8 p-8 bg-primary/5 border-l-4 border-l-primary">
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="md:col-span-2">
                   <div className="text-sm font-semibold text-primary mb-2">FEATURED</div>
-                  <h3 className="text-2xl font-bold mb-3">Navigating the New Leave of Absence Laws</h3>
+                  <h3 className="text-2xl font-bold mb-3 text-foreground">Navigating the New Leave of Absence Laws</h3>
                   <p className="text-muted-foreground mb-4 leading-relaxed">
                     Understanding the intersection of FMLA, CFRA, and PDL can be a nightmare. Here is your step-by-step
                     guide to managing employee leave without risking a lawsuit.
@@ -164,9 +164,9 @@ export default function BlogPage() {
                   </div>
                   <Button>Read Article</Button>
                 </div>
-                <div className="flex items-center justify-center bg-primary/5 rounded-lg p-6">
+                <div className="flex items-center justify-center bg-primary/10 rounded-lg p-6">
                   <div className="text-center">
-                    <p className="text-sm font-medium mb-3">Struggling with complex HR issues?</p>
+                    <p className="text-sm font-medium mb-3 text-foreground">Struggling with complex HR issues?</p>
                     <Button variant="outline" className="w-full bg-transparent">
                       Ask an HR Expert
                     </Button>
@@ -178,8 +178,8 @@ export default function BlogPage() {
             {/* Recent Articles */}
             <div className="grid md:grid-cols-3 gap-6">
               {hrArticles.map((article, index) => (
-                <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
-                  <h4 className="text-lg font-bold mb-2">{article.title}</h4>
+                <Card key={index} className="p-6 hover:shadow-lg transition-shadow bg-card">
+                  <h4 className="text-lg font-bold mb-2 text-foreground">{article.title}</h4>
                   <div className="flex items-center gap-3 text-xs text-muted-foreground mb-3">
                     <span>{article.date}</span>
                     <span>•</span>
@@ -196,21 +196,21 @@ export default function BlogPage() {
         </section>
 
         {/* Section 2: Payroll */}
-        <section className="py-16 bg-gray-50">
+        <section className="py-16 md:py-24 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="mb-12">
-              <h2 className="text-3xl font-bold mb-3">Payroll & Tax Insights</h2>
+              <h2 className="text-3xl font-bold mb-3 text-foreground">Payroll & Tax Insights</h2>
               <p className="text-lg text-muted-foreground">
                 Expert insights on payroll processing, wage-and-hour laws, and tax compliance.
               </p>
             </div>
 
             {/* Featured Article */}
-            <Card className="mb-8 p-8 bg-gradient-to-br from-indigo-50 to-white border-l-4 border-l-indigo-600">
+            <Card className="mb-8 p-8 bg-primary/5 border-l-4 border-l-primary">
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="md:col-span-2">
-                  <div className="text-sm font-semibold text-indigo-600 mb-2">FEATURED</div>
-                  <h3 className="text-2xl font-bold mb-3">The True Cost of Misclassification</h3>
+                  <div className="text-sm font-semibold text-primary mb-2">FEATURED</div>
+                  <h3 className="text-2xl font-bold mb-3 text-foreground">The True Cost of Misclassification</h3>
                   <p className="text-muted-foreground mb-4 leading-relaxed">
                     "Independent Contractor" vs. "Employee." The lines are blurring, and the penalties are rising. Learn
                     how to audit your payroll before the EDD does.
@@ -227,9 +227,9 @@ export default function BlogPage() {
                   </div>
                   <Button>Read Article</Button>
                 </div>
-                <div className="flex items-center justify-center bg-indigo-600/5 rounded-lg p-6">
+                <div className="flex items-center justify-center bg-primary/10 rounded-lg p-6">
                   <div className="text-center">
-                    <p className="text-sm font-medium mb-3">Ensure your payroll is audit-proof</p>
+                    <p className="text-sm font-medium mb-3 text-foreground">Ensure your payroll is audit-proof</p>
                     <Button variant="outline" className="w-full bg-transparent">
                       View Payroll Solutions
                     </Button>
@@ -241,8 +241,8 @@ export default function BlogPage() {
             {/* Recent Articles */}
             <div className="grid md:grid-cols-3 gap-6">
               {payrollArticles.map((article, index) => (
-                <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
-                  <h4 className="text-lg font-bold mb-2">{article.title}</h4>
+                <Card key={index} className="p-6 hover:shadow-lg transition-shadow bg-card">
+                  <h4 className="text-lg font-bold mb-2 text-foreground">{article.title}</h4>
                   <div className="flex items-center gap-3 text-xs text-muted-foreground mb-3">
                     <span>{article.date}</span>
                     <span>•</span>
@@ -259,21 +259,21 @@ export default function BlogPage() {
         </section>
 
         {/* Section 3: Talent */}
-        <section className="py-16 bg-white">
+        <section className="py-16 md:py-24 bg-background">
           <div className="container mx-auto px-4">
             <div className="mb-12">
-              <h2 className="text-3xl font-bold mb-3">Talent Acquisition</h2>
+              <h2 className="text-3xl font-bold mb-3 text-foreground">Talent Acquisition</h2>
               <p className="text-lg text-muted-foreground">
                 Strategies for recruiting, retaining, and developing top-tier talent in a competitive market.
               </p>
             </div>
 
             {/* Featured Article */}
-            <Card className="mb-8 p-8 bg-gradient-to-br from-green-50 to-white border-l-4 border-l-green-600">
+            <Card className="mb-8 p-8 bg-primary/5 border-l-4 border-l-primary">
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="md:col-span-2">
-                  <div className="text-sm font-semibold text-green-600 mb-2">FEATURED</div>
-                  <h3 className="text-2xl font-bold mb-3">Hiring in the Age of AI</h3>
+                  <div className="text-sm font-semibold text-primary mb-2">FEATURED</div>
+                  <h3 className="text-2xl font-bold mb-3 text-foreground">Hiring in the Age of AI</h3>
                   <p className="text-muted-foreground mb-4 leading-relaxed">
                     How to use artificial intelligence to speed up your screening process without introducing bias—and
                     how to spot candidates using AI to write their resumes.
@@ -290,9 +290,9 @@ export default function BlogPage() {
                   </div>
                   <Button>Read Article</Button>
                 </div>
-                <div className="flex items-center justify-center bg-green-600/5 rounded-lg p-6">
+                <div className="flex items-center justify-center bg-primary/10 rounded-lg p-6">
                   <div className="text-center">
-                    <p className="text-sm font-medium mb-3">Need to fill a role fast?</p>
+                    <p className="text-sm font-medium mb-3 text-foreground">Need to fill a role fast?</p>
                     <Button variant="outline" className="w-full bg-transparent">
                       Start a Recruiting Campaign
                     </Button>
@@ -304,8 +304,8 @@ export default function BlogPage() {
             {/* Recent Articles */}
             <div className="grid md:grid-cols-3 gap-6">
               {talentArticles.map((article, index) => (
-                <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
-                  <h4 className="text-lg font-bold mb-2">{article.title}</h4>
+                <Card key={index} className="p-6 hover:shadow-lg transition-shadow bg-card">
+                  <h4 className="text-lg font-bold mb-2 text-foreground">{article.title}</h4>
                   <div className="flex items-center gap-3 text-xs text-muted-foreground mb-3">
                     <span>{article.date}</span>
                     <span>•</span>
@@ -322,21 +322,21 @@ export default function BlogPage() {
         </section>
 
         {/* Section 4: Employee Engagement */}
-        <section className="py-16 bg-gray-50">
+        <section className="py-16 md:py-24 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="mb-12">
-              <h2 className="text-3xl font-bold mb-3">Culture & Engagement</h2>
+              <h2 className="text-3xl font-bold mb-3 text-foreground">Culture & Engagement</h2>
               <p className="text-lg text-muted-foreground">
                 Tips for building company culture, boosting team performance, and driving retention.
               </p>
             </div>
 
             {/* Featured Article */}
-            <Card className="mb-8 p-8 bg-gradient-to-br from-orange-50 to-white border-l-4 border-l-orange-600">
+            <Card className="mb-8 p-8 bg-primary/5 border-l-4 border-l-primary">
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="md:col-span-2">
-                  <div className="text-sm font-semibold text-orange-600 mb-2">FEATURED</div>
-                  <h3 className="text-2xl font-bold mb-3">Why Safety Culture IS Company Culture</h3>
+                  <div className="text-sm font-semibold text-primary mb-2">FEATURED</div>
+                  <h3 className="text-2xl font-bold mb-3 text-foreground">Why Safety Culture IS Company Culture</h3>
                   <p className="text-muted-foreground mb-4 leading-relaxed">
                     A safe workplace is a happy workplace. Discover how our "Safety Committee" framework not only
                     reduces accidents but increases employee morale and ownership.
@@ -352,9 +352,9 @@ export default function BlogPage() {
                   </div>
                   <Button>Read Article</Button>
                 </div>
-                <div className="flex items-center justify-center bg-orange-600/5 rounded-lg p-6">
+                <div className="flex items-center justify-center bg-primary/10 rounded-lg p-6">
                   <div className="text-center">
-                    <p className="text-sm font-medium mb-3">Build a better workplace</p>
+                    <p className="text-sm font-medium mb-3 text-foreground">Build a better workplace</p>
                     <Button variant="outline" className="w-full bg-transparent">
                       Demo Our EMS Platform
                     </Button>
@@ -366,8 +366,8 @@ export default function BlogPage() {
             {/* Recent Articles */}
             <div className="grid md:grid-cols-3 gap-6">
               {engagementArticles.map((article, index) => (
-                <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
-                  <h4 className="text-lg font-bold mb-2">{article.title}</h4>
+                <Card key={index} className="p-6 hover:shadow-lg transition-shadow bg-card">
+                  <h4 className="text-lg font-bold mb-2 text-foreground">{article.title}</h4>
                   <div className="flex items-center gap-3 text-xs text-muted-foreground mb-3">
                     <span>{article.date}</span>
                     <span>•</span>
@@ -384,23 +384,23 @@ export default function BlogPage() {
         </section>
 
         {/* Newsletter Subscription */}
-        <section className="py-20 bg-slate-800 text-white">
+        <section className="py-16 md:py-24 bg-primary text-primary-foreground">
           <div className="container mx-auto px-4 max-w-2xl text-center">
-            <h2 className="text-4xl font-bold mb-4">Stay Compliant. Stay Informed.</h2>
-            <p className="text-xl text-slate-300 mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Stay Compliant. Stay Informed.</h2>
+            <p className="text-lg md:text-xl text-primary-foreground/90 mb-8">
               Join 20,000+ business leaders receiving our weekly compliance alerts and leadership tips.
             </p>
             <form className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-              <Input type="email" placeholder="Enter your email address" className="bg-white text-gray-900 flex-1" />
-              <Button type="submit" size="lg" className="bg-primary hover:bg-primary/90">
+              <Input type="email" placeholder="Enter your email address" className="bg-background text-foreground flex-1" />
+              <Button type="submit" size="lg" className="bg-background text-foreground hover:bg-background/90">
                 Subscribe
               </Button>
             </form>
-            <p className="text-sm text-slate-400 mt-4">We respect your privacy. Unsubscribe at any time.</p>
+            <p className="text-sm text-primary-foreground/70 mt-4">We respect your privacy. Unsubscribe at any time.</p>
           </div>
         </section>
       </main>
       <Footer />
-    </>
+    </div>
   )
 }
