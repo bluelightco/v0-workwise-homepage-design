@@ -666,6 +666,51 @@ export default function PricingPage() {
           </div>
         </section>
 
+        {/* Not Sure Section - Moved here after comparison table */}
+        <section className="py-20 bg-slate-50">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-4xl font-bold mb-6">Not sure which plan is right for you?</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
+              Schedule a consultation with our compliance experts to find the perfect fit for your business
+            </p>
+            <Button size="lg" asChild>
+              <Link href="/contact">
+                Schedule a Consultation
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+          </div>
+        </section>
+
+        {/* Why Choose Us Section */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-4xl font-bold text-center mb-6">Why Choose Us</h2>
+              <p className="text-xl text-muted-foreground text-center mb-8">
+                We make HR + Safety practical, proactive, and easy to manage. You get tools that work, plus fractional HR & Safety subject matter experts who partner with you to:
+              </p>
+              <ul className="space-y-4 mb-8 max-w-2xl mx-auto">
+                <li className="flex items-start gap-3">
+                  <Check className="w-6 h-6 text-primary shrink-0 mt-0.5" />
+                  <span className="text-lg text-foreground">Do the work for you</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="w-6 h-6 text-primary shrink-0 mt-0.5" />
+                  <span className="text-lg text-foreground">Keep you up to date on state and federal laws</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="w-6 h-6 text-primary shrink-0 mt-0.5" />
+                  <span className="text-lg text-foreground">Proactively consult, train, and support your business</span>
+                </li>
+              </ul>
+              <p className="text-lg text-muted-foreground text-center">
+                We provide proactive HR & Safety guidance and tools to strengthen your operations and keep your business compliant and protected.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* FAQ Section */}
         <section className="py-20 bg-slate-50">
           <div className="container mx-auto px-4">
@@ -708,19 +753,25 @@ export default function PricingPage() {
           </div>
         </section>
 
-        {/* CTA Section */}
+        {/* Bottom CTA Section */}
         <section className="py-20 bg-gradient-to-br from-primary to-primary/80 text-white">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-4xl font-bold mb-6">Not sure which plan is right for you?</h2>
-            <p className="text-xl text-white/90 max-w-2xl mx-auto mb-8">
-              Schedule a consultation with our compliance experts to find the perfect fit for your business
+            <h2 className="text-4xl font-bold mb-6">Get the HR & Safety support your business needs — your way</h2>
+            <p className="text-xl text-white/90 max-w-3xl mx-auto mb-8">
+              Handle compliance yourself with the right tools, or partner with dedicated HR & Safety experts who do the work for you.
             </p>
-            <Button size="lg" variant="secondary" asChild>
-              <Link href="/contact">
-                Schedule a Consultation
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" variant="secondary" className="px-8" asChild>
+                <Link href="/contact">
+                  Get Started
+                </Link>
+              </Button>
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 bg-transparent px-8" asChild>
+                <Link href="/contact">
+                  Talk to an Expert
+                </Link>
+              </Button>
+            </div>
           </div>
         </section>
       </main>
