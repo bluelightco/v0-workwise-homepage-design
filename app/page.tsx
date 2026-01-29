@@ -2,6 +2,7 @@ import { Header } from "@/components/header"
 import { HeroSection } from "@/components/hero-section"
 import { GoogleReviewsSection } from "@/components/google-reviews-section"
 import { ThreeTierSection } from "@/components/three-tier-section"
+import { YouVsWeSection } from "@/components/you-vs-we-section"
 import { NewsletterSection } from "@/components/newsletter-section"
 import { ResourcesSection } from "@/components/resources-section"
 import { FinalCTA } from "@/components/final-cta"
@@ -15,6 +16,7 @@ export default function Home() {
         <HeroSection />
         <GoogleReviewsSection />
         <ThreeTierSection />
+        <YouVsWeSection />
         <NewsletterSection />
         <ResourcesSection />
         <FinalCTA />
