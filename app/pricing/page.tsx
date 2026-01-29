@@ -44,7 +44,7 @@ export default function PricingPage() {
           </div>
         </section>
 
-        <section className="py-8 bg-muted/30 border-b">
+        <section className="py-8 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="max-w-xl mx-auto">
               <label className="text-sm font-semibold text-foreground block mb-3 text-center">
