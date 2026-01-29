@@ -313,28 +313,14 @@ export default function ServicesPage() {
                 How It <span className="text-primary">Works</span>
               </h2>
             </div>
-            <div className="max-w-6xl mx-auto">
-              <div className="hidden lg:flex items-center justify-between">
-                {howItWorks.map((item, index) => (
-                  <div key={item.step} className="flex items-center">
-                    <div className="flex flex-col items-center">
-                      <div className="w-16 h-16 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-2xl font-bold">
-                        {item.step}
-                      </div>
-                      <h3 className="text-lg font-semibold text-foreground mb-2 mt-4 text-center">{item.title}</h3>
-                      <p className="text-sm text-muted-foreground text-center max-w-[200px]">{item.description}</p>
-                    </div>
-                    {index < howItWorks.length - 1 && (
-                      <div className="flex-1 h-0.5 bg-muted-foreground/30 mx-4 self-start mt-8" style={{ minWidth: '80px' }} />
-                    )}
-                  </div>
-                ))}
-              </div>
-              {/* Mobile/Tablet grid layout */}
-              <div className="grid sm:grid-cols-2 gap-8 lg:hidden">
+            <div className="relative max-w-6xl mx-auto">
+              {/* Continuous connector line */}
+              <div className="hidden lg:block absolute top-8 left-[calc(12.5%+32px)] right-[calc(12.5%+32px)] h-0.5 bg-muted-foreground/30" />
+              
+              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
                 {howItWorks.map((item) => (
-                  <div key={item.step} className="text-center">
-                    <div className="w-16 h-16 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                  <div key={item.step} className="text-center relative">
+                    <div className="w-16 h-16 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-2xl font-bold mx-auto mb-4 relative z-10">
                       {item.step}
                     </div>
                     <h3 className="text-lg font-semibold text-foreground mb-2">{item.title}</h3>
