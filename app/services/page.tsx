@@ -341,19 +341,8 @@ export default function ServicesPage() {
               <p className="text-lg md:text-xl text-primary-foreground/90 leading-relaxed">
                 Build HR and Safety support that scales with your business.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+              <div className="flex justify-center pt-4">
                 <Button asChild size="lg" className="bg-background text-foreground hover:bg-background/90">
-                  <Link href="/contact">
-                    Get Started
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
-                <Button
-                  asChild
-                  size="lg"
-                  variant="outline"
-                  className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10 bg-transparent"
-                >
                   <Link href="/contact">
                     <Phone className="mr-2 h-4 w-4" />
                     Talk to an Expert
