@@ -35,16 +35,16 @@ export default function PricingPage() {
       <Header />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-primary to-primary/80 text-white py-20">
+        <section className="bg-gradient-to-br from-primary to-primary/80 text-primary-foreground py-20 md:py-28">
           <div className="container mx-auto px-4 text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">{"Let Us Simplify Your HR & Safety"}</h1>
-            <p className="text-xl text-white/90 max-w-3xl mx-auto">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">{"Let Us Simplify Your HR & Safety"}</h1>
+            <p className="text-lg md:text-xl text-primary-foreground/90 max-w-3xl mx-auto">
               From posters to full-service support — find the right level for your business
             </p>
           </div>
         </section>
 
-        <section className="py-8 bg-slate-50 border-b">
+        <section className="py-8 bg-muted/30 border-b">
           <div className="container mx-auto px-4">
             <div className="max-w-xl mx-auto">
               <label className="text-sm font-semibold text-foreground block mb-3 text-center">
@@ -74,7 +74,7 @@ export default function PricingPage() {
         </section>
 
         {/* Billing Toggle */}
-        <section className="py-6 bg-slate-50">
+        <section className="py-6 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="flex items-center justify-center gap-3">
               <span className={`text-sm font-medium ${!isAnnual ? "text-foreground" : "text-muted-foreground"}`}>
@@ -99,7 +99,7 @@ export default function PricingPage() {
         </section>
 
         {/* Pricing Tiers */}
-        <section className="py-12 bg-slate-50">
+        <section className="py-12 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="max-w-7xl mx-auto">
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -667,7 +667,7 @@ export default function PricingPage() {
         </section>
 
         {/* Not Sure Section - Moved here after comparison table */}
-        <section className="py-20 bg-slate-50">
+        <section className="py-16 md:py-24 bg-muted/30">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-4xl font-bold mb-6">Not sure which plan is right for you?</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
@@ -683,7 +683,7 @@ export default function PricingPage() {
         </section>
 
         {/* Why Choose Us Section */}
-        <section className="py-20 bg-white">
+        <section className="py-16 md:py-24 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-4xl font-bold text-center mb-6">Why Choose Us</h2>
@@ -712,20 +712,22 @@ export default function PricingPage() {
         </section>
 
         {/* FAQ Section */}
-        <section className="py-20 bg-slate-50">
+        <section className="py-16 md:py-24 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-4xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+                Frequently Asked <span className="text-primary">Questions</span>
+              </h2>
               <div className="space-y-6">
-                <div className="bg-white p-6 rounded-lg">
-                  <h3 className="font-bold text-xl mb-2">Can I switch plans later?</h3>
+                <div className="bg-card p-6 rounded-lg border">
+                  <h3 className="font-bold text-xl mb-2 text-foreground">Can I switch plans later?</h3>
                   <p className="text-muted-foreground">
                     Yes! You can upgrade or downgrade your plan at any time. Changes take effect at the start of your
                     next billing cycle.
                   </p>
                 </div>
-                <div className="bg-white p-6 rounded-lg">
-                  <h3 className="font-bold text-xl mb-2">
+                <div className="bg-card p-6 rounded-lg border">
+                  <h3 className="font-bold text-xl mb-2 text-foreground">
                     What&apos;s the difference between Virtual + and Onsite Pro?
                   </h3>
                   <p className="text-muted-foreground">
@@ -734,15 +736,15 @@ export default function PricingPage() {
                     businesses needing a physical presence.
                   </p>
                 </div>
-                <div className="bg-white p-6 rounded-lg">
-                  <h3 className="font-bold text-xl mb-2">Do you offer custom enterprise plans?</h3>
+                <div className="bg-card p-6 rounded-lg border">
+                  <h3 className="font-bold text-xl mb-2 text-foreground">Do you offer custom enterprise plans?</h3>
                   <p className="text-muted-foreground">
                     Yes! For organizations with 100+ employees or specialized needs, we offer custom enterprise
                     solutions. Contact us for a tailored quote.
                   </p>
                 </div>
-                <div className="bg-white p-6 rounded-lg">
-                  <h3 className="font-bold text-xl mb-2">Is there a contract commitment?</h3>
+                <div className="bg-card p-6 rounded-lg border">
+                  <h3 className="font-bold text-xl mb-2 text-foreground">Is there a contract commitment?</h3>
                   <p className="text-muted-foreground">
                     Monthly plans are month-to-month with no long-term commitment required. Annual plans offer 20%
                     savings and can be canceled with 30 days notice.
@@ -754,19 +756,19 @@ export default function PricingPage() {
         </section>
 
         {/* Bottom CTA Section */}
-        <section className="py-20 bg-gradient-to-br from-primary to-primary/80 text-white">
+        <section className="py-16 md:py-24 bg-primary text-primary-foreground">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-4xl font-bold mb-6">Get the HR & Safety support your business needs — your way</h2>
-            <p className="text-xl text-white/90 max-w-3xl mx-auto mb-8">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-balance">Get the HR & Safety support your business needs — your way</h2>
+            <p className="text-lg md:text-xl text-primary-foreground/90 max-w-3xl mx-auto mb-8">
               Handle compliance yourself with the right tools, or partner with dedicated HR & Safety experts who do the work for you.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="secondary" className="px-8" asChild>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+              <Button size="lg" className="bg-background text-foreground hover:bg-background/90 px-12" asChild>
                 <Link href="/contact">
                   Get Started
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 bg-transparent px-8" asChild>
+              <Button size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10 bg-transparent px-8" asChild>
                 <Link href="/contact">
                   Talk to an Expert
                 </Link>
