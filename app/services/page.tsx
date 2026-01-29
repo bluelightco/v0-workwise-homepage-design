@@ -138,14 +138,47 @@ const adminServices = [
   },
 ]
 
-const talentAcquisitionFeatures = [
-  "Intake Consultation – Understand hiring needs, role requirements, and organizational goals.",
-  "Sourcing Candidates – Actively source candidates online and through our network.",
-  "Resume Review – Shortlist top candidates efficiently.",
-  "Pre-Screen Calls – Conduct initial interviews to gauge fit.",
-  "Interview Scheduling & Oversight – Manage scheduling and oversee process.",
-  "Final Candidate Evaluation – Support client decision-making for final selection.",
-  "Biweekly Progress Reports – Keep clients updated throughout the process.",
+const talentAcquisitionServices = [
+  {
+    icon: MessageSquare,
+    title: "Intake Consultation",
+    description: "Understand hiring needs, role requirements, and organizational goals to build an effective recruitment strategy.",
+  },
+  {
+    icon: Search,
+    title: "Sourcing Candidates",
+    description: "Actively source candidates online and through our network to find the best talent for your roles.",
+  },
+  {
+    icon: FileText,
+    title: "Resume Review",
+    description: "Shortlist top candidates efficiently with thorough resume screening and qualification matching.",
+  },
+  {
+    icon: Phone,
+    title: "Pre-Screen Calls",
+    description: "Conduct initial interviews to gauge fit and assess candidate qualifications before advancing.",
+  },
+  {
+    icon: Calendar,
+    title: "Interview Scheduling",
+    description: "Manage scheduling and oversee the interview process to ensure a smooth candidate experience.",
+  },
+  {
+    icon: CheckCircle,
+    title: "Final Candidate Evaluation",
+    description: "Support client decision-making for final selection with detailed candidate assessments.",
+  },
+  {
+    icon: ClipboardList,
+    title: "Biweekly Progress Reports",
+    description: "Keep clients updated throughout the process with regular status reports and insights.",
+  },
+  {
+    icon: Users,
+    title: "Full-Cycle Support",
+    description: "End-to-end recruiting support so you can focus on your core business while we deliver the right candidates.",
+  },
 ]
 
 const howItWorks = [
@@ -270,34 +303,18 @@ export default function ServicesPage() {
         {/* Talent Acquisition Services Section */}
         <section className="py-16 md:py-24 bg-muted/30">
           <div className="container mx-auto px-4">
-            <div className="max-w-5xl mx-auto">
-              <div className="text-center mb-12">
-                <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                  Talent Acquisition <span className="text-primary">Services</span>
-                </h2>
-                <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                  Streamline hiring with full-cycle recruiting and strategic talent sourcing tailored to your business needs.
-                </p>
-              </div>
-              
-              <Card className="border-border/50">
-                <CardContent className="p-8 md:p-10">
-                  <h3 className="text-xl font-semibold text-foreground mb-6">What We Provide:</h3>
-                  <ul className="space-y-4 mb-8">
-                    {talentAcquisitionFeatures.map((feature, index) => (
-                      <li key={index} className="flex items-start gap-3">
-                        <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                        <span className="text-muted-foreground">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="bg-primary/5 rounded-lg p-6 border border-primary/10">
-                    <p className="text-foreground font-medium text-center">
-                      Our Talent Acquisition Experts streamline your hiring process, so you can focus on your core business while we deliver the right candidates.
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                Talent Acquisition <span className="text-primary">Services</span>
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Streamline hiring with full-cycle recruiting and strategic talent sourcing tailored to your business needs.
+              </p>
+            </div>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+              {talentAcquisitionServices.map((service) => (
+                <ServiceCard key={service.title} {...service} />
+              ))}
             </div>
           </div>
         </section>
