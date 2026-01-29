@@ -39,7 +39,7 @@ export default function PricingPage() {
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">{"Let Us Simplify Your HR & Safety"}</h1>
             <p className="text-lg md:text-xl text-primary-foreground/90 max-w-3xl mx-auto">
-              From posters to full-service support — find the right level for your business
+              From posters to full-service support — proactive HR + Safety support that's affordable, responsive, and powered by experts and tools that deliver.
             </p>
           </div>
         </section>
