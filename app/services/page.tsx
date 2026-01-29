@@ -314,13 +314,13 @@ export default function ServicesPage() {
               </h2>
             </div>
             <div className="relative max-w-6xl mx-auto">
-              {/* Continuous connector line */}
-              <div className="hidden lg:block absolute top-8 left-[calc(12.5%+32px)] right-[calc(12.5%+32px)] h-0.5 bg-muted-foreground/30" />
+              {/* Continuous connector line - extends under the circles */}
+              <div className="hidden lg:block absolute top-8 left-[12.5%] right-[12.5%] h-0.5 bg-muted-foreground/30" />
               
               <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
                 {howItWorks.map((item) => (
                   <div key={item.step} className="text-center relative">
-                    <div className="w-16 h-16 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-2xl font-bold mx-auto mb-4 relative z-10">
+                    <div className="w-16 h-16 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-2xl font-bold mx-auto mb-4 relative z-10 ring-4 ring-background">
                       {item.step}
                     </div>
                     <h3 className="text-lg font-semibold text-foreground mb-2">{item.title}</h3>
