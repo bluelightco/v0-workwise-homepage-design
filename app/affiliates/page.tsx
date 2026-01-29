@@ -231,21 +231,20 @@ export default function AffiliatesPage() {
                 <CardContent className="p-8">
                   <div className="flex flex-col md:flex-row md:items-start gap-6 md:gap-12">
                     <div className="md:w-64 shrink-0">
-                      <div className="flex items-center gap-3 mb-2">
-                        <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-                          <Gift className="w-5 h-5 text-primary" />
+                      <div className="flex items-center gap-3">
+                        <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                          <Gift className="w-6 h-6 text-primary" />
                         </div>
-                        <h3 className="text-xl font-bold text-foreground">Digital Products</h3>
+                        <h3 className="text-2xl font-bold text-foreground">Digital Products</h3>
                       </div>
-                      <p className="text-muted-foreground text-sm">(for Resell)</p>
                     </div>
-                    <div className="flex-1 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div className="flex-1 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                       {digitalProducts.map((product, index) => (
                         <div key={index} className="flex items-start gap-3">
-                          <product.icon className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                          <product.icon className="w-5 h-5 text-primary shrink-0 mt-1" />
                           <div>
-                            <h4 className="font-semibold text-foreground text-sm">{product.title}</h4>
-                            <p className="text-xs text-muted-foreground">{product.description}</p>
+                            <h4 className="font-semibold text-foreground">{product.title}</h4>
+                            <p className="text-muted-foreground">{product.description}</p>
                           </div>
                         </div>
                       ))}
@@ -259,21 +258,20 @@ export default function AffiliatesPage() {
                 <CardContent className="p-8">
                   <div className="flex flex-col md:flex-row md:items-start gap-6 md:gap-12">
                     <div className="md:w-64 shrink-0">
-                      <div className="flex items-center gap-3 mb-2">
-                        <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-                          <Shield className="w-5 h-5 text-primary" />
+                      <div className="flex items-center gap-3">
+                        <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                          <Shield className="w-6 h-6 text-primary" />
                         </div>
-                        <h3 className="text-xl font-bold text-foreground">HR & Safety Services</h3>
+                        <h3 className="text-2xl font-bold text-foreground">HR & Safety Services</h3>
                       </div>
-                      <p className="text-muted-foreground text-sm">(for Referral)</p>
                     </div>
-                    <div className="flex-1 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div className="flex-1 grid sm:grid-cols-2 gap-6">
                       {hrSafetyServices.map((service, index) => (
                         <div key={index} className="flex items-start gap-3">
-                          <service.icon className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                          <service.icon className="w-5 h-5 text-primary shrink-0 mt-1" />
                           <div>
-                            <h4 className="font-semibold text-foreground text-sm">{service.title}</h4>
-                            <p className="text-xs text-muted-foreground">{service.description}</p>
+                            <h4 className="font-semibold text-foreground">{service.title}</h4>
+                            <p className="text-muted-foreground">{service.description}</p>
                           </div>
                         </div>
                       ))}
