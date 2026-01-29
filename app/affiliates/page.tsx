@@ -144,8 +144,8 @@ export default function AffiliatesPage() {
 
             <div className="grid md:grid-cols-2 gap-8">
               {/* Resell Program */}
-              <Card className="border-2 hover:border-primary transition-colors">
-                <CardContent className="p-8">
+              <Card className="border-2 hover:border-primary transition-colors flex flex-col">
+                <CardContent className="p-8 flex flex-col flex-1">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
                       <Handshake className="w-6 h-6 text-primary" />
@@ -166,7 +166,7 @@ export default function AffiliatesPage() {
                     ))}
                   </ul>
 
-                  <div className="flex flex-col sm:flex-row gap-3">
+                  <div className="flex flex-col sm:flex-row gap-3 mt-auto">
                     <Button className="flex-1" size="lg" asChild>
                       <Link href="/contact">Get Started</Link>
                     </Button>
@@ -178,8 +178,8 @@ export default function AffiliatesPage() {
               </Card>
 
               {/* Referral Program */}
-              <Card className="border-2 hover:border-primary transition-colors">
-                <CardContent className="p-8">
+              <Card className="border-2 hover:border-primary transition-colors flex flex-col">
+                <CardContent className="p-8 flex flex-col flex-1">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
                       <DollarSign className="w-6 h-6 text-primary" />
@@ -200,7 +200,7 @@ export default function AffiliatesPage() {
                     ))}
                   </ul>
 
-                  <div className="flex flex-col sm:flex-row gap-3">
+                  <div className="flex flex-col sm:flex-row gap-3 mt-auto">
                     <Button className="flex-1" size="lg" asChild>
                       <Link href="/contact">Get Started</Link>
                     </Button>
