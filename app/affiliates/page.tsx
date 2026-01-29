@@ -225,52 +225,62 @@ export default function AffiliatesPage() {
               </h2>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-12">
-              {/* Digital Products */}
-              <div>
-                <h3 className="text-xl font-bold text-foreground mb-6 flex items-center gap-2">
-                  <Gift className="w-5 h-5 text-primary" />
-                  Digital Products <span className="text-muted-foreground font-normal text-base">(for Resell)</span>
-                </h3>
-                <div className="space-y-4">
-                  {digitalProducts.map((product, index) => (
-                    <Card key={index}>
-                      <CardContent className="p-4 flex items-start gap-4">
-                        <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-                          <product.icon className="w-5 h-5 text-primary" />
+            <div className="space-y-6">
+              {/* Digital Products Card */}
+              <Card className="border-2">
+                <CardContent className="p-8">
+                  <div className="flex flex-col md:flex-row md:items-start gap-6 md:gap-12">
+                    <div className="md:w-64 shrink-0">
+                      <div className="flex items-center gap-3 mb-2">
+                        <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                          <Gift className="w-5 h-5 text-primary" />
                         </div>
-                        <div>
-                          <h4 className="font-semibold text-foreground">{product.title}</h4>
-                          <p className="text-sm text-muted-foreground">{product.description}</p>
+                        <h3 className="text-xl font-bold text-foreground">Digital Products</h3>
+                      </div>
+                      <p className="text-muted-foreground text-sm">(for Resell)</p>
+                    </div>
+                    <div className="flex-1 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                      {digitalProducts.map((product, index) => (
+                        <div key={index} className="flex items-start gap-3">
+                          <product.icon className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                          <div>
+                            <h4 className="font-semibold text-foreground text-sm">{product.title}</h4>
+                            <p className="text-xs text-muted-foreground">{product.description}</p>
+                          </div>
                         </div>
-                      </CardContent>
-                    </Card>
-                  ))}
-                </div>
-              </div>
+                      ))}
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
 
-              {/* HR & Safety Services */}
-              <div>
-                <h3 className="text-xl font-bold text-foreground mb-6 flex items-center gap-2">
-                  <Shield className="w-5 h-5 text-primary" />
-                  HR & Safety Services <span className="text-muted-foreground font-normal text-base">(for Referral)</span>
-                </h3>
-                <div className="space-y-4">
-                  {hrSafetyServices.map((service, index) => (
-                    <Card key={index}>
-                      <CardContent className="p-4 flex items-start gap-4">
-                        <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-                          <service.icon className="w-5 h-5 text-primary" />
+              {/* HR & Safety Services Card */}
+              <Card className="border-2">
+                <CardContent className="p-8">
+                  <div className="flex flex-col md:flex-row md:items-start gap-6 md:gap-12">
+                    <div className="md:w-64 shrink-0">
+                      <div className="flex items-center gap-3 mb-2">
+                        <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                          <Shield className="w-5 h-5 text-primary" />
                         </div>
-                        <div>
-                          <h4 className="font-semibold text-foreground">{service.title}</h4>
-                          <p className="text-sm text-muted-foreground">{service.description}</p>
+                        <h3 className="text-xl font-bold text-foreground">HR & Safety Services</h3>
+                      </div>
+                      <p className="text-muted-foreground text-sm">(for Referral)</p>
+                    </div>
+                    <div className="flex-1 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                      {hrSafetyServices.map((service, index) => (
+                        <div key={index} className="flex items-start gap-3">
+                          <service.icon className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                          <div>
+                            <h4 className="font-semibold text-foreground text-sm">{service.title}</h4>
+                            <p className="text-xs text-muted-foreground">{service.description}</p>
+                          </div>
                         </div>
-                      </CardContent>
-                    </Card>
-                  ))}
-                </div>
-              </div>
+                      ))}
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </div>
