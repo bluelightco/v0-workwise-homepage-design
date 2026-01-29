@@ -3,7 +3,6 @@
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { Mail } from "lucide-react"
 
 export function NewsletterSection() {
   const [name, setName] = useState("")
@@ -28,16 +27,12 @@ export function NewsletterSection() {
     <section className="py-16 md:py-24 bg-primary text-primary-foreground">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center">
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary-foreground/10 mb-6">
-            <Mail className="w-8 h-8" />
-          </div>
-          
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Stay ahead of HR & Safety changes
           </h2>
           
           <p className="text-lg md:text-xl text-primary-foreground/80 mb-8">
-            Get practical insights, compliance updates, and workplace best practices—delivered straight to your inbox.
+            Get practical insights, compliance updates, and workplace best practices delivered straight to your inbox.
           </p>
 
           {isSubmitted ? (
