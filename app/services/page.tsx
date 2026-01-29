@@ -342,9 +342,8 @@ export default function ServicesPage() {
                 Build HR and Safety support that scales with your business.
               </p>
               <div className="flex justify-center pt-4">
-                <Button asChild size="lg" className="bg-background text-foreground hover:bg-background/90">
+                <Button asChild size="lg" className="bg-background text-foreground hover:bg-background/90 px-16">
                   <Link href="/contact">
-                    <Phone className="mr-2 h-4 w-4" />
                     Talk to an Expert
                   </Link>
                 </Button>
