@@ -2,7 +2,7 @@ import { Header } from "@/components/header"
 import { HeroSection } from "@/components/hero-section"
 import { GoogleReviewsSection } from "@/components/google-reviews-section"
 import { ProductFeaturesSection } from "@/components/product-features-section"
-import { OutcomesSection } from "@/components/outcomes-section"
+
 import { ROISection } from "@/components/roi-section"
 import { ThreeTierSection } from "@/components/three-tier-section"
 import { OnSiteSection } from "@/components/on-site-section"
@@ -21,7 +21,6 @@ export default function Home() {
         <GoogleReviewsSection />
         <ThreeTierSection />
         <ProductFeaturesSection />
-        <OutcomesSection />
         <ROISection />
         <OnSiteSection />
         <RecognitionSection />

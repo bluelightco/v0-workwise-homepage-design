@@ -24,10 +24,14 @@ export function ResourcesSection() {
   return (
     <section className="py-16 md:py-24 bg-muted/30">
       <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold">Insights and inspiration</h2>
-          <Button variant="link" className="hidden md:flex items-center gap-2 font-semibold">
-            View All
+        <div className="flex flex-col md:flex-row justify-between md:items-end mb-12 gap-4">
+          <div className="space-y-2">
+            <h2 className="text-3xl md:text-4xl font-bold">Recent Articles</h2>
+            <p className="text-lg text-primary font-medium">Insights that help you run a better workplace</p>
+            <p className="text-muted-foreground max-w-2xl">Practical articles on HR, Safety, compliance, and people operations—written for real businesses, not legal textbooks.</p>
+          </div>
+          <Button variant="link" className="hidden md:flex items-center gap-2 font-semibold shrink-0">
+            View All Articles
             <ArrowRight className="w-4 h-4" />
           </Button>
         </div>
@@ -57,7 +61,7 @@ export function ResourcesSection() {
 
         <div className="text-center md:hidden">
           <Button variant="outline" className="w-full bg-transparent">
-            View All Resources
+            View All Articles
           </Button>
         </div>
       </div>
