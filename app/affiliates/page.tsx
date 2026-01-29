@@ -64,7 +64,7 @@ const digitalProducts = [
 const hrSafetyServices = [
   {
     icon: Users,
-    title: "Virtual + Onsite Pro HR Administrative Services",
+    title: "Virtual Plus Onsite Pro HR Administrative Services",
     description: "Full-service support for HR operations",
   },
   {

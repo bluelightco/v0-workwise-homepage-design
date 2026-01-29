@@ -34,7 +34,7 @@ const tiers = [
   },
   {
     name: "We Do It",
-    subtitle: "Virtual + & Onsite Pro",
+    subtitle: "Virtual Plus & Onsite Pro",
     description:
       "Expert HR & Safety support without the overhead. Get a dedicated partner for virtual or onsite needs.",
     features: [
