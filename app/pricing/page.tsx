@@ -249,7 +249,7 @@ export default function PricingPage() {
                   </CardContent>
                 </Card>
 
-                {/* Virtual Plus */}
+                {/* Virtual */}
                 <Card className="border-2 border-primary shadow-lg relative gap-0">
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-3 py-0.5 rounded-full text-xs font-semibold">
                     MOST POPULAR
@@ -258,7 +258,7 @@ export default function PricingPage() {
                     <div className="text-center">
                       <div className="flex items-center justify-center gap-2 mb-2">
                         <Monitor className="w-5 h-5 text-primary" />
-                        <h3 className="text-xl font-bold">Virtual Plus</h3>
+                        <h3 className="text-xl font-bold">Virtual</h3>
                       </div>
                       <p className="text-sm text-muted-foreground text-center">
                         Dedicated Virtual HR &amp; Safety partner
@@ -382,7 +382,7 @@ export default function PricingPage() {
                     <ul className="space-y-3">
                       <li className="flex gap-2">
                         <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                        <p className="text-sm font-medium">Everything in Virtual Plus</p>
+                        <p className="text-sm font-medium">Everything in Virtual</p>
                       </li>
                       <li className="flex gap-2">
                         <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
@@ -448,7 +448,7 @@ export default function PricingPage() {
                       <th className="text-left p-4 font-bold">Feature</th>
                       <th className="text-center p-4 font-bold">Labor Law Posters</th>
                       <th className="text-center p-4 font-bold">Essentials</th>
-                      <th className="text-center p-4 font-bold bg-primary/5">Virtual Plus</th>
+                      <th className="text-center p-4 font-bold bg-primary/5">Virtual</th>
                       <th className="text-center p-4 font-bold">Onsite Pro</th>
                     </tr>
                   </thead>
@@ -728,10 +728,10 @@ export default function PricingPage() {
                 </div>
                 <div className="bg-card p-6 rounded-lg border">
   <h3 className="font-bold text-xl mb-2 text-foreground">
-    What&apos;s the difference between Virtual Plus and Onsite Pro?
+    What&apos;s the difference between Virtual and Onsite Pro?
   </h3>
   <p className="text-muted-foreground">
-    Virtual Plus provides dedicated remote HR & Safety support, perfect for growing businesses. Onsite Pro
+    Virtual provides dedicated remote HR & Safety support, perfect for growing businesses. Onsite Pro
                     includes all that plus in-person visits for audits, training, and hands-on guidance — ideal for
                     businesses needing a physical presence.
                   </p>
