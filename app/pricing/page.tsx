@@ -678,7 +678,7 @@ export default function PricingPage() {
             </p>
             <Button size="lg" asChild>
               <Link href="/contact">
-                Schedule a Consultation
+                Talk to an Expert
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>

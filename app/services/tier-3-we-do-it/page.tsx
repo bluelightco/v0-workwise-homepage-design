@@ -364,7 +364,7 @@ export default function ProSupportPage() {
                 business.
               </p>
               <Button size="lg" className="bg-indigo-600 hover:bg-indigo-700" asChild>
-                <Link href="/contact">Schedule a Consultation</Link>
+                <Link href="/contact">Talk to an Expert</Link>
               </Button>
             </div>
           </div>

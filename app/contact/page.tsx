@@ -155,7 +155,7 @@ export default function ContactPage() {
                       <Calendar className="h-6 w-6 text-primary" />
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-xl font-bold text-foreground mb-2">Schedule a Consultation</h3>
+                      <h3 className="text-xl font-bold text-foreground mb-2">Talk to an Expert</h3>
                       <p className="text-muted-foreground mb-4">
                         Not sure what you need? Book a 15-minute discovery call at a time that works for you.
                       </p>
