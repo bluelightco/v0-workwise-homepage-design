@@ -204,10 +204,9 @@ export default function ServicesPage() {
               <p className="text-lg md:text-xl text-primary-foreground/90 max-w-3xl mx-auto leading-relaxed mb-8">
                 Proactive, expert-led HR and Safety support tailored to your business needs, helping you manage risk, reduce liability, and focus on your core operations.
               </p>
-              <Button asChild size="lg" className="bg-background text-foreground hover:bg-background/90 px-8">
+              <Button asChild size="lg" className="bg-background text-foreground hover:bg-background/90 px-16">
                 <Link href="/contact">
                   Get Started
-                  <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
             </div>
