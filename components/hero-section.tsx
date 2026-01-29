@@ -18,7 +18,7 @@ export function HeroSection() {
             Transforming workplaces powered by people and tools that deliver. A smarter, more responsive solution that's
             affordable for every business owner.
           </p>
-          <div className="px-100">
+          <div className="px-[100px]">
             <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
               <Link href="/pricing">Get Started</Link>
             </Button>
