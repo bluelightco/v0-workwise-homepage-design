@@ -33,11 +33,11 @@ export function NewsletterSection() {
           </div>
           
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Monthly HR Newsletter
+            Stay ahead of HR & Safety changes
           </h2>
           
           <p className="text-lg md:text-xl text-primary-foreground/80 mb-8">
-            Stay One Step Ahead By Signing Up To Our Monthly Newsletter!
+            Get practical insights, compliance updates, and workplace best practices—delivered straight to your inbox.
           </p>
 
           {isSubmitted ? (
