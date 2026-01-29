@@ -318,10 +318,10 @@ export default function TrainingPage() {
                 Sign up for our training alerts. We'll notify you when new training sessions and legal updates are
                 scheduled.
               </p>
-              <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-                <Input type="text" placeholder="Your Name" className="flex-1" />
+              <div className="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto">
+                <Input type="text" placeholder="Your Name" className="w-32 shrink-0" />
                 <Input type="email" placeholder="Your Work Email" className="flex-1" />
-                <Button>Subscribe</Button>
+                <Button className="shrink-0">Subscribe</Button>
               </div>
             </div>
           </div>
