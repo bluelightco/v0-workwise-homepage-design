@@ -42,7 +42,7 @@ const tiers = [
       "Unlimited consultation & policy guidance",
       "Onsite training & inspections available",
     ],
-    cta: "See Options",
+    cta: "Learn More",
     ctaLink: "/pricing",
     variant: "dark" as const,
   },
