@@ -195,9 +195,6 @@ export default function ServicesPage() {
         <section className="bg-gradient-to-br from-primary to-primary/80 text-primary-foreground py-20 md:py-28">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <p className="text-sm uppercase tracking-widest text-primary-foreground/70 mb-4 font-medium">
-                Your Cost-Effective All-Inclusive Solution
-              </p>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-balance">
                 HR & Safety Services
               </h1>
