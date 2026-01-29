@@ -2,44 +2,48 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from "@/components/ui/button"
 import { Check } from "lucide-react"
 import { cn } from "@/lib/utils"
+import Link from "next/link"
 
 const tiers = [
   {
     name: "You Post It",
-    subtitle: "Compliance Essentials",
-    description: "The foundation of a compliant workplace. We track the changing laws; you simply post the updates.",
+    subtitle: "Labor Law Posters",
+    description: "Stay compliant with required federal and state postings. We track law changes so you don't have to.",
     features: [
-      "Automatic State & Federal Poster updates for 1 year",
-      "City & County specific posters",
-      'Backed by our $40,000+ "We Pay The Fine" Guarantee',
+      "Automatic poster updates when laws change",
+      "Single or multi-location coverage",
+      "Subscribe & save with ongoing compliance",
     ],
     cta: "Shop Posters",
+    ctaLink: "/shop-posters",
     variant: "light" as const,
   },
   {
     name: "You Do It",
-    subtitle: "Self-Service HR & Safety Tools",
+    subtitle: "Essentials",
     description:
-      "Give your internal team the professional-grade tools they need to manage compliance and mitigate risk.",
+      "Foundational HR & Safety support with the tools your team needs to manage compliance confidently.",
     features: [
-      "EMS Platform Access: Training trackers, document center, and newsletters",
-      "Library: Access to attorney-reviewed checklists and forms",
-      "A La Carte: Add-ons for AI Chatbot support and custom forms",
+      "Employee Management System included",
+      "LMS training modules & compliance courses",
+      "Step-by-step guides & digital templates",
     ],
-    cta: "Explore Tools",
+    cta: "Learn More",
+    ctaLink: "/pricing",
     variant: "medium" as const,
   },
   {
     name: "We Do It",
-    subtitle: "Remote Full-Service HR & Safety",
+    subtitle: "Virtual + & Onsite Pro",
     description:
-      "A complete virtual department. We lower your liability and overhead by managing your HR and Safety programs for you.",
+      "Expert HR & Safety support without the overhead. Get a dedicated partner for virtual or onsite needs.",
     features: [
-      "Virtual Service Model: Unlimited support from a dedicated HR & Safety Business Partner",
-      "Strategic Support: Handbook creation, compensation analysis, and IIPP development",
-      "Full EMS Access: Included",
+      "Dedicated HR & Safety business partner",
+      "Unlimited consultation & policy guidance",
+      "Onsite training & inspections available",
     ],
-    cta: "Go Virtual",
+    cta: "See Options",
+    ctaLink: "/pricing",
     variant: "dark" as const,
   },
 ]
@@ -94,8 +98,10 @@ export function ThreeTierSection() {
               </CardContent>
 
               <CardFooter>
-                <Button variant={tier.variant === "dark" ? "secondary" : "outline"} className="w-full">
-                  {tier.cta}
+                <Button variant={tier.variant === "dark" ? "secondary" : "outline"} className="w-full" asChild>
+                  <Link href={tier.ctaLink}>
+                    {tier.cta}
+                  </Link>
                 </Button>
               </CardFooter>
             </Card>
