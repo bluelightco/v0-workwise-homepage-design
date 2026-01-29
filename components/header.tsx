@@ -1,5 +1,6 @@
 "use client"
 
+// Header component for site navigation
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ShoppingCart } from "lucide-react"
