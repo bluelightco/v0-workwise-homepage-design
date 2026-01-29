@@ -440,7 +440,10 @@ export default function PricingPage() {
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-7xl mx-auto">
-              <h2 className="text-4xl font-bold text-center mb-12">Compare Plans</h2>
+              <h2 className="text-4xl font-bold text-center mb-4">Compare Plans</h2>
+          <p className="text-lg text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
+            All plans support HR & Safety — choose how much support you want.
+          </p>
               <div className="overflow-x-auto">
                 <table className="w-full border-collapse">
                   <thead>
