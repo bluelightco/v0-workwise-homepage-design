@@ -74,7 +74,6 @@ export default function TrainingPage() {
                       <Button size="lg" className="w-full">
                         Reserve Your Spot Instantly
                       </Button>
-                      <p className="text-sm text-muted-foreground text-center mt-3">One-click registration</p>
                     </div>
                   </div>
                 </CardContent>
@@ -320,7 +319,8 @@ export default function TrainingPage() {
                 scheduled.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-                <Input type="email" placeholder="Enter Work Email Address" className="flex-1" />
+                <Input type="text" placeholder="Your Name" className="flex-1" />
+                <Input type="email" placeholder="Your Work Email" className="flex-1" />
                 <Button>Subscribe</Button>
               </div>
             </div>
@@ -340,7 +340,7 @@ export default function TrainingPage() {
               <div className="flex justify-center pt-4">
                 <Button size="lg" className="bg-background text-foreground hover:bg-background/90 px-16" asChild>
                   <Link href="/contact">
-                    Contact Support
+                    Talk to an Expert
                   </Link>
                 </Button>
               </div>
