@@ -313,19 +313,21 @@ export default function ServicesPage() {
                 How It <span className="text-primary">Works</span>
               </h2>
             </div>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-              {howItWorks.map((item, index) => (
-                <div key={item.step} className="text-center relative">
-                  <div className="w-16 h-16 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                    {item.step}
+            <div className="relative max-w-6xl mx-auto">
+              {/* Continuous connector line */}
+              <div className="hidden lg:block absolute top-8 left-[calc(12.5%+32px)] right-[calc(12.5%+32px)] h-0.5 bg-muted-foreground/30" />
+              
+              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                {howItWorks.map((item) => (
+                  <div key={item.step} className="text-center relative">
+                    <div className="w-16 h-16 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-2xl font-bold mx-auto mb-4 relative z-10">
+                      {item.step}
+                    </div>
+                    <h3 className="text-lg font-semibold text-foreground mb-2">{item.title}</h3>
+                    <p className="text-sm text-muted-foreground">{item.description}</p>
                   </div>
-                  <h3 className="text-lg font-semibold text-foreground mb-2">{item.title}</h3>
-                  <p className="text-sm text-muted-foreground">{item.description}</p>
-                  {index < howItWorks.length - 1 && (
-                    <div className="hidden lg:block absolute top-8 left-[calc(50%+40px)] w-full h-0.5 bg-muted-foreground/30" />
-                  )}
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         </section>
