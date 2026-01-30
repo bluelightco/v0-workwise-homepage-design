@@ -15,11 +15,10 @@ export function HeroSection() {
             Simplifying <span className="text-primary">HR & Safety Compliance</span>
           </h1>
           <p className="text-xl md:text-2xl text-white/90 text-pretty leading-relaxed max-w-3xl text-left">
-            Transforming workplaces powered by people and tools that deliver. A smarter, more responsive solution that's
-            affordable for every business owner.
+            Transform your workplace with people and tools that deliver results. A smarter, responsive HR & Safety compliance solution built to fit the needs of every business.
           </p>
           <div>
-            <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
+            <Button asChild size="lg" className="bg-primary hover:bg-primary/90 px-16">
               <Link href="/pricing">Get Started</Link>
             </Button>
           </div>

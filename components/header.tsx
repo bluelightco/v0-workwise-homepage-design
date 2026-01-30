@@ -1,6 +1,8 @@
 "use client"
 
+// Header component for site navigation
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ShoppingCart } from "lucide-react"
 
@@ -10,7 +12,14 @@ export function Header() {
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <div className="flex items-center gap-8">
           <Link href="/" className="flex items-center gap-2">
-            <img src="/images/workwise-logo.png" alt="WorkWise Compliance" className="h-8 w-auto" />
+            <Image 
+              src="/images/workwise-logo.png" 
+              alt="WorkWise Compliance" 
+              width={147}
+              height={44}
+              priority
+              style={{ width: '147px', height: '44px' }}
+            />
           </Link>
 
           <nav className="hidden md:flex items-center gap-6">
@@ -36,17 +45,17 @@ export function Header() {
             </Link>
 
             <Link
+              href="/affiliates"
+              className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
+            >
+              Affiliates
+            </Link>
+
+            <Link
               href="/blog"
               className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
             >
               Blog
-            </Link>
-
-            <Link
-              href="/resell-refer"
-              className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
-            >
-              Affiliates
             </Link>
 
             <Link

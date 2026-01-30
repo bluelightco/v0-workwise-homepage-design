@@ -10,71 +10,28 @@ import Link from "next/link"
 
 export default function PricingPage() {
   const [isAnnual, setIsAnnual] = useState(false)
-  const [employeeCount, setEmployeeCount] = useState(10)
 
-  const getEssentialsPrice = () => {
-    if (employeeCount <= 25) return 89
-    return 89 + (employeeCount - 25) * 6
-  }
-
-  const getVirtualPlusPrice = () => {
-    if (employeeCount <= 10) return 375
-    if (employeeCount <= 25) return 575
-    if (employeeCount <= 50) return 750
-    if (employeeCount <= 99) return 1000
-    return "schedule" // 100+
-  }
-
-  const essentialsPrice = getEssentialsPrice()
+  const essentialsPrice = 89
   const essentialsAnnual = Math.round(essentialsPrice * 12 * 0.8)
-  const virtualPlusPrice = getVirtualPlusPrice()
-  const virtualPlusAnnual = typeof virtualPlusPrice === "number" ? Math.round(virtualPlusPrice * 12 * 0.8) : null
+  const virtualPlusPrice = 375
+  const virtualPlusAnnual = Math.round(virtualPlusPrice * 12 * 0.8)
 
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-primary to-primary/80 text-white py-20">
+        <section className="bg-gradient-to-br from-primary to-primary/80 text-primary-foreground py-20 md:py-28">
           <div className="container mx-auto px-4 text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">{"Let Us Simplify Your HR & Safety"}</h1>
-            <p className="text-xl text-white/90 max-w-3xl mx-auto">
-              From posters to full-service support — find the right level for your business
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">{"Let Us Simplify Your HR & Safety"}</h1>
+            <p className="text-lg md:text-xl text-primary-foreground/90 max-w-3xl mx-auto">
+              From posters to full-service support — proactive HR + Safety support that's affordable, responsive, and powered by experts and tools that deliver.
             </p>
           </div>
         </section>
 
-        <section className="py-8 bg-slate-50 border-b">
-          <div className="container mx-auto px-4">
-            <div className="max-w-xl mx-auto">
-              <label className="text-sm font-semibold text-foreground block mb-3 text-center">
-                How many employees do you have?
-              </label>
-              <div className="flex items-center gap-4">
-                <span className="text-sm text-muted-foreground w-8">1</span>
-                <input
-                  type="range"
-                  min="1"
-                  max="100"
-                  value={employeeCount}
-                  onChange={(e) => setEmployeeCount(Number(e.target.value))}
-                  className="w-full h-2 bg-muted rounded-lg appearance-none cursor-pointer accent-primary"
-                />
-                <span className="text-sm text-muted-foreground w-8">100</span>
-              </div>
-              <div className="text-center mt-2">
-                <span className="inline-flex items-center gap-2 bg-primary/10 text-primary font-semibold px-4 py-1.5 rounded-full">
-                  <Users className="w-4 h-4" />
-                  {employeeCount} employee{employeeCount !== 1 ? "s" : ""}
-                  {employeeCount === 100 && "+"}
-                </span>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Billing Toggle */}
-        <section className="py-6 bg-slate-50">
+        <section className="pt-12 pb-6 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="flex items-center justify-center gap-3">
               <span className={`text-sm font-medium ${!isAnnual ? "text-foreground" : "text-muted-foreground"}`}>
@@ -99,7 +56,7 @@ export default function PricingPage() {
         </section>
 
         {/* Pricing Tiers */}
-        <section className="py-12 bg-slate-50">
+        <section className="py-12 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="max-w-7xl mx-auto">
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -111,7 +68,7 @@ export default function PricingPage() {
                         <FileText className="w-5 h-5 text-primary" />
                         <h3 className="text-xl font-bold">Labor Law Posters</h3>
                       </div>
-                      <p className="text-sm text-muted-foreground text-center">Stay compliant with required postings</p>
+                      <p className="text-sm text-muted-foreground text-center h-10">Stay compliant with required postings</p>
                     </div>
                     <div className="flex flex-col items-center w-full mx-0 my-2">
                       <div className="flex items-baseline justify-center gap-1">
@@ -173,7 +130,7 @@ export default function PricingPage() {
                         <Briefcase className="w-5 h-5 text-primary" />
                         <h3 className="text-xl font-bold">Essentials</h3>
                       </div>
-                      <p className="text-sm text-muted-foreground text-center">Foundational HR & Safety support</p>
+                      <p className="text-sm text-muted-foreground text-center h-10">Foundational HR & Safety support</p>
                     </div>
                     <div className="flex flex-col items-center w-full mx-0 my-2">
                       <div className="flex items-baseline justify-center gap-1">
@@ -210,14 +167,7 @@ export default function PricingPage() {
                       <li className="flex gap-2">
                         <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
                         <div>
-                          <p className="text-sm font-medium">Employee Management System </p>
-                          <p className="text-xs text-muted-foreground">Onboarding, time-off, docs & more</p>
-                        </div>
-                      </li>
-                      <li className="flex gap-2">
-                        <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                        <div>
-                          <p className="text-sm font-medium">LMS Training Modules</p>
+                          <p className="text-sm font-medium">Online Training Hub</p>
                           <p className="text-xs text-muted-foreground">On-demand compliance courses</p>
                         </div>
                       </li>
@@ -249,7 +199,7 @@ export default function PricingPage() {
                   </CardContent>
                 </Card>
 
-                {/* Virtual + */}
+                {/* Virtual */}
                 <Card className="border-2 border-primary shadow-lg relative gap-0">
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-3 py-0.5 rounded-full text-xs font-semibold">
                     MOST POPULAR
@@ -258,40 +208,27 @@ export default function PricingPage() {
                     <div className="text-center">
                       <div className="flex items-center justify-center gap-2 mb-2">
                         <Monitor className="w-5 h-5 text-primary" />
-                        <h3 className="text-xl font-bold">Virtual +</h3>
+                        <h3 className="text-xl font-bold">Virtual</h3>
                       </div>
-                      <p className="text-sm text-muted-foreground text-center">
-                        Dedicated Virtual HR &amp; Safety partner
+                      <p className="text-sm text-muted-foreground text-center h-10">
+                        Dedicated Virtual HR & Safety partner
                       </p>
                     </div>
                     <div className="flex flex-col items-center w-full mx-0 my-2">
-                      {virtualPlusPrice === "schedule" ? (
-                        <>
-                          <div className="flex items-baseline justify-center gap-1">
-                            <Phone className="w-5 h-5 text-primary" />
-                            <span className="text-3xl font-bold text-primary">Let's Talk</span>
-                          </div>
-                          <div className="h-5">
-                            <p className="text-xs text-muted-foreground text-center">Custom Pricing</p>
-                          </div>
-                        </>
-                      ) : (
-                        <>
-                          <div className="flex items-baseline justify-center gap-1">
-                            <span className="text-3xl font-bold text-primary">
-                              ${isAnnual && virtualPlusAnnual ? Math.round(virtualPlusAnnual / 12) : virtualPlusPrice}
-                            </span>
-                            <span className="text-muted-foreground text-sm">/mo</span>
-                          </div>
-                          <div className="h-5">
-                            {isAnnual && virtualPlusAnnual && (
-                              <p className="text-xs text-green-600 font-medium text-center">
-                                Save ${(virtualPlusPrice * 12 - virtualPlusAnnual).toLocaleString()}/yr
-                              </p>
-                            )}
-                          </div>
-                        </>
-                      )}
+                      <div className="flex items-baseline justify-center gap-1">
+                        <span className="text-sm text-muted-foreground mr-1">Starting At</span>
+                        <span className="text-3xl font-bold text-primary">
+                          ${isAnnual ? Math.round(virtualPlusAnnual / 12) : virtualPlusPrice}
+                        </span>
+                        <span className="text-muted-foreground text-sm">/mo</span>
+                      </div>
+                      <div className="h-5">
+                        {isAnnual && (
+                          <p className="text-xs text-green-600 font-medium text-center">
+                            Save ${(virtualPlusPrice * 12 - virtualPlusAnnual).toLocaleString()}/yr
+                          </p>
+                        )}
+                      </div>
                       <Button className="w-full mt-2" size="lg" asChild>
                         <Link href="/contact">
                           Schedule a Call
@@ -305,7 +242,7 @@ export default function PricingPage() {
                     <ul className="space-y-3">
                       <li className="flex gap-2">
                         <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                        <p className="text-sm font-medium">Everything in Essentials</p>
+                        <p className="text-sm font-medium">Everything in Virtual</p>
                       </li>
                       <li className="flex gap-2">
                         <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
@@ -357,9 +294,9 @@ export default function PricingPage() {
                         <Users className="w-5 h-5 text-primary" />
                         <h3 className="text-xl font-bold">Onsite Pro</h3>
                       </div>
-                      <p className="text-sm text-muted-foreground text-center">
-                        {"HR & Safety Support, where you are"}
-                      </p>
+  <p className="text-sm text-muted-foreground text-center h-10">
+    HR & Safety Support, where you are
+  </p>
                     </div>
                     <div className="flex flex-col items-center w-full mx-0 my-2">
                       <div className="flex items-baseline justify-center gap-1">
@@ -382,7 +319,7 @@ export default function PricingPage() {
                     <ul className="space-y-3">
                       <li className="flex gap-2">
                         <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                        <p className="text-sm font-medium">Everything in Virtual +</p>
+                        <p className="text-sm font-medium">Everything in Virtual</p>
                       </li>
                       <li className="flex gap-2">
                         <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
@@ -440,7 +377,10 @@ export default function PricingPage() {
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-7xl mx-auto">
-              <h2 className="text-4xl font-bold text-center mb-12">Compare Plans</h2>
+              <h2 className="text-4xl font-bold text-center mb-4">Compare Plans</h2>
+          <p className="text-lg text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
+            All plans support HR & Safety — choose how much support you want.
+          </p>
               <div className="overflow-x-auto">
                 <table className="w-full border-collapse">
                   <thead>
@@ -448,7 +388,7 @@ export default function PricingPage() {
                       <th className="text-left p-4 font-bold">Feature</th>
                       <th className="text-center p-4 font-bold">Labor Law Posters</th>
                       <th className="text-center p-4 font-bold">Essentials</th>
-                      <th className="text-center p-4 font-bold bg-primary/5">Virtual +</th>
+                      <th className="text-center p-4 font-bold bg-primary/5">Virtual</th>
                       <th className="text-center p-4 font-bold">Onsite Pro</th>
                     </tr>
                   </thead>
@@ -499,20 +439,7 @@ export default function PricingPage() {
                       </td>
                     </tr>
                     <tr className="border-b border-border">
-                      <td className="p-4">Employee Management System</td>
-                      <td className="text-center p-4">-</td>
-                      <td className="text-center p-4">
-                        <Check className="w-5 h-5 text-primary mx-auto" />
-                      </td>
-                      <td className="text-center p-4 bg-primary/5">
-                        <Check className="w-5 h-5 text-primary mx-auto" />
-                      </td>
-                      <td className="text-center p-4">
-                        <Check className="w-5 h-5 text-primary mx-auto" />
-                      </td>
-                    </tr>
-                    <tr className="border-b border-border">
-                      <td className="p-4">LMS Training Modules</td>
+                      <td className="p-4">Online Training Hub</td>
                       <td className="text-center p-4">-</td>
                       <td className="text-center p-4">
                         <Check className="w-5 h-5 text-primary mx-auto" />
@@ -666,38 +593,85 @@ export default function PricingPage() {
           </div>
         </section>
 
-        {/* FAQ Section */}
-        <section className="py-20 bg-slate-50">
+        {/* Not Sure Section - Moved here after comparison table */}
+        <section className="py-16 md:py-24 bg-muted/30">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-4xl font-bold mb-6">Not sure which plan is right for you?</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
+              Schedule a consultation with our compliance experts to find the perfect fit for your business
+            </p>
+            <Button size="lg" asChild>
+              <Link href="/contact">
+                Talk to an Expert
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+          </div>
+        </section>
+
+        {/* Why Choose Us Section */}
+        <section className="py-16 md:py-24 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-4xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+              <h2 className="text-4xl font-bold text-center mb-6">Why Choose Us</h2>
+              <p className="text-xl text-muted-foreground text-center mb-8">
+                We make HR + Safety practical, proactive, and easy to manage. You get tools that work, plus fractional HR & Safety subject matter experts who partner with you to:
+              </p>
+              <ul className="space-y-4 mb-8 max-w-2xl mx-auto">
+                <li className="flex items-start gap-3">
+                  <Check className="w-6 h-6 text-primary shrink-0 mt-0.5" />
+                  <span className="text-lg text-foreground">Do the work for you</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="w-6 h-6 text-primary shrink-0 mt-0.5" />
+                  <span className="text-lg text-foreground">Keep you up to date on state and federal laws</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="w-6 h-6 text-primary shrink-0 mt-0.5" />
+                  <span className="text-lg text-foreground">Proactively consult, train, and support your business</span>
+                </li>
+              </ul>
+              <p className="text-lg text-muted-foreground text-center">
+                We provide proactive HR & Safety guidance and tools to strengthen your operations and keep your business compliant and protected.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-16 md:py-24 bg-muted/30">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+                Frequently Asked <span className="text-primary">Questions</span>
+              </h2>
               <div className="space-y-6">
-                <div className="bg-white p-6 rounded-lg">
-                  <h3 className="font-bold text-xl mb-2">Can I switch plans later?</h3>
+                <div className="bg-card p-6 rounded-lg border">
+                  <h3 className="font-bold text-xl mb-2 text-foreground">Can I switch plans later?</h3>
                   <p className="text-muted-foreground">
                     Yes! You can upgrade or downgrade your plan at any time. Changes take effect at the start of your
                     next billing cycle.
                   </p>
                 </div>
-                <div className="bg-white p-6 rounded-lg">
-                  <h3 className="font-bold text-xl mb-2">
-                    What&apos;s the difference between Virtual + and Onsite Pro?
-                  </h3>
-                  <p className="text-muted-foreground">
-                    Virtual + provides dedicated remote HR & Safety support, perfect for growing businesses. Onsite Pro
+                <div className="bg-card p-6 rounded-lg border">
+  <h3 className="font-bold text-xl mb-2 text-foreground">
+    What&apos;s the difference between Virtual and Onsite Pro?
+  </h3>
+  <p className="text-muted-foreground">
+    Virtual provides dedicated remote HR & Safety support, perfect for growing businesses. Onsite Pro
                     includes all that plus in-person visits for audits, training, and hands-on guidance — ideal for
                     businesses needing a physical presence.
                   </p>
                 </div>
-                <div className="bg-white p-6 rounded-lg">
-                  <h3 className="font-bold text-xl mb-2">Do you offer custom enterprise plans?</h3>
+                <div className="bg-card p-6 rounded-lg border">
+                  <h3 className="font-bold text-xl mb-2 text-foreground">Do you offer custom enterprise plans?</h3>
                   <p className="text-muted-foreground">
                     Yes! For organizations with 100+ employees or specialized needs, we offer custom enterprise
                     solutions. Contact us for a tailored quote.
                   </p>
                 </div>
-                <div className="bg-white p-6 rounded-lg">
-                  <h3 className="font-bold text-xl mb-2">Is there a contract commitment?</h3>
+                <div className="bg-card p-6 rounded-lg border">
+                  <h3 className="font-bold text-xl mb-2 text-foreground">Is there a contract commitment?</h3>
                   <p className="text-muted-foreground">
                     Monthly plans are month-to-month with no long-term commitment required. Annual plans offer 20%
                     savings and can be canceled with 30 days notice.
@@ -708,19 +682,25 @@ export default function PricingPage() {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-br from-primary to-primary/80 text-white">
+        {/* Bottom CTA Section */}
+        <section className="py-16 md:py-24 bg-primary text-primary-foreground">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-4xl font-bold mb-6">Not sure which plan is right for you?</h2>
-            <p className="text-xl text-white/90 max-w-2xl mx-auto mb-8">
-              Schedule a consultation with our compliance experts to find the perfect fit for your business
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-balance">Get the HR & Safety support your business needs — your way</h2>
+            <p className="text-lg md:text-xl text-primary-foreground/90 max-w-3xl mx-auto mb-8">
+              Handle compliance yourself with the right tools, or partner with dedicated HR & Safety experts who do the work for you.
             </p>
-            <Button size="lg" variant="secondary" asChild>
-              <Link href="/contact">
-                Schedule a Consultation
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+              <Button size="lg" className="bg-background text-foreground hover:bg-background/90 px-12" asChild>
+                <Link href="/contact">
+                  Get Started
+                </Link>
+              </Button>
+              <Button size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10 bg-transparent px-8" asChild>
+                <Link href="/contact">
+                  Talk to an Expert
+                </Link>
+              </Button>
+            </div>
           </div>
         </section>
       </main>

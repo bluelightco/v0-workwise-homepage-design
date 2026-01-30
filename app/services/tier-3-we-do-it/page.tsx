@@ -39,7 +39,7 @@ export default function ProSupportPage() {
               <div className="flex flex-wrap justify-center gap-4 text-sm mb-8">
                 <span className="bg-white px-4 py-2 rounded-full">Poster Auto-Updates</span>
                 <span className="bg-white px-4 py-2 rounded-full">Digital Library</span>
-                <span className="bg-white px-4 py-2 rounded-full">LMS Training Modules</span>
+                <span className="bg-white px-4 py-2 rounded-full">Online Training Hub</span>
                 <span className="bg-white px-4 py-2 rounded-full">Newsletter Updates</span>
                 <span className="bg-white px-4 py-2 rounded-full">10% Webinar Discount</span>
               </div>
@@ -67,11 +67,10 @@ export default function ProSupportPage() {
                       <BookOpen className="w-8 h-8 text-indigo-600 flex-shrink-0 mt-1" />
                       <div>
                         <h3 className="font-bold text-xl mb-3">
-                          Access to EMS for tracking employee compliance and training
+                          Employee tracking for compliance and training
                         </h3>
                         <p className="text-muted-foreground">
-                          Complete employee management system to track all compliance requirements, training
-                          certifications, and deadlines.
+                          Complete tracking system to monitor all compliance requirements, training certifications, and deadlines for your workforce.
                         </p>
                       </div>
                     </div>
@@ -98,9 +97,9 @@ export default function ProSupportPage() {
                     <div className="flex gap-4">
                       <Users className="w-8 h-8 text-indigo-600 flex-shrink-0 mt-1" />
                       <div>
-                        <h3 className="font-bold text-xl mb-3">All-Access LMS training modules</h3>
+                        <h3 className="font-bold text-xl mb-3">All-Access Online Training Hub</h3>
                         <p className="text-muted-foreground">
-                          Full library of learning management system courses for all employees across your organization.
+                          Full library of training courses for all employees across your organization.
                         </p>
                       </div>
                     </div>
@@ -364,7 +363,7 @@ export default function ProSupportPage() {
                 business.
               </p>
               <Button size="lg" className="bg-indigo-600 hover:bg-indigo-700" asChild>
-                <Link href="/contact">Schedule a Consultation</Link>
+                <Link href="/contact">Talk to an Expert</Link>
               </Button>
             </div>
           </div>
