@@ -80,7 +80,7 @@ export function NewsletterSection() {
                     type="submit"
                     size="lg"
                     disabled={isSubmitting}
-                    className="w-full bg-[#3EBAB2] hover:bg-[#35a39c] text-white h-12 rounded-full font-semibold tracking-wide"
+                    className="w-full bg-primary hover:bg-primary/90 text-primary-foreground h-12 rounded-full font-semibold tracking-wide"
                   >
                     {isSubmitting ? "SIGNING UP..." : "SIGN UP HERE"}
                   </Button>
