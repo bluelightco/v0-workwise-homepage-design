@@ -36,10 +36,10 @@ export function ResourcesSection() {
           <p className="text-lg text-muted-foreground">Check Out Our Recent Posts</p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-8 max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-8 mb-8 max-w-6xl mx-auto">
           {resources.map((resource, index) => (
-            <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow flex flex-col bg-card">
-              <div className="aspect-video relative bg-secondary/20 w-full overflow-hidden">
+            <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow flex flex-col bg-card border-0 shadow-md rounded-lg">
+              <div className="aspect-[4/3] relative bg-muted w-full overflow-hidden">
                 <Image 
                   src={resource.image || "/placeholder.svg"} 
                   alt={resource.title} 
@@ -47,16 +47,15 @@ export function ResourcesSection() {
                   className="object-cover w-full h-full" 
                 />
               </div>
-              <CardContent className="p-6 space-y-4 flex flex-col flex-1">
-                <h3 className="text-lg font-bold leading-snug text-foreground">
+              <CardContent className="p-6 flex flex-col flex-1">
+                <h3 className="text-xl font-bold leading-tight text-foreground mb-4">
                   {resource.title}
                 </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed flex-1">
+                <p className="text-sm text-muted-foreground leading-relaxed flex-1 mb-4">
                   {resource.description}
                 </p>
-                <Link href={resource.href} className="text-primary font-semibold hover:text-primary/80 transition-colors inline-flex items-center gap-2">
+                <Link href={resource.href} className="text-primary font-semibold hover:text-primary/80 transition-colors">
                   Read More
-                  <ArrowRight className="w-4 h-4" />
                 </Link>
               </CardContent>
             </Card>
