@@ -97,13 +97,13 @@ export default function BlogPage() {
         </section>
 
         {/* Featured Article */}
-        <section className="bg-background">
+        <section className="py-16 md:py-20 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <Link href="/blog" className="block">
-                <Card className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-shadow cursor-pointer">
+                <Card className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-shadow cursor-pointer p-0">
                   <div className="grid md:grid-cols-2 gap-0">
-                    <div className="aspect-[4/3] md:aspect-auto relative bg-muted">
+                    <div className="aspect-[4/3] md:aspect-auto md:min-h-[400px] relative bg-muted">
                       <Image
                         src={featuredArticle.image}
                         alt={featuredArticle.title}
@@ -111,7 +111,7 @@ export default function BlogPage() {
                         className="object-cover"
                       />
                     </div>
-                    <CardContent className="p-8 md:p-10 flex flex-col justify-center">
+                    <div className="p-8 md:p-10 flex flex-col justify-center">
                       <div className="flex items-center gap-4 text-sm text-muted-foreground mb-4">
                         <span className="flex items-center gap-1">
                           <Calendar className="h-4 w-4" />
@@ -128,7 +128,7 @@ export default function BlogPage() {
                       <p className="text-muted-foreground leading-relaxed">
                         {featuredArticle.excerpt}
                       </p>
-                    </CardContent>
+                    </div>
                   </div>
                 </Card>
               </Link>
@@ -145,35 +145,31 @@ export default function BlogPage() {
               </h2>
               <div className="grid md:grid-cols-3 gap-8">
                 {articles.map((article, index) => (
-                  <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow flex flex-col bg-card border-0 shadow-md rounded-lg p-0">
-                    <div className="aspect-[4/3] relative bg-muted w-full overflow-hidden rounded-t-lg">
-                      <Image
-                        src={article.image}
-                        alt={article.title}
-                        fill
-                        className="object-cover w-full h-full"
-                      />
-                    </div>
-                    <CardContent className="px-6 pt-6 pb-4 flex flex-col flex-1">
-                      <div className="flex items-center gap-3 text-xs text-muted-foreground mb-3">
-                        <span>{article.date}</span>
-                        <span>•</span>
-                        <span>{article.readTime}</span>
+                  <Link key={index} href="/blog" className="block">
+                    <Card className="overflow-hidden hover:shadow-lg transition-shadow flex flex-col bg-card border-0 shadow-md rounded-lg p-0 h-full cursor-pointer">
+                      <div className="aspect-[4/3] relative bg-muted w-full overflow-hidden rounded-t-lg">
+                        <Image
+                          src={article.image}
+                          alt={article.title}
+                          fill
+                          className="object-cover w-full h-full"
+                        />
                       </div>
-                      <h3 className="text-xl font-bold leading-tight text-foreground mb-3">
-                        {article.title}
-                      </h3>
-                      <p className="text-sm text-muted-foreground leading-relaxed flex-1 mb-4">
-                        {article.description}
-                      </p>
-                      <Link 
-                        href="/blog" 
-                        className="text-primary font-semibold hover:text-primary/80 transition-colors"
-                      >
-                        Read More
-                      </Link>
-                    </CardContent>
-                  </Card>
+                      <div className="px-6 pt-6 pb-4 flex flex-col flex-1">
+                        <div className="flex items-center gap-3 text-xs text-muted-foreground mb-3">
+                          <span>{article.date}</span>
+                          <span>•</span>
+                          <span>{article.readTime}</span>
+                        </div>
+                        <h3 className="text-xl font-bold leading-tight text-foreground mb-3">
+                          {article.title}
+                        </h3>
+                        <p className="text-sm text-muted-foreground leading-relaxed flex-1">
+                          {article.description}
+                        </p>
+                      </div>
+                    </Card>
+                  </Link>
                 ))}
               </div>
             </div>
