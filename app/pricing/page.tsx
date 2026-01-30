@@ -10,25 +10,11 @@ import Link from "next/link"
 
 export default function PricingPage() {
   const [isAnnual, setIsAnnual] = useState(false)
-  const [employeeCount, setEmployeeCount] = useState(10)
 
-  const getEssentialsPrice = () => {
-    if (employeeCount <= 25) return 89
-    return 89 + (employeeCount - 25) * 6
-  }
-
-  const getVirtualPlusPrice = () => {
-    if (employeeCount <= 10) return 375
-    if (employeeCount <= 25) return 575
-    if (employeeCount <= 50) return 750
-    if (employeeCount <= 99) return 1000
-    return "schedule" // 100+
-  }
-
-  const essentialsPrice = getEssentialsPrice()
+  const essentialsPrice = 89
   const essentialsAnnual = Math.round(essentialsPrice * 12 * 0.8)
-  const virtualPlusPrice = getVirtualPlusPrice()
-  const virtualPlusAnnual = typeof virtualPlusPrice === "number" ? Math.round(virtualPlusPrice * 12 * 0.8) : null
+  const virtualPlusPrice = 375
+  const virtualPlusAnnual = Math.round(virtualPlusPrice * 12 * 0.8)
 
   return (
     <div className="flex min-h-screen flex-col">
@@ -41,35 +27,6 @@ export default function PricingPage() {
             <p className="text-lg md:text-xl text-primary-foreground/90 max-w-3xl mx-auto">
               From posters to full-service support — proactive HR + Safety support that's affordable, responsive, and powered by experts and tools that deliver.
             </p>
-          </div>
-        </section>
-
-        <section className="py-8 bg-muted/30">
-          <div className="container mx-auto px-4">
-            <div className="max-w-xl mx-auto">
-              <label className="text-sm font-semibold text-foreground block mb-3 text-center">
-                How many employees do you have?
-              </label>
-              <div className="flex items-center gap-4">
-                <span className="text-sm text-muted-foreground w-8">1</span>
-                <input
-                  type="range"
-                  min="1"
-                  max="100"
-                  value={employeeCount}
-                  onChange={(e) => setEmployeeCount(Number(e.target.value))}
-                  className="w-full h-2 bg-muted rounded-lg appearance-none cursor-pointer accent-primary"
-                />
-                <span className="text-sm text-muted-foreground w-8">100</span>
-              </div>
-              <div className="text-center mt-2">
-                <span className="inline-flex items-center gap-2 bg-primary/10 text-primary font-semibold px-4 py-1.5 rounded-full">
-                  <Users className="w-4 h-4" />
-                  {employeeCount} employee{employeeCount !== 1 ? "s" : ""}
-                  {employeeCount === 100 && "+"}
-                </span>
-              </div>
-            </div>
           </div>
         </section>
 
@@ -265,33 +222,22 @@ export default function PricingPage() {
                       </p>
                     </div>
                     <div className="flex flex-col items-center w-full mx-0 my-2">
-                      {virtualPlusPrice === "schedule" ? (
-                        <>
-                          <div className="flex items-baseline justify-center gap-1">
-                            <Phone className="w-5 h-5 text-primary" />
-                            <span className="text-3xl font-bold text-primary">Let's Talk</span>
-                          </div>
-                          <div className="h-5">
-                            <p className="text-xs text-muted-foreground text-center">Custom Pricing</p>
-                          </div>
-                        </>
-                      ) : (
-                        <>
-                          <div className="flex items-baseline justify-center gap-1">
-                            <span className="text-3xl font-bold text-primary">
-                              ${isAnnual && virtualPlusAnnual ? Math.round(virtualPlusAnnual / 12) : virtualPlusPrice}
-                            </span>
-                            <span className="text-muted-foreground text-sm">/mo</span>
-                          </div>
-                          <div className="h-5">
-                            {isAnnual && virtualPlusAnnual && (
-                              <p className="text-xs text-green-600 font-medium text-center">
-                                Save ${(virtualPlusPrice * 12 - virtualPlusAnnual).toLocaleString()}/yr
-                              </p>
-                            )}
-                          </div>
-                        </>
-                      )}
+                      <div className="flex items-baseline justify-center gap-1">
+                        <span className="text-sm text-muted-foreground">Starting at</span>
+                      </div>
+                      <div className="flex items-baseline justify-center gap-1">
+                        <span className="text-3xl font-bold text-primary">
+                          ${isAnnual ? Math.round(virtualPlusAnnual / 12) : virtualPlusPrice}
+                        </span>
+                        <span className="text-muted-foreground text-sm">/mo</span>
+                      </div>
+                      <div className="h-5">
+                        {isAnnual && (
+                          <p className="text-xs text-green-600 font-medium text-center">
+                            Save ${(virtualPlusPrice * 12 - virtualPlusAnnual).toLocaleString()}/yr
+                          </p>
+                        )}
+                      </div>
                       <Button className="w-full mt-2" size="lg" asChild>
                         <Link href="/contact">
                           Schedule a Call
