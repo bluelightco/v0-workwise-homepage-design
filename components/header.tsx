@@ -11,13 +11,12 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <div className="flex items-center gap-8">
-          <Link href="/" className="flex items-center gap-2">
+          <Link href="/" className="flex items-center gap-2 relative w-[140px] h-8">
             <Image 
               src="/images/workwise-logo.png" 
               alt="WorkWise Compliance" 
-              width={160}
-              height={32}
-              className="h-8 w-auto"
+              fill
+              className="object-contain object-left"
               priority
             />
           </Link>
