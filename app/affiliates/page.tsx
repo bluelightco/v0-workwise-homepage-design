@@ -168,7 +168,7 @@ export default function AffiliatesPage() {
 
                   <div className="flex flex-col sm:flex-row gap-3 mt-auto">
                     <Button className="flex-1" size="lg" asChild>
-                      <Link href="/contact">Get Started</Link>
+                      <Link href="/contact">Signup Now</Link>
                     </Button>
                     <Button variant="outline" className="flex-1" size="lg" asChild>
                       <Link href="/contact">Talk to an Expert</Link>
@@ -202,7 +202,7 @@ export default function AffiliatesPage() {
 
                   <div className="flex flex-col sm:flex-row gap-3 mt-auto">
                     <Button className="flex-1" size="lg" asChild>
-                      <Link href="/contact">Get Started</Link>
+                      <Link href="/contact">Signup Now</Link>
                     </Button>
                     <Button variant="outline" className="flex-1" size="lg" asChild>
                       <Link href="/contact">Talk to an Expert</Link>
@@ -320,7 +320,7 @@ export default function AffiliatesPage() {
             </h2>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
               <Button size="lg" variant="secondary" className="bg-background text-foreground hover:bg-background/90 px-12" asChild>
-                <Link href="/contact">Get Started</Link>
+                <Link href="/contact">Signup Now</Link>
               </Button>
               <Button
                 size="lg"
