@@ -37,17 +37,17 @@ export function Header() {
             </Link>
 
             <Link
-              href="/blog"
-              className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
-            >
-              Blog
-            </Link>
-
-            <Link
               href="/affiliates"
               className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
             >
               Affiliates
+            </Link>
+
+            <Link
+              href="/blog"
+              className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
+            >
+              Blog
             </Link>
 
             <Link
