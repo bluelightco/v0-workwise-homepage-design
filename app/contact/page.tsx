@@ -221,22 +221,6 @@ export default function ContactPage() {
             </div>
           </div>
         </section>
-
-        {/* Existing Client Support */}
-        <section className="py-16 md:py-24 bg-primary text-primary-foreground">
-          <div className="container mx-auto px-4 max-w-4xl text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Already a Client?</h2>
-            <p className="text-lg text-primary-foreground/90 mb-8">
-              For faster service regarding your subscription, invoice, or poster shipments, please use the Client Portal.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button className="bg-background text-foreground hover:bg-background/90">Client Login</Button>
-              <Button variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10 bg-transparent">
-                Visit Support Center
-              </Button>
-            </div>
-          </div>
-        </section>
       </main>
 
       <Footer />
