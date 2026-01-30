@@ -37,51 +37,6 @@ export default function TrainingPage() {
           </div>
         </section>
 
-        {/* Featured Event */}
-        <section className="py-16 md:py-24 bg-muted/30">
-          <div className="container mx-auto px-4">
-            <div className="max-w-5xl mx-auto">
-              <Card className="border-2 border-primary overflow-hidden">
-                <div className="bg-primary text-primary-foreground px-6 py-3">
-                  <p className="text-sm font-semibold tracking-wide">UPCOMING MAJOR EVENT</p>
-                </div>
-                <CardContent className="p-8">
-                  <div className="grid md:grid-cols-3 gap-6">
-                    <div className="md:col-span-2">
-                      <h2 className="text-3xl font-bold text-foreground mb-4">2026 Employment Law & Legal Update</h2>
-                      <div className="flex items-center gap-4 text-muted-foreground mb-6">
-                        <div className="flex items-center gap-2">
-                          <Calendar className="w-5 h-5" />
-                          <span>January 14, 2026</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <Clock className="w-5 h-5" />
-                          <span>10:00 AM PST</span>
-                        </div>
-                      </div>
-                      <p className="text-muted-foreground mb-6 leading-relaxed">
-                        Prepare your business for the new year. We will cover critical updates to California wage and
-                        hour laws, the new SB 553 Workplace Violence requirements, and federal posting changes.
-                      </p>
-                      <div className="flex items-center gap-2 text-muted-foreground">
-                        <User className="w-5 h-5" />
-                        <span>
-                          <strong className="text-foreground">Speaker:</strong> Sarah Mitchell, VP of Legal Affairs
-                        </span>
-                      </div>
-                    </div>
-                    <div className="flex flex-col justify-center">
-                      <Button size="lg" className="w-full">
-                        Reserve Your Spot Instantly
-                      </Button>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
-
         {/* Interactive Calendar */}
         <section className="py-16 md:py-24 bg-background">
           <div className="container mx-auto px-4">
