@@ -1,4 +1,6 @@
-import { Check } from "lucide-react"
+import { Check, ArrowRight } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 export function YouVsWeSection() {
   const youDoItFeatures = [
@@ -6,6 +8,7 @@ export function YouVsWeSection() {
     "Digital HR & Safety tools and templates ready to use",
     "Regular newsletter updates so you don't miss important changes",
     "Training courses you can complete on your schedule",
+    "Labor law posters included to keep your workplace compliant",
   ]
 
   const weDoItFeatures = [
@@ -75,6 +78,15 @@ export function YouVsWeSection() {
                 Best for businesses that want peace of mind and expert execution.
               </p>
             </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <Button size="lg" asChild>
+              <Link href="/pricing">
+                Compare Plans
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
           </div>
         </div>
       </div>
