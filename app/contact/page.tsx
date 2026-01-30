@@ -46,7 +46,7 @@ export default function ContactPage() {
                       </SelectTrigger>
                       <SelectContent>
                         <SelectItem value="posters">Labor Law Posters</SelectItem>
-                        <SelectItem value="ems">HR & Safety Software / EMS</SelectItem>
+                        <SelectItem value="software">HR & Safety Software</SelectItem>
                         <SelectItem value="consulting">Outsourced HR & Safety Consulting</SelectItem>
                         <SelectItem value="partnership">Partnership / Affiliate Program</SelectItem>
                         <SelectItem value="support">Billing or Support Question</SelectItem>

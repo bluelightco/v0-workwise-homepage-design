@@ -8,9 +8,9 @@ const tools = [
     image: "/images/poster-email.jpeg",
   },
   {
-    title: "Employee Management System (EMS)",
+    title: "Digital Document Management",
     description:
-      "Ditch the spreadsheets. Our proprietary EMS allows you to onboard employees, assign mandatory training (like Sexual Harassment Prevention), and store e-signed documents securely in the cloud.",
+      "Ditch the spreadsheets. Our digital document system allows you to onboard employees, assign mandatory training (like Sexual Harassment Prevention), and store e-signed documents securely in the cloud.",
     image: "/images/bh-new-hris-mac-mockup.png",
   },
   {

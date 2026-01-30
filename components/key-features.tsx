@@ -11,7 +11,7 @@ const features = [
     image: "/images/image-shield-grad.jpeg",
     title: "Proactive Training",
     description:
-      "Reduce risk and improve culture with our robust Employee Management System (EMS). Access interactive training modules, track certifications, and manage records in one cloud-based hub.",
+      "Reduce risk and improve culture with our comprehensive training platform. Access interactive training modules, track certifications, and manage records in one cloud-based hub.",
   },
   {
     image: "/images/image-bank-check.jpeg",
