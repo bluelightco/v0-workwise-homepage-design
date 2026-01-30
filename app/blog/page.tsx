@@ -97,45 +97,41 @@ export default function BlogPage() {
         </section>
 
         {/* Featured Article */}
-        <section className="py-16 md:py-20 bg-background">
+        <section className="bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <Card className="overflow-hidden border-0 shadow-lg">
-                <div className="grid md:grid-cols-2 gap-0">
-                  <div className="aspect-[4/3] md:aspect-auto relative bg-muted">
-                    <Image
-                      src={featuredArticle.image}
-                      alt={featuredArticle.title}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <CardContent className="p-8 md:p-10 flex flex-col justify-center">
-                    <div className="flex items-center gap-4 text-sm text-muted-foreground mb-4">
-                      <span className="flex items-center gap-1">
-                        <Calendar className="h-4 w-4" />
-                        {featuredArticle.date}
-                      </span>
-                      <span className="flex items-center gap-1">
-                        <Clock className="h-4 w-4" />
-                        {featuredArticle.readTime}
-                      </span>
+              <Link href="/blog" className="block">
+                <Card className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-shadow cursor-pointer">
+                  <div className="grid md:grid-cols-2 gap-0">
+                    <div className="aspect-[4/3] md:aspect-auto relative bg-muted">
+                      <Image
+                        src={featuredArticle.image}
+                        alt={featuredArticle.title}
+                        fill
+                        className="object-cover"
+                      />
                     </div>
-                    <h2 className="text-2xl md:text-3xl font-bold mb-4 text-foreground">
-                      {featuredArticle.title}
-                    </h2>
-                    <p className="text-muted-foreground mb-6 leading-relaxed">
-                      {featuredArticle.excerpt}
-                    </p>
-                    <Link 
-                      href="/blog" 
-                      className="text-primary font-semibold hover:text-primary/80 transition-colors"
-                    >
-                      Read More
-                    </Link>
-                  </CardContent>
-                </div>
-              </Card>
+                    <CardContent className="p-8 md:p-10 flex flex-col justify-center">
+                      <div className="flex items-center gap-4 text-sm text-muted-foreground mb-4">
+                        <span className="flex items-center gap-1">
+                          <Calendar className="h-4 w-4" />
+                          {featuredArticle.date}
+                        </span>
+                        <span className="flex items-center gap-1">
+                          <Clock className="h-4 w-4" />
+                          {featuredArticle.readTime}
+                        </span>
+                      </div>
+                      <h2 className="text-2xl md:text-3xl font-bold mb-4 text-foreground">
+                        {featuredArticle.title}
+                      </h2>
+                      <p className="text-muted-foreground leading-relaxed">
+                        {featuredArticle.excerpt}
+                      </p>
+                    </CardContent>
+                  </div>
+                </Card>
+              </Link>
             </div>
           </div>
         </section>
