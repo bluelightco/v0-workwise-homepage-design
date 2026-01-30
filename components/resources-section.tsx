@@ -38,8 +38,8 @@ export function ResourcesSection() {
 
         <div className="grid md:grid-cols-3 gap-8 mb-8 max-w-6xl mx-auto">
           {resources.map((resource, index) => (
-            <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow flex flex-col bg-card border-0 shadow-md rounded-lg">
-              <div className="aspect-[4/3] relative bg-muted w-full overflow-hidden">
+            <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow flex flex-col bg-card border-0 shadow-md rounded-lg p-0">
+              <div className="aspect-[4/3] relative bg-muted w-full overflow-hidden rounded-t-lg">
                 <Image 
                   src={resource.image || "/placeholder.svg"} 
                   alt={resource.title} 
@@ -47,7 +47,7 @@ export function ResourcesSection() {
                   className="object-cover w-full h-full" 
                 />
               </div>
-              <CardContent className="p-6 flex flex-col flex-1">
+              <CardContent className="px-6 pt-6 pb-4 flex flex-col flex-1">
                 <h3 className="text-xl font-bold leading-tight text-foreground mb-4">
                   {resource.title}
                 </h3>
