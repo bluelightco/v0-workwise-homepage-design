@@ -68,7 +68,7 @@ export default function PricingPage() {
                         <FileText className="w-5 h-5 text-primary" />
                         <h3 className="text-xl font-bold">Labor Law Posters</h3>
                       </div>
-                      <p className="text-sm text-muted-foreground text-center">Stay compliant with required postings</p>
+                      <p className="text-sm text-muted-foreground text-center h-10">Stay compliant with required postings</p>
                     </div>
                     <div className="flex flex-col items-center w-full mx-0 my-2">
                       <div className="flex items-baseline justify-center gap-1">
@@ -130,7 +130,7 @@ export default function PricingPage() {
                         <Briefcase className="w-5 h-5 text-primary" />
                         <h3 className="text-xl font-bold">Essentials</h3>
                       </div>
-                      <p className="text-sm text-muted-foreground text-center">Foundational HR & Safety support</p>
+                      <p className="text-sm text-muted-foreground text-center h-10">Foundational HR & Safety support</p>
                     </div>
                     <div className="flex flex-col items-center w-full mx-0 my-2">
                       <div className="flex items-baseline justify-center gap-1">
@@ -210,24 +210,23 @@ export default function PricingPage() {
                         <Monitor className="w-5 h-5 text-primary" />
                         <h3 className="text-xl font-bold">Virtual</h3>
                       </div>
-                      <p className="text-sm text-muted-foreground text-center">
-                        Dedicated Virtual HR &amp; Safety partner
+                      <p className="text-sm text-muted-foreground text-center h-10">
+                        Dedicated Virtual HR & Safety partner
                       </p>
                     </div>
                     <div className="flex flex-col items-center w-full mx-0 my-2">
                       <div className="flex items-baseline justify-center gap-1">
+                        {!isAnnual && <span className="text-sm text-muted-foreground mr-1">Starting At</span>}
                         <span className="text-3xl font-bold text-primary">
                           ${isAnnual ? Math.round(virtualPlusAnnual / 12) : virtualPlusPrice}
                         </span>
                         <span className="text-muted-foreground text-sm">/mo</span>
                       </div>
                       <div className="h-5">
-                        {isAnnual ? (
+                        {isAnnual && (
                           <p className="text-xs text-green-600 font-medium text-center">
                             Save ${(virtualPlusPrice * 12 - virtualPlusAnnual).toLocaleString()}/yr
                           </p>
-                        ) : (
-                          <p className="text-xs text-muted-foreground text-center">Starting At</p>
                         )}
                       </div>
                       <Button className="w-full mt-2" size="lg" asChild>
@@ -243,7 +242,7 @@ export default function PricingPage() {
                     <ul className="space-y-3">
                       <li className="flex gap-2">
                         <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                        <p className="text-sm font-medium">Everything in Essentials</p>
+                        <p className="text-sm font-medium">Everything in Virtual</p>
                       </li>
                       <li className="flex gap-2">
                         <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
@@ -295,9 +294,9 @@ export default function PricingPage() {
                         <Users className="w-5 h-5 text-primary" />
                         <h3 className="text-xl font-bold">Onsite Pro</h3>
                       </div>
-                      <p className="text-sm text-muted-foreground text-center">
-                        {"HR & Safety Support, where you are"}
-                      </p>
+  <p className="text-sm text-muted-foreground text-center h-10">
+    HR & Safety Support, where you are
+  </p>
                     </div>
                     <div className="flex flex-col items-center w-full mx-0 my-2">
                       <div className="flex items-baseline justify-center gap-1">
