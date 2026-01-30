@@ -41,9 +41,9 @@ export function ComplianceTrainingSection() {
                 compliance, workplace safety, and HR audits
               </p>
 
-              <Button size="lg" className="bg-primary/20 text-primary hover:bg-primary/30 border border-primary/30" asChild>
-                <Link href="/training">
-                  Online Compliance Training Platform
+              <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90" asChild>
+                <Link href="/pricing">
+                  Online Training Hub - LMS
                 </Link>
               </Button>
 
