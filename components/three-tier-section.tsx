@@ -26,7 +26,7 @@ const tiers = [
     features: [
       "Online Training Hub with compliance courses",
       "Step-by-step guides & digital templates",
-      "Digital document storage & templates",
+      "Newsletter updates on law changes",
     ],
     cta: "Learn More",
     ctaLink: "/pricing",

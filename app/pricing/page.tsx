@@ -167,13 +167,6 @@ export default function PricingPage() {
                       <li className="flex gap-2">
                         <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
                         <div>
-                          <p className="text-sm font-medium">Digital Document Management</p>
-                          <p className="text-xs text-muted-foreground">Onboarding, time-off, docs & more</p>
-                        </div>
-                      </li>
-                      <li className="flex gap-2">
-                        <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                        <div>
                           <p className="text-sm font-medium">Online Training Hub</p>
                           <p className="text-xs text-muted-foreground">On-demand compliance courses</p>
                         </div>

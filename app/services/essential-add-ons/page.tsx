@@ -37,15 +37,14 @@ export default function EssentialAddOnsPage() {
           </div>
         </section>
 
-        {/* Advanced HR Administration Section */}
+        {/* Add-On Services Section */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold mb-4">Advanced HR Administration</h2>
+                <h2 className="text-3xl font-bold mb-4">Enhanced Administrative Services</h2>
                 <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                  Unlock the full potential of your HR platform with premium administrative features that
-                  streamline payroll, benefits, and leave management.
+                  Streamline your HR operations with premium add-on services for payroll, benefits, and leave management.
                 </p>
               </div>
 
@@ -53,7 +52,7 @@ export default function EssentialAddOnsPage() {
                 <div>
                   <Image
                     src="/images/bh-new-hris-mac-mockup.png"
-                    alt="HR Dashboard"
+                    alt="Administrative Dashboard"
                     width={600}
                     height={400}
                     className="rounded-lg shadow-xl"
@@ -62,7 +61,7 @@ export default function EssentialAddOnsPage() {
                 <div>
                   <h3 className="text-2xl font-bold mb-6">Comprehensive Workforce Administration</h3>
                   <p className="text-muted-foreground mb-6">
-                    Upgrade your HR platform with advanced administrative capabilities that give you complete control
+                    Enhance your platform with advanced administrative capabilities that give you complete control
                     over employee data, compensation, and time off management.
                   </p>
                   <div className="space-y-4">
