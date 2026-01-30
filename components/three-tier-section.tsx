@@ -24,9 +24,9 @@ const tiers = [
     description:
       "Foundational HR & Safety support with the tools your team needs to manage compliance confidently.",
     features: [
-      "Employee Management System included",
       "Online Training Hub with compliance courses",
       "Step-by-step guides & digital templates",
+      "Digital document storage & templates",
     ],
     cta: "Learn More",
     ctaLink: "/pricing",

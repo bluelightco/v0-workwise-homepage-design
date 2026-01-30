@@ -167,7 +167,7 @@ export default function PricingPage() {
                       <li className="flex gap-2">
                         <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
                         <div>
-                          <p className="text-sm font-medium">Employee Management System </p>
+                          <p className="text-sm font-medium">Digital Document Management</p>
                           <p className="text-xs text-muted-foreground">Onboarding, time-off, docs & more</p>
                         </div>
                       </li>
@@ -446,20 +446,7 @@ export default function PricingPage() {
                       </td>
                     </tr>
                     <tr className="border-b border-border">
-                      <td className="p-4">Employee Management System</td>
-                      <td className="text-center p-4">-</td>
-                      <td className="text-center p-4">
-                        <Check className="w-5 h-5 text-primary mx-auto" />
-                      </td>
-                      <td className="text-center p-4 bg-primary/5">
-                        <Check className="w-5 h-5 text-primary mx-auto" />
-                      </td>
-                      <td className="text-center p-4">
-                        <Check className="w-5 h-5 text-primary mx-auto" />
-                      </td>
-                    </tr>
-                    <tr className="border-b border-border">
-                      <td className="p-4">LMS Training Modules</td>
+                      <td className="p-4">Online Training Hub</td>
                       <td className="text-center p-4">-</td>
                       <td className="text-center p-4">
                         <Check className="w-5 h-5 text-primary mx-auto" />
