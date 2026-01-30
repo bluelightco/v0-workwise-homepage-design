@@ -216,7 +216,7 @@ export default function PricingPage() {
                     </div>
                     <div className="flex flex-col items-center w-full mx-0 my-2">
                       <div className="flex items-baseline justify-center gap-1">
-                        {!isAnnual && <span className="text-sm text-muted-foreground mr-1">Starting At</span>}
+                        <span className="text-sm text-muted-foreground mr-1">Starting At</span>
                         <span className="text-3xl font-bold text-primary">
                           ${isAnnual ? Math.round(virtualPlusAnnual / 12) : virtualPlusPrice}
                         </span>
