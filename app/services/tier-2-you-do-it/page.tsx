@@ -97,7 +97,7 @@ export default function Tier2Page() {
                   </CardContent>
                 </Card>
 
-                {/* LMS Training */}
+                {/* Online Training Hub */}
                 <Card className="border-2">
                   <CardContent className="p-8">
                     <div className="flex items-start gap-4 mb-4">
@@ -105,7 +105,7 @@ export default function Tier2Page() {
                         <GraduationCap className="w-6 h-6 text-primary" />
                       </div>
                       <div>
-                        <h3 className="font-bold text-xl mb-2">LMS Training Modules</h3>
+                        <h3 className="font-bold text-xl mb-2">Online Training Hub</h3>
                         <p className="text-muted-foreground">Access to select compliance training courses</p>
                       </div>
                     </div>
@@ -195,7 +195,7 @@ export default function Tier2Page() {
                       <li className="flex gap-3">
                         <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                         <div>
-                          <p className="font-semibold">Additional LMS Courses</p>
+                          <p className="font-semibold">Additional Training Courses</p>
                           <p className="text-sm text-muted-foreground">
                             Expand training library at 10% discounted rate
                           </p>

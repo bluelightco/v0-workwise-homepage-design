@@ -46,11 +46,11 @@ const features = [
     cta: "Request a Demo",
     link: "#",
     items: [
-      "Employee Management System (EMS)",
       "Interactive training modules",
       "Performance tracking",
       "Onboarding and offboarding",
       "HR policy development",
+      "Digital employee records",
     ],
   },
   {

@@ -1,31 +1,25 @@
 import { Header } from "@/components/header"
 import { HeroSection } from "@/components/hero-section"
 import { GoogleReviewsSection } from "@/components/google-reviews-section"
-import { ProductFeaturesSection } from "@/components/product-features-section"
-import { OutcomesSection } from "@/components/outcomes-section"
-import { InnovationSection } from "@/components/innovation-section"
-import { ROISection } from "@/components/roi-section"
 import { ThreeTierSection } from "@/components/three-tier-section"
-import { OnSiteSection } from "@/components/on-site-section"
-import { RecognitionSection } from "@/components/recognition-section"
+import { YouVsWeSection } from "@/components/you-vs-we-section"
+import { ComplianceTrainingSection } from "@/components/compliance-training-section"
+import { NewsletterSection } from "@/components/newsletter-section"
 import { ResourcesSection } from "@/components/resources-section"
 import { FinalCTA } from "@/components/final-cta"
 import { Footer } from "@/components/footer"
 
 export default function Home() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-background flex flex-col">
       <Header />
-      <main>
+      <main className="flex-1">
         <HeroSection />
         <GoogleReviewsSection />
-        <ProductFeaturesSection />
-        <OutcomesSection />
-        <InnovationSection />
-        <ROISection />
         <ThreeTierSection />
-        <OnSiteSection />
-        <RecognitionSection />
+        <YouVsWeSection />
+        <ComplianceTrainingSection />
+        <NewsletterSection />
         <ResourcesSection />
         <FinalCTA />
       </main>

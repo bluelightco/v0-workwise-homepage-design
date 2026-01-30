@@ -1,3 +1,6 @@
+import { Button } from "@/components/ui/button"
+import Link from "next/link"
+
 export function HeroSection() {
   return (
     <section className="relative overflow-hidden">
@@ -9,12 +12,16 @@ export function HeroSection() {
       <div className="relative container mx-auto px-4 py-20 md:py-32">
         <div className="max-w-4xl space-y-8">
           <h1 className="text-5xl md:text-6xl font-bold leading-tight text-balance text-white text-left lg:text-6xl">
-            {"Simplifying HR & Safety Compliance"}
+            Simplifying <span className="text-primary">HR & Safety Compliance</span>
           </h1>
           <p className="text-xl md:text-2xl text-white/90 text-pretty leading-relaxed max-w-3xl text-left">
-            Transforming workplaces powered by people and tools that deliver. A smarter, more responsive solution that’s
-            affordable for every business owner.
+            Transform your workplace with people and tools that deliver results. A smarter, responsive HR & Safety compliance solution built to fit the needs of every business.
           </p>
+          <div>
+            <Button asChild size="lg" className="bg-primary hover:bg-primary/90 px-16">
+              <Link href="/pricing">Get Started</Link>
+            </Button>
+          </div>
         </div>
       </div>
     </section>

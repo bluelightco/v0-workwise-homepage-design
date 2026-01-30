@@ -1,5 +1,9 @@
+"use client"
+
 import Image from "next/image"
-import { Star } from "lucide-react"
+import { Star, ChevronLeft, ChevronRight } from "lucide-react"
+import { useRef, useState, useEffect, useCallback } from "react"
+import { Button } from "@/components/ui/button"
 
 const reviews = [
   {
@@ -49,7 +53,105 @@ const reviews = [
   },
 ]
 
+// Duplicate reviews for seamless infinite loop
+const loopedReviews = [...reviews, ...reviews, ...reviews]
+
 export function GoogleReviewsSection() {
+  const scrollContainerRef = useRef<HTMLDivElement>(null)
+  const [isPaused, setIsPaused] = useState(false)
+  const resumeTimeoutRef = useRef<NodeJS.Timeout | null>(null)
+
+  // Clear any existing resume timeout
+  const clearResumeTimeout = useCallback(() => {
+    if (resumeTimeoutRef.current) {
+      clearTimeout(resumeTimeoutRef.current)
+      resumeTimeoutRef.current = null
+    }
+  }, [])
+
+  // Start a 10-second timer to resume auto-scroll
+  const startResumeTimer = useCallback(() => {
+    clearResumeTimeout()
+    resumeTimeoutRef.current = setTimeout(() => {
+      setIsPaused(false)
+    }, 10000)
+  }, [clearResumeTimeout])
+
+  // Initialize scroll position to middle set
+  useEffect(() => {
+    if (scrollContainerRef.current) {
+      const cardWidth = 350 + 24 // card width + gap
+      const middleStart = cardWidth * reviews.length
+      scrollContainerRef.current.scrollLeft = middleStart
+    }
+  }, [])
+
+  // Continuous auto-scroll
+  useEffect(() => {
+    if (isPaused) return
+
+    const interval = setInterval(() => {
+      if (scrollContainerRef.current) {
+        scrollContainerRef.current.scrollLeft += 1
+      }
+    }, 20)
+
+    return () => clearInterval(interval)
+  }, [isPaused])
+
+  // Handle infinite loop reset
+  useEffect(() => {
+    const container = scrollContainerRef.current
+    if (!container) return
+
+    const handleScroll = () => {
+      const cardWidth = 350 + 24 // card width + gap
+      const singleSetWidth = cardWidth * reviews.length
+      
+      // If scrolled past the last set, jump back to middle set
+      if (container.scrollLeft >= singleSetWidth * 2) {
+        container.scrollLeft = singleSetWidth
+      }
+      // If scrolled before the first set, jump to middle set
+      if (container.scrollLeft <= 0) {
+        container.scrollLeft = singleSetWidth
+      }
+    }
+
+    container.addEventListener("scroll", handleScroll)
+    return () => container.removeEventListener("scroll", handleScroll)
+  }, [])
+
+  // Cleanup timeout on unmount
+  useEffect(() => {
+    return () => clearResumeTimeout()
+  }, [clearResumeTimeout])
+
+  const scroll = (direction: "left" | "right") => {
+    if (scrollContainerRef.current) {
+      // Pause auto-scroll and start resume timer
+      setIsPaused(true)
+      startResumeTimer()
+
+      const container = scrollContainerRef.current
+      const gap = 24
+      // Get actual card width from the first card element
+      const firstCard = container.querySelector("div > div") as HTMLElement
+      const cardWidth = firstCard ? firstCard.offsetWidth + gap : 320 + gap
+
+      // Calculate current card index and snap to next/previous full card
+      const currentScroll = container.scrollLeft
+      const currentCardIndex = Math.round(currentScroll / cardWidth)
+      const targetCardIndex = direction === "left" ? currentCardIndex - 1 : currentCardIndex + 1
+      const targetScroll = targetCardIndex * cardWidth
+
+      container.scrollTo({
+        left: targetScroll,
+        behavior: "smooth",
+      })
+    }
+  }
+
   return (
     <section className="py-12 md:py-16 bg-muted/30">
       <div className="container mx-auto px-4">
@@ -83,10 +185,29 @@ export function GoogleReviewsSection() {
           <p className="text-muted-foreground">Trusted by 60,000+ Companies Nationwide</p>
         </div>
 
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {reviews.slice(0, 3).map((review, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 shadow-sm border">
+        <div className="flex items-center gap-4">
+          <Button
+            variant="outline"
+            size="icon"
+            className="flex-shrink-0 bg-background shadow-md"
+            onClick={() => scroll("left")}
+            aria-label="Scroll left"
+          >
+            <ChevronLeft className="h-5 w-5" />
+          </Button>
+
+          <div
+            ref={scrollContainerRef}
+            className="flex gap-6 overflow-x-auto scrollbar-hide pb-4 flex-1"
+            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}
+          >
+            {loopedReviews.map((review, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-xl p-6 shadow-sm border flex-shrink-0 w-[320px] md:w-[350px] snap-start"
+              >
                 <div className="flex items-start gap-4 mb-4">
                   <div className="relative h-12 w-12 rounded-full overflow-hidden flex-shrink-0">
                     <Image src={review.image || "/placeholder.svg"} alt={review.name} fill className="object-cover" />
@@ -106,28 +227,16 @@ export function GoogleReviewsSection() {
               </div>
             ))}
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6 max-w-4xl mx-auto">
-            {reviews.slice(3).map((review, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 shadow-sm border">
-                <div className="flex items-start gap-4 mb-4">
-                  <div className="relative h-12 w-12 rounded-full overflow-hidden flex-shrink-0">
-                    <Image src={review.image || "/placeholder.svg"} alt={review.name} fill className="object-cover" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold">{review.name}</h4>
-                    <p className="text-sm text-muted-foreground">{review.role}</p>
-                    <p className="text-sm text-muted-foreground">{review.company}</p>
-                  </div>
-                </div>
-                <div className="flex gap-0.5 mb-3">
-                  {[...Array(review.rating)].map((_, i) => (
-                    <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                  ))}
-                </div>
-                <p className="text-sm text-muted-foreground leading-relaxed">{review.review}</p>
-              </div>
-            ))}
-          </div>
+
+          <Button
+            variant="outline"
+            size="icon"
+            className="flex-shrink-0 bg-background shadow-md"
+            onClick={() => scroll("right")}
+            aria-label="Scroll right"
+          >
+            <ChevronRight className="h-5 w-5" />
+          </Button>
         </div>
       </div>
     </section>
