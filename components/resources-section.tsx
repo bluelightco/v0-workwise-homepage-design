@@ -12,7 +12,7 @@ const resources = [
     href: "/blog",
   },
   {
-    image: "/workplace-safety-checklist.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-JkGkeCtPLWiICdgwIgKV1yfEo59Arg.png",
     title: "How to build a comprehensive workplace safety program",
     description: "A step-by-step guide to developing an effective safety program that protects your employees and reduces risk.",
     href: "/blog",
