@@ -33,7 +33,7 @@ export function ResourcesSection() {
           <h2 className="text-3xl md:text-4xl font-bold mb-2">
             Recent <span className="text-primary">Articles</span>
           </h2>
-          <p className="text-lg text-muted-foreground">Check Out Our Recent Posts</p>
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">Practical articles on HR, Safety, compliance, and people operations—written for real businesses, not legal textbooks.</p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 mb-8 max-w-6xl mx-auto">
