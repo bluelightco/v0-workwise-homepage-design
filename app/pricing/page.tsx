@@ -31,7 +31,7 @@ export default function PricingPage() {
         </section>
 
         {/* Billing Toggle */}
-        <section className="py-6 bg-muted/30">
+        <section className="pt-12 pb-6 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="flex items-center justify-center gap-3">
               <span className={`text-sm font-medium ${!isAnnual ? "text-foreground" : "text-muted-foreground"}`}>
@@ -222,10 +222,8 @@ export default function PricingPage() {
                       </p>
                     </div>
                     <div className="flex flex-col items-center w-full mx-0 my-2">
-                      <div className="flex items-baseline justify-center gap-1">
+                      <div className="flex items-baseline justify-center gap-2">
                         <span className="text-sm text-muted-foreground">Starting at</span>
-                      </div>
-                      <div className="flex items-baseline justify-center gap-1">
                         <span className="text-3xl font-bold text-primary">
                           ${isAnnual ? Math.round(virtualPlusAnnual / 12) : virtualPlusPrice}
                         </span>
