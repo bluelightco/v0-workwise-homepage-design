@@ -15,10 +15,10 @@ export function Header() {
             <Image 
               src="/images/workwise-logo.png" 
               alt="WorkWise Compliance" 
-              width={140}
-              height={32}
+              width={147}
+              height={44}
               priority
-              style={{ width: '140px', height: '32px' }}
+              style={{ width: '147px', height: '44px' }}
             />
           </Link>
 
