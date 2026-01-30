@@ -2,6 +2,7 @@
 
 // Header component for site navigation
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ShoppingCart } from "lucide-react"
 
@@ -11,7 +12,14 @@ export function Header() {
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <div className="flex items-center gap-8">
           <Link href="/" className="flex items-center gap-2">
-            <img src="/images/workwise-logo.png" alt="WorkWise Compliance" className="h-8 w-auto" />
+            <Image 
+              src="/images/workwise-logo.png" 
+              alt="WorkWise Compliance" 
+              width={160}
+              height={32}
+              className="h-8 w-auto"
+              priority
+            />
           </Link>
 
           <nav className="hidden md:flex items-center gap-6">
