@@ -21,18 +21,6 @@ export default function TrainingPage() {
                 Join our senior HR consultants and safety experts for interactive sessions on the latest regulatory
                 changes, leadership strategies, and OSHA protocols. Stay ahead of the curve with Workwise.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="bg-background text-foreground hover:bg-background/90">
-                  View Upcoming Schedule
-                </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10 bg-transparent"
-                >
-                  Access Past Recordings
-                </Button>
-              </div>
             </div>
           </div>
         </section>
