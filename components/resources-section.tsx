@@ -8,16 +8,20 @@ const resources = [
   {
     image: "/compliance-expert-professional.jpg",
     title: "Expert insights: Building a culture of compliance in 2025",
-    author: "WorkWise Team",
-    readTime: "5 MIN READ",
-    category: "Expert Insights",
+    description: "Learn how to foster a compliance-first mindset across your organization with practical strategies and real-world examples.",
+    href: "/blog",
   },
   {
     image: "/workplace-safety-checklist.jpg",
     title: "How to build a comprehensive workplace safety program",
-    author: "Safety Team",
-    readTime: "7 MIN READ",
-    category: "Safety Guide",
+    description: "A step-by-step guide to developing an effective safety program that protects your employees and reduces risk.",
+    href: "/blog",
+  },
+  {
+    image: "/workplace-safety-checklist.jpg",
+    title: "Holiday Safety Tips: Keeping Your Workplace Safe This Season",
+    description: "The holiday season brings unique workplace hazards. Discover essential safety practices for your team during festive celebrations.",
+    href: "/blog",
   },
 ]
 
@@ -25,47 +29,45 @@ export function ResourcesSection() {
   return (
     <section className="py-16 md:py-24 bg-muted/30">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row justify-between md:items-end mb-12 gap-4">
-          <div className="space-y-2">
-            <h2 className="text-3xl md:text-4xl font-bold">Recent Articles</h2>
-            <p className="text-lg text-primary font-medium">Insights that help you run a better workplace</p>
-            <p className="text-muted-foreground max-w-2xl">Practical articles on HR, Safety, compliance, and people operations—written for real businesses, not legal textbooks.</p>
-          </div>
-          <Button asChild variant="link" className="hidden md:flex items-center gap-2 font-semibold shrink-0">
-            <Link href="/blog">
-              View All Articles
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-          </Button>
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-2">
+            Recent <span className="text-primary">Articles</span>
+          </h2>
+          <p className="text-lg text-muted-foreground">Check Out Our Recent Posts</p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 mb-8">
+        <div className="grid md:grid-cols-3 gap-8 mb-8 max-w-7xl mx-auto">
           {resources.map((resource, index) => (
-            <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
-              <div className="aspect-video relative bg-secondary/20">
-                <Image src={resource.image || "/placeholder.svg"} alt={resource.title} fill className="object-cover" />
+            <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow flex flex-col bg-card">
+              <div className="aspect-video relative bg-secondary/20 w-full overflow-hidden">
+                <Image 
+                  src={resource.image || "/placeholder.svg"} 
+                  alt={resource.title} 
+                  fill 
+                  className="object-cover w-full h-full" 
+                />
               </div>
-              <CardContent className="p-6 space-y-4">
-                <div className="inline-block px-3 py-1 bg-primary/10 text-primary text-xs font-semibold rounded-full">
-                  {resource.category}
-                </div>
-                <h3 className="text-xl font-semibold leading-snug hover:text-primary transition-colors cursor-pointer">
+              <CardContent className="p-6 space-y-4 flex flex-col flex-1">
+                <h3 className="text-lg font-bold leading-snug text-foreground">
                   {resource.title}
                 </h3>
-                <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                  <span>{resource.author}</span>
-                  <span>•</span>
-                  <span>{resource.readTime}</span>
-                </div>
+                <p className="text-sm text-muted-foreground leading-relaxed flex-1">
+                  {resource.description}
+                </p>
+                <Link href={resource.href} className="text-primary font-semibold hover:text-primary/80 transition-colors inline-flex items-center gap-2">
+                  Read More
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
               </CardContent>
             </Card>
           ))}
         </div>
 
-        <div className="text-center md:hidden">
-          <Button asChild variant="outline" className="w-full bg-transparent">
+        <div className="text-center">
+          <Button asChild variant="link" className="text-primary hover:text-primary/80 font-semibold">
             <Link href="/blog">
               View All Articles
+              <ArrowRight className="w-4 h-4 ml-2" />
             </Link>
           </Button>
         </div>
