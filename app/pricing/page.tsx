@@ -222,18 +222,19 @@ export default function PricingPage() {
                       </p>
                     </div>
                     <div className="flex flex-col items-center w-full mx-0 my-2">
-                      <div className="flex items-baseline justify-center gap-2">
-                        <span className="text-sm text-muted-foreground">Starting at</span>
+                      <div className="flex items-baseline justify-center gap-1">
                         <span className="text-3xl font-bold text-primary">
                           ${isAnnual ? Math.round(virtualPlusAnnual / 12) : virtualPlusPrice}
                         </span>
                         <span className="text-muted-foreground text-sm">/mo</span>
                       </div>
                       <div className="h-5">
-                        {isAnnual && (
+                        {isAnnual ? (
                           <p className="text-xs text-green-600 font-medium text-center">
                             Save ${(virtualPlusPrice * 12 - virtualPlusAnnual).toLocaleString()}/yr
                           </p>
+                        ) : (
+                          <p className="text-xs text-muted-foreground text-center">Starting at</p>
                         )}
                       </div>
                       <Button className="w-full mt-2" size="lg" asChild>
