@@ -65,7 +65,7 @@ export function NewsletterSection() {
                       value={name}
                       onChange={(e) => setName(e.target.value)}
                       required
-                      className="bg-background text-foreground placeholder:text-muted-foreground border-0 h-12 rounded-full shadow-sm"
+                      className="bg-background"
                     />
                     <Input
                       type="email"
@@ -73,16 +73,16 @@ export function NewsletterSection() {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       required
-                      className="bg-background text-foreground placeholder:text-muted-foreground border-0 h-12 rounded-full shadow-sm"
+                      className="bg-background"
                     />
                   </div>
                   <Button
                     type="submit"
                     size="lg"
                     disabled={isSubmitting}
-                    className="w-full bg-primary hover:bg-primary/90 text-primary-foreground h-12 rounded-full font-semibold tracking-wide"
+                    className="w-full"
                   >
-                    {isSubmitting ? "SIGNING UP..." : "SIGN UP HERE"}
+                    {isSubmitting ? "Signing Up..." : "Sign Up Here"}
                   </Button>
                 </form>
               )}
