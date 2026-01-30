@@ -43,7 +43,7 @@ export function ComplianceTrainingSection() {
 
               <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90" asChild>
                 <Link href="/pricing">
-                  Online Training Hub - LMS
+                  Online Training Hub
                 </Link>
               </Button>
 
