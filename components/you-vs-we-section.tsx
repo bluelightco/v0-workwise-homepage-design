@@ -28,7 +28,7 @@ export function YouVsWeSection() {
               You do it <span className="text-primary">vs.</span> We do it
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground">
-              Two ways to stay compliant—only one gives you back your time.
+              Two ways to stay compliant—one empowers you, one gives you back your time.
             </p>
           </div>
 

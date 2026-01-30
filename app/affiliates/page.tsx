@@ -235,7 +235,10 @@ export default function AffiliatesPage() {
                         <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
                           <Gift className="w-6 h-6 text-primary" />
                         </div>
-                        <h3 className="text-2xl font-bold text-foreground">Digital Products</h3>
+                        <div>
+                          <h3 className="text-2xl font-bold text-foreground">Digital Products</h3>
+                          <span className="text-sm font-medium text-primary">Reseller Program</span>
+                        </div>
                       </div>
                     </div>
                     <div className="flex-1 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -262,7 +265,10 @@ export default function AffiliatesPage() {
                         <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
                           <Shield className="w-6 h-6 text-primary" />
                         </div>
-                        <h3 className="text-2xl font-bold text-foreground">HR & Safety Services</h3>
+                        <div>
+                          <h3 className="text-2xl font-bold text-foreground">HR & Safety Services</h3>
+                          <span className="text-sm font-medium text-primary">Referral Program</span>
+                        </div>
                       </div>
                     </div>
                     <div className="flex-1 grid sm:grid-cols-2 gap-6">
