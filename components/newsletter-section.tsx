@@ -24,56 +24,70 @@ export function NewsletterSection() {
   }
 
   return (
-    <section className="py-16 md:py-24 bg-primary text-primary-foreground">
-      <div className="container mx-auto px-4">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Stay ahead of HR & Safety changes
-          </h2>
-          
-          <p className="text-lg md:text-xl text-primary-foreground/80 mb-8">
-            Get practical insights, compliance updates, and workplace best practices delivered straight to your inbox.
-          </p>
+    <section className="py-16 md:py-20 bg-muted/50 relative overflow-hidden">
+      {/* Decorative arc pattern */}
+      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[600px] h-[600px] pointer-events-none opacity-30">
+        <svg viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+          <circle cx="300" cy="300" r="200" stroke="currentColor" strokeWidth="1" className="text-muted-foreground/30" />
+          <circle cx="300" cy="300" r="250" stroke="currentColor" strokeWidth="1" className="text-muted-foreground/20" />
+          <circle cx="300" cy="300" r="300" stroke="currentColor" strokeWidth="1" className="text-muted-foreground/10" />
+        </svg>
+      </div>
 
-          {isSubmitted ? (
-            <div className="bg-primary-foreground/10 rounded-lg p-6">
-              <p className="text-lg font-semibold">Thank you for subscribing!</p>
-              <p className="text-primary-foreground/80 mt-2">
-                You&apos;ll receive our next newsletter in your inbox.
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+            {/* Left side - Heading and subtitle */}
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                Monthly <span className="text-primary">HR Newsletter</span>
+              </h2>
+              <p className="text-lg text-muted-foreground">
+                Stay One Step Ahead By Signing Up To Our Monthly Newsletter!
               </p>
             </div>
-          ) : (
-            <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto">
-              <Input
-                type="text"
-                placeholder="Your name"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                required
-                className="bg-primary-foreground text-foreground placeholder:text-muted-foreground border-0 h-12"
-              />
-              <Input
-                type="email"
-                placeholder="Your email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-                className="bg-primary-foreground text-foreground placeholder:text-muted-foreground border-0 h-12"
-              />
-              <Button
-                type="submit"
-                size="lg"
-                disabled={isSubmitting}
-                className="bg-background text-foreground hover:bg-background/90 h-12 px-8 whitespace-nowrap"
-              >
-                {isSubmitting ? "Subscribing..." : "Subscribe"}
-              </Button>
-            </form>
-          )}
 
-          <p className="text-sm text-primary-foreground/60 mt-6">
-            We respect your privacy. Unsubscribe at any time.
-          </p>
+            {/* Right side - Form */}
+            <div>
+              {isSubmitted ? (
+                <div className="bg-background rounded-lg p-6 shadow-sm">
+                  <p className="text-lg font-semibold text-foreground">Thank you for subscribing!</p>
+                  <p className="text-muted-foreground mt-2">
+                    You&apos;ll receive our next newsletter in your inbox.
+                  </p>
+                </div>
+              ) : (
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  <div className="grid grid-cols-2 gap-4">
+                    <Input
+                      type="text"
+                      placeholder="Name"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                      required
+                      className="bg-background text-foreground placeholder:text-muted-foreground border-0 h-12 rounded-full shadow-sm"
+                    />
+                    <Input
+                      type="email"
+                      placeholder="Email Address"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      required
+                      className="bg-background text-foreground placeholder:text-muted-foreground border-0 h-12 rounded-full shadow-sm"
+                    />
+                  </div>
+                  <Button
+                    type="submit"
+                    size="lg"
+                    disabled={isSubmitting}
+                    className="w-full bg-[#3EBAB2] hover:bg-[#35a39c] text-white h-12 rounded-full font-semibold tracking-wide"
+                  >
+                    {isSubmitting ? "SIGNING UP..." : "SIGN UP HERE"}
+                  </Button>
+                </form>
+              )}
+            </div>
+          </div>
         </div>
       </div>
     </section>
